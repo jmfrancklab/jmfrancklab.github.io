@@ -4,7 +4,8 @@ layout: default
 
 <div class="home">
     <h1>Welcome!</h1>
-{% capture my_include %}{% include welcome.md %}{% endcapture %}
+    {% capture my_include %}{% include welcome.md %}{% endcapture %}<!--need to assign the content to a variable first-->
+    {{ my_include | markdownify }}<!--then, we can render it-->
 
   <h2>Posts</h1>
   <ul class="post-list">
@@ -17,8 +18,5 @@ layout: default
   </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-{% capture my_include %}{% include sponsorship.md %}{% endcapture %}
-  {{ my_include | markdownify kramdown }}
 
 </div>

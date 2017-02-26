@@ -95,6 +95,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+h2{
+    position:relative;
+    overflow:hidden;
+}
+h2:after {
+    content:"";
+    top:70%;
+    width:100%;
+    margin-left:0px;
+    height:2px;
+    position:absolute;
+    background:lightgrey;
+}
+
 
 /**
  * Links
