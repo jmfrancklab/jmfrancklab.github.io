@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+        <div class="figure-wrapper">
+            <img src="{{ site.baseurl }}/taugh-f.png" class="left-image"/>
+        </div>
+        <div class="wrapper">
+            {{ content }}
+            {% include footer.html %}
+        </div>
+    </div>
+  </body>
+
+</html>
