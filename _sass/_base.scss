@@ -104,7 +104,7 @@ h2:after {
     top:70%;
     width:100%;
     margin-left:0px;
-    height:2px;
+    height:0.5px;
     position:absolute;
     background:lightgrey;
 }
@@ -122,9 +122,9 @@ a {
     }
 
     &:hover {
-        color: $text-hover-color;
+        color: $brand-color;
         text-decoration: underline;
-        text-shadow: 0px 0px 5px rgba(0,0,255,0.5);
+        text-shadow: 0px 0px 5px $text-hover-color;
     }
 }
 
@@ -281,6 +281,20 @@ table td, table th {
 }
 table tr:first-child th {
     border-bottom: 3px;
+}
+
+.mugshot img {
+  float: left;
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
+
+.mugshot h2 {
+  position: relative;
+  top: 18px;
+  left: 0px;
 }
 //tbody {
 //    border:3px solid black;

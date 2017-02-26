@@ -22,7 +22,12 @@ Students joining the Franck lab will
     as well as customized tools
     available nowhere else in the world.
 
-Incoming students with an interest in chemical synthesis,
-    analytical chemistry, spectroscopy, or biochemistry
+Incoming students with an interest in
+    spectroscopy,
+    chemical physics,
+    biochemistry,
+    chemical synthesis,
+    or
+    analytical chemistry
     are particularly encouraged to investigate the Franck lab
     further.
