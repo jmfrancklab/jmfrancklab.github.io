@@ -184,7 +184,7 @@ h1 {
  * Page content
  */
 .page-content {
-    margin: 110px auto 0;
+    margin: 20px auto 0;
     padding: 0;
     width: 100%;
     max-width: #{$content-width};
@@ -225,20 +225,32 @@ h1 {
     padding: 0px;
 }
 .invisible-table td{
-    border: 3px solid green;
+    //border: 3px solid green;
+    border: 0px;
     margin: 0px;
     padding: 0px;
     height: 100%;
     vertical-align: top;
 }
-.invisible-table .left{
+.invisible-table .top div{
+    width: 100%;
+    text-align: center;
+    // the following is supposed to work for images
+    //margin-left: auto;
+    //margin-right: auto;
+    //display: block;
+    background: #000005;
+    border-top-left-radius: #{$curve-radius};
+    border-top-right-radius: #{$curve-radius};
+}
+.invisible-table .left td{
     width: #{$left-width + $overlap-width};
 }
-.invisible-table .right td{
+.invisible-table .right{
     width: #{$right-width};
 }
-.invisible-table .bottom td{
-    border: 3px solid green;
+.invisible-table .bottom{
+    border: 0px;
     margin: 0px;
     padding: 0px;
     height: 100%;
