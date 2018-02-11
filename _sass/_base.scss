@@ -183,7 +183,7 @@ pre {
     margin-bottom: 0;
     margin-left: 0;
     z-index: -1;
-    border-radius: 20px;
+    border-radius: #{$curve-radius};
 }
 .top-wrapper {
     width: 100%;
@@ -212,7 +212,7 @@ pre {
     }
 }
 .wrapper {
-    width: #{$right-width - 2*$spacing-unit};
+    width: #{0.5*$overlap-width+100%};
     //width: #{$right-width - $spacing-unit};
     //width: 30%;
     margin-right: auto;

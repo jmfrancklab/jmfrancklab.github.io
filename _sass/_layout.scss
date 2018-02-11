@@ -188,7 +188,7 @@ h1 {
     padding: 0;
     width: 100%;
     max-width: #{$content-width};
-    border-radius: 20px;
+    border-radius: #{$curve-radius};
     background: rgb(250,250,250);
     box-shadow: 5px 5px 30px rgba(0,0,0,0.50);
     z-index: 0;
@@ -196,19 +196,15 @@ h1 {
 }
 .left-wrapper {
     position: relative;
-    display: inline-block;
-    border: 0;
-    top: 0;
-    padding: 0;
-    width: #{$left-width + $overlap-width};
-    min-height: 500px;
+    width: 100%;
     height: 100%;
     border: 1px solid red;
+    vertical-align: top;
 }
 .left-wrapper .top{
+    vertical-align: top;
     position: absolute;
     top: 0;
-    vertical-align: top;
     width: 100%;
 }
 .left-wrapper .middle{
@@ -219,6 +215,34 @@ h1 {
     bottom: 0;
     vertical-align: top;
     width: 100%;
+}
+.invisible-table{
+    border: 0px;
+    margin: 0px;
+}
+.invisible-table tr{
+    margin: 0px;
+    padding: 0px;
+}
+.invisible-table td{
+    border: 3px solid green;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    vertical-align: top;
+}
+.invisible-table .left{
+    width: #{$left-width + $overlap-width};
+}
+.invisible-table .right td{
+    width: #{$right-width};
+}
+.invisible-table .bottom td{
+    border: 3px solid green;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    vertical-align: bottom;
 }
 .top-content {
     margin: 0 auto 0;
