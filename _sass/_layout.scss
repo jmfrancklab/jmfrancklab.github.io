@@ -6,19 +6,29 @@ h1 {
     line-height: #{0.75*$base-line-height};
     text-align: center;
 }
+.floating-top .decoration{
+    position: relative;
+    background: rgba(0,10,20,0.9);
+    width: 100%;
+    display: block;
+    max-width: #{$content-width};
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.33);
+    border-top: 5px solid $grey-color-dark;
+    border-bottom: 3px solid $grey-color-dark;
+    z-index: +5;
+    border-top-left-radius: #{$curve-radius};
+    border-top-right-radius: #{$curve-radius};
+}
 .floating-top {
     position: fixed;
-    background: rgba(238,219,212,0.9);
     // was going to change to background: rgba(235,242,215,0.9); but not as good
     top: 0;
     width: 100%;
     border: 0;
-    box-shadow: 10px 10px 5px rgba(0,0,0,0.33);
     min-height: 56px;
     max-height: 110px;
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 3px solid $grey-color-dark;
-    z-index: +5;
 }
 .site-header {
     // Positioning context for the mobile navigation icon
@@ -234,14 +244,7 @@ h1 {
 }
 .invisible-table .top div{
     width: 100%;
-    text-align: center;
-    // the following is supposed to work for images
-    //margin-left: auto;
-    //margin-right: auto;
-    //display: block;
-    background: #000005;
-    border-top-left-radius: #{$curve-radius};
-    border-top-right-radius: #{$curve-radius};
+    minimum-width: 200px;// to allow for top banner
 }
 .invisible-table .left td{
     width: #{$left-width + $overlap-width};
