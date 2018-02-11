@@ -180,17 +180,10 @@ pre {
  * Wrapper
  */
 .left-image{
-    margin-top: 0;
+    margin-bottom: 0;
     margin-left: 0;
     z-index: -1;
-    border-radius: 50px;
-}
-.left-wrapper{
-    width: $left-width;
-    margin-top: 0;
-    margin-left: 0;
-    display: inline-block;
-    vertical-align: top;
+    border-radius: 20px;
 }
 .top-wrapper {
     width: 100%;
