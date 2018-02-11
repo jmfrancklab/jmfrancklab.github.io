@@ -183,7 +183,7 @@ pre {
     margin-bottom: 0;
     margin-left: 0;
     z-index: -1;
-    border-radius: #{$curve-radius};
+    border-bottom-left-radius: #{$curve-radius};
 }
 .top-wrapper {
     width: 100%;

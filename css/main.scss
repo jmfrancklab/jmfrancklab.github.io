@@ -23,15 +23,17 @@ $text-hover-color: rgba(0,255,255,0.5);
 $background-color: rgb(150,150,170);
 $brand-color:      #2a7ae2;
 // was going to change to $brand-color:      #a5c14f; but not as good 
+$syracuse-orange: #d44500;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+$top-bar-height:   50px;
 // Width of the content area
 $content-width:    800px;
 
-$on-palm:          600px;
+$on-palm:         600px;
 $on-laptop:        800px;
 //$leftimage-width:  image-width('taugh-f.jpg');
 $leftimage-width:  400px;

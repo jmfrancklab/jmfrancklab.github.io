@@ -6,29 +6,30 @@ h1 {
     line-height: #{0.75*$base-line-height};
     text-align: center;
 }
-.floating-top .decoration{
-    position: relative;
-    background: rgba(0,10,20,0.9);
-    width: 100%;
-    display: block;
-    max-width: #{$content-width};
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 10px 10px 5px rgba(0,0,0,0.33);
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 3px solid $grey-color-dark;
-    z-index: +5;
-    border-top-left-radius: #{$curve-radius};
-    border-top-right-radius: #{$curve-radius};
-}
 .floating-top {
     position: fixed;
     // was going to change to background: rgba(235,242,215,0.9); but not as good
     top: 0;
     width: 100%;
     border: 0;
-    min-height: 56px;
-    max-height: 110px;
+    height: #{$top-bar-height};
+    z-index: +5;
+}
+.floating-top .decoration{
+    position: relative;
+    background: rgba(75,92,122,0.9);
+    width: 100%;
+    display: block;
+    max-width: #{-4px+$content-width};
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.33);
+    border: 2px solid rgb(33,41,28);
+    //border-top: 5px solid $grey-color-dark;
+    //border-bottom: 3px solid $grey-color-dark;
+    border-top-left-radius: #{$curve-radius};
+    border-top-right-radius: #{$curve-radius};
+    height: #{$top-bar-height};
 }
 .site-header {
     // Positioning context for the mobile navigation icon
@@ -37,31 +38,38 @@ h1 {
 }
 
 .site-title {
-    font-size: 26px;
+    font-size: #{0.5*$top-bar-height};
     letter-spacing: -1px;
     margin: 0 auto 0;
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $syracuse-orange;
     }
 }
 
 .site-nav {
     margin: 0 auto 0;
     line-height: normal;
+    border: 1px solid green;
+    width: 80%;
+    margin-left: 0;
+    height: 100%;
 
     .menu-icon {
         display: none;
     }
 
     .page-link {
-        color: $text-color;
+        color: $syracuse-orange;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
+        //&:not(:first-child) {
+        //    margin-left: 20px;
+        //}
+    }
+    .trigger{
+        height: 100%;
     }
 
     @include media-query($on-palm) {
@@ -81,6 +89,12 @@ h1 {
             line-height: 0;
             padding-top: 10px;
             text-align: center;
+            > .text{
+                display: inline;
+                font-weight: bold;
+                text-align: left;
+                horizontal-align: right;
+            }
 
             > svg {
                 width: 18px;
@@ -91,21 +105,23 @@ h1 {
                 }
             }
         }
-
         .trigger {
             clear: both;
             display: none;
             float: left;
             line-height: normal;
         }
-
         &:hover .trigger {
             display: block;
             padding-bottom: 5px;
+            height: 100%;
         }
-
+        &:hover .menu-item {
+            .text{
+                display: none;
+            }
+        }
         .page-link {
-            display: block;
             padding: 5px 10px;
         }
     }
@@ -159,6 +175,7 @@ h1 {
 .footer-col-2 {
     width: -webkit-calc(20% - (#{$spacing-unit} / 2));
     width:         calc(20% - (#{$spacing-unit} / 2));
+    max-width: 50px;// this is the syracuse seal
 }
 
 .footer-col-3 {
@@ -194,7 +211,7 @@ h1 {
  * Page content
  */
 .page-content {
-    margin: 20px auto 0;
+    margin: 0 auto 0;
     padding: 0;
     width: 100%;
     max-width: #{$content-width};
@@ -211,59 +228,64 @@ h1 {
     border: 1px solid red;
     vertical-align: top;
 }
-.left-wrapper .top{
-    vertical-align: top;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-.left-wrapper .middle{
-    width: 100%;
-}
-.left-wrapper .bottom{//this is because the figure doesn't expand the div otherwise
-    position: absolute;
-    bottom: 0;
-    vertical-align: top;
-    width: 100%;
-}
 .invisible-table{
     border: 0px;
     margin: 0px;
+    tr{
+        margin: 0px;
+        padding: 0px;
+    }
+    td{
+        //border: 3px solid green;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        vertical-align: top;
+    }
+    .top div{
+        width: 100%;
+        height: #{$top-bar-height+10px};
+        padding: 0px;
+        margin: 0px;
+        min-height: #{$top-bar-height};// to allow for top banner
+        text-align: center;
+    }
+    .left div{
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        min-height: #{$top-bar-height};// to allow for top banner
+        text-align: center;
+    }
+    .left td{
+        width: #{$left-width + $overlap-width};
+    }
+    .right{
+        width: #{$right-width};
+    }
+    .bottom{
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        vertical-align: bottom;
+    }
 }
-.invisible-table tr{
-    margin: 0px;
-    padding: 0px;
-}
-.invisible-table td{
-    //border: 3px solid green;
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    vertical-align: top;
-}
-.invisible-table .top div{
-    width: 100%;
-    minimum-width: 200px;// to allow for top banner
-}
-.invisible-table .left td{
-    width: #{$left-width + $overlap-width};
-}
-.invisible-table .right{
-    width: #{$right-width};
-}
-.invisible-table .bottom{
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    vertical-align: bottom;
-}
-.top-content {
+.topcontent {
     margin: 0 auto 0;
     padding: 0 0;
     width: 100%;
     max-width: #{$content-width};
+}
+
+.bottom-pad{
+    //border: 3px solid green;
+    display: block;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    min-height: #{0.2*$top-bar-height};
 }
 
 .page-heading {
