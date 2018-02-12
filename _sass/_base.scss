@@ -109,6 +109,16 @@ h2:after {
     background:lightgrey;
 }
 
+h1{
+    font-size: #{$large-font-size};
+}
+h2{
+    font-size: #{$medium-font-size};
+}
+h3{
+    font-size: #{$mediumer-font-size};
+}
+
 
 /**
  * Links

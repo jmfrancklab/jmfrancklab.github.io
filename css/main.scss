@@ -7,8 +7,10 @@
 // Our variables
 $base-font-family: 'PT Serif',serif;
 $base-font-size:   16px;
-$large-font-size:  $base-font-size / 0.875;
-$small-font-size:  $base-font-size * 0.875;
+$large-font-size:  $base-font-size * 1.75;
+$medium-font-size: ($base-font-size+$large-font-size)/2;
+$mediumer-font-size: ($base-font-size+$medium-font-size)/2;
+$small-font-size:  $base-font-size / 1.75;
 $base-line-height: 1.5;
 
 $spacing-unit:     2.5%;
@@ -20,7 +22,7 @@ $curve-radius:     20px;
 $text-color:       #111;
 $text-hover-color: rgba(0,255,255,0.5);
 // was going to change to $text-hover-color: #391c00; but not as good
-$background-color: rgb(150,150,170);
+$background-color: rgb(150,160,170);
 $brand-color:      #2a7ae2;
 // was going to change to $brand-color:      #a5c14f; but not as good 
 $syracuse-orange: #d44500;
