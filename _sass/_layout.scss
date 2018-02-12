@@ -18,7 +18,7 @@ h1 {
 }
 .floating-top .decoration{
     position: relative;
-    background: rgba(75,92,122,0.9);
+    background: #{$top-bg-color};
     width: 100%;
     display: block;
     max-width: #{-4px+$content-width};
@@ -80,6 +80,14 @@ h1 {
     }
     .trigger{
         height: 100%;
+        font-weight: bold;
+        a {
+            text-decoration: underline;
+            text-decoration-color: #{rgba($top-bg-color,0.75)};
+            &:hover{
+                text-decoration-color: #{$syracuse-orange};
+            }
+        }
     }
 
     @include media-query($on-palm) {
@@ -132,6 +140,7 @@ h1 {
             display: block;
             padding-bottom: 5px;
             height: 100%;
+            font-weight: bold;
         }
         &:hover .text{
             display: inline;
@@ -283,6 +292,13 @@ h1 {
         margin: 0px;
         min-height: #{$top-bar-height};// to allow for top banner
         text-align: center;
+        .small-spacer{
+            padding: 0px;
+            margin: 0px;
+            min-height: 5px;
+            height: 25px;
+            border: 1px solid red;
+        }
     }
     .left td{
         width: #{$left-width + $overlap-width};
