@@ -344,7 +344,7 @@ h1 {
 }
 
 .post-meta {
-    font-size: $large-font-size;
+    font-size: $medium-font-size;
     color: $grey-color;
 }
 
@@ -363,12 +363,12 @@ h1 {
 }
 
 .post-title {
-    font-size: 42px;
+    font-size: #{$medium-font-size};
     letter-spacing: -1px;
     line-height: 1;
 
     @include media-query($on-laptop) {
-        font-size: 36px;
+        font-size: #{$mediumer-font-size};
     }
 }
 

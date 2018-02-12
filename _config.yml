@@ -4,7 +4,7 @@ email: jmfranck [at] syr.edu
 description: > # this means to ignore newlines until "baseurl:"
     ©2017 J.M. Franck
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://jmfranck.gitub.io/francklab_web" # the base hostname & protocol for your site
+url: "http://jmfranck.github.io/francklab_web" # the base hostname & protocol for your site
 #url: "http://symposium2015.acert.cornell.edu" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 github_username:  jmfranck
