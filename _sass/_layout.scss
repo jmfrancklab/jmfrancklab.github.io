@@ -53,6 +53,8 @@ h1 {
     line-height: normal;
     border: 1px solid green;
     width: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: 0;
     height: 100%;
 
@@ -168,9 +170,14 @@ h1 {
 .social-media-list img {
     margin-bottom: -15px;
 }
-.title-image img {
+.title-image{
     display: block;
-    margin: 0 auto 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    max-height: 75px;
+    width: auto;
+    height: auto;
 }
 
 .footer-col-wrapper {
@@ -267,7 +274,7 @@ h1 {
         height: #{$top-bar-height+10px};
         padding: 0px;
         margin: 0px;
-        min-height: #{$top-bar-height};// to allow for top banner
+        min-height: #{$top-bar-height+20px};// to allow for top banner
         text-align: center;
     }
     .left div{
