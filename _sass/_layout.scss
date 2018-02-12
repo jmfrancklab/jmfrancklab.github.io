@@ -1,6 +1,7 @@
 /**
  * Site header
  */
+
 h1 {
     border-bottom: 1px solid $grey-color-dark;
     line-height: #{0.75*$base-line-height};
@@ -34,7 +35,7 @@ h1 {
 .site-header {
     // Positioning context for the mobile navigation icon
     min-height: 56px;
-    max-height: 110px;
+    height: 100%;
 }
 
 .site-title {
@@ -54,6 +55,13 @@ h1 {
     width: 80%;
     margin-left: 0;
     height: 100%;
+
+    .text{
+        display: none;
+    }
+    ul{
+        list-style-type: none;
+    }
 
     .menu-icon {
         display: none;
@@ -80,7 +88,11 @@ h1 {
         border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;
-
+        width: 35px;
+        height: 35px;
+        .text{
+            display: none;
+        }
         .menu-icon {
             display: block;
             float: right;
@@ -89,12 +101,6 @@ h1 {
             line-height: 0;
             padding-top: 10px;
             text-align: center;
-            > .text{
-                display: inline;
-                font-weight: bold;
-                text-align: left;
-                horizontal-align: right;
-            }
 
             > svg {
                 width: 18px;
@@ -111,22 +117,32 @@ h1 {
             float: left;
             line-height: normal;
         }
+        &:hover{
+            width: 80%;
+            height: 150px;
+            ul {
+                text-align: left;
+                list-style: square inside;
+                color: #{$syracuse-orange};
+            }
+        }
         &:hover .trigger {
             display: block;
             padding-bottom: 5px;
             height: 100%;
         }
-        &:hover .menu-item {
-            .text{
-                display: none;
-            }
+        &:hover .text{
+            display: inline;
+            font-weight: bold;
+            text-align: left;
+            horizontal-align: left;
+            width: 50%;
         }
         .page-link {
             padding: 5px 10px;
         }
     }
 }
-
 
 
 /**
@@ -151,6 +167,10 @@ h1 {
 }
 .social-media-list img {
     margin-bottom: -15px;
+}
+.title-image img {
+    display: block;
+    margin: 0 auto 0;
 }
 
 .footer-col-wrapper {
@@ -225,7 +245,6 @@ h1 {
     position: relative;
     width: 100%;
     height: 100%;
-    border: 1px solid red;
     vertical-align: top;
 }
 .invisible-table{
@@ -272,7 +291,7 @@ h1 {
         vertical-align: bottom;
     }
 }
-.topcontent {
+.top-content {
     margin: 0 auto 0;
     padding: 0 0;
     width: 100%;
