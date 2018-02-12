@@ -19,7 +19,7 @@ h1 {
 .floating-top .decoration{
     position: relative;
     background: #{$top-bg-color};
-    width: 100%;
+    width: 95%;
     display: block;
     max-width: #{-4px+$content-width};
     margin-left: auto;
@@ -34,7 +34,7 @@ h1 {
 }
 .site-header {
     // Positioning context for the mobile navigation icon
-    min-height: 56px;
+    min-height: 100px;
     height: 100%;
 }
 
@@ -132,8 +132,13 @@ h1 {
             height: 150px;
             ul {
                 text-align: left;
-                list-style: square inside;
-                color: #{$syracuse-orange};
+                padding: 0px;
+                li{
+                    margin: 0px;
+                    padding: 0px;
+                }
+                //list-style: square inside;
+                //color: #{$syracuse-orange};
             }
         }
         &:hover .trigger {
@@ -150,7 +155,7 @@ h1 {
             width: 50%;
         }
         .page-link {
-            padding: 5px 10px;
+            padding: 1px;
         }
     }
 }
@@ -249,7 +254,7 @@ h1 {
 .page-content {
     margin: 0 auto 0;
     padding: 0;
-    width: 100%;
+    width: 95%;
     max-width: #{$content-width};
     border-radius: #{$curve-radius};
     background: rgb(250,250,250);

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Research Areas
+title: Research
 attribution: J.M. Franck
 ---
 # {{page.title}}
