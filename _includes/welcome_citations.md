@@ -1,0 +1,183 @@
+The Franck lab is a brand new lab at Syracuse University.
+Research in the Franck lab is highly interdisciplinary,
+    but also extremely accessible to students from a variety of
+    backgrounds.
+We employ a mix of
+    synthetic tools,
+    biochemistry, analytical chemistry,
+    and chemical physics.
+
+## Our goal:
+
+Our lab develops unorthodox spectroscopic techniques
+    to investigate how water interacts 
+    with the surfaces of proteins and other macromolecules.
+The resulting insight will improve our ability to design drugs
+    and synthetic materials.
+In particular,
+    we specialize in magnetic resonance techniques
+    that communicate with both electron and
+    nuclear spins to probe
+    nanometer-scale structure and dynamics.
+
+## Why hydration water?
+While tools have been developed for
+    characterizing static structures,
+    we still need techniques that can study
+    dynamic arrangements of molecules
+    and, most urgently,
+    the arrangement
+    of water molecules.
+Even though water appears uniform
+    on a macroscopic scale,
+    it behaves quite differently
+    on the nanoscale.
+If we zoom in to the first few layers of water
+    molecules near a surface,
+    we see that
+    hydrogen bonds break
+    and
+    individual water molecules move
+    at rates
+    anywhere from a couple times
+    slower to hundreds of times slower than those in the bulk
+    liquid.
+In both biomolecules and synthetic materials,
+    we know that these differently behaved "hydration waters" are
+    key to determining interactions.
+
+## General
+
+Our work relies on a simple chemical labeling strategy:
+
+Students in the Franck lab have the opportunity to learn
+    and demonstrate experience in 
+    a wide range of skills applicable to their future careers,
+    ...
+    in fact a broader range of opportunities than in a more
+    traditional chemistry lab.
+
+Students joining the Franck lab will
+    have the opportunity to work with
+    a unique combination of state-of-the-art instruments,
+    as well as customized tools
+    available nowhere else in the world.
+
+Incoming students with an interest in
+    spectroscopy,
+    chemical physics,
+    biochemistry,
+    chemical synthesis,
+    or
+    analytical chemistry
+    are particularly encouraged to investigate the Franck lab
+    further.
+
+## Initial examples:
+As a fundamental example,
+    we looked at lipid bilayers
+    -- structures that make up cell membranes.
+We developed (at other institutions) a specialized technique to
+    characterize water near the bilayer surfaces.
+Our technique
+    -- called Overhauser Effect Dynamic Nuclear
+    Polarization (ODNP) [@FranckPNMRS] --
+    tracks the motion of the water nuclei,
+    and allows us to zoom in on the
+    "hydration water" near the surface of the lipid bilayer
+    (figure below).
+It allowed us to
+    see that the hydration water moves about 5
+    times slower than bulk water [@Franck_crowding].
+Furthermore, by dramatically
+    changing the characteristics of the bulk
+    solution,
+    we learned that
+    an order of magnitude change in the viscosity
+    barely affects the diffusion in the hydration
+    layer [@Franck_crowding].
+We have also implemented this technique
+    in systems with membrane proteins [@Hussain2013],
+    DNA [@Franck2015DNA],
+    and large protein folding chaperones [@FranckGroES].
+The significant variations in the properties of the
+    hydration water play in important role in how these surfaces
+    interact in nature.
+
+![*This image illustrates ODNP of water in the hydration layer of a
+    lipid bilayer.
+This is one example of many studies that are possible with ODNP.
+A lipid bilayer (the basis for cellular membranes) consists of a
+    self-organized set of molecules with hydrophilic headgroups
+    and hydrophobic tails (see labels above).
+One can place a spin label (typically a nitroxide group)
+    at a particular location near the surface of the lipid
+    bilayer (via chemical synthesis).
+A combination of electron- and nuclear-spin resonance
+    (i.e. ODNP)
+    can selectively interrogate the motion of water molecules
+    at a specific location --
+    here inside the hydration layer of
+    the lipid bilayer.
+For example, employing the setup shown above,
+    we were able to verify that the motion of water molecules
+    within the hydration layer was not sensitive to the presence
+    of a high concentration of large molecules
+    that are not chemically disposed to disrupt the hydration layer.
+This was even true when the large molecules significantly altered the
+    viscosity of the bulk solution [@Franck_crowding].*](for_website_160809.png)
+
+## The future:
+In the Franck lab,
+    we will extend the power
+    of ODNP-based techniques and integrate them with a toolbox of
+    previously developed techniques, for example:
+    NMR techniques that can measure
+    microscopic diffusion and flow,
+    as well as electron spin resonance (ESR) techniques that interrogate local
+    motions (cw ESR),
+    that measure nanometer-scale distances (double
+    electron-electron resonance, i.e. "DEER”)
+    and that map out local arrangements of nuclei
+    (electron-nuclear double resonance, *i.e.* "ENDOR" and electron spin echo
+    envelope modulation, i.e. "ESEEM” [@FranckGroES]).
+Towards these ends,
+    we will draw on expertise in spectrometer design
+    [@FranckBarnes2015;@Kaufmann2013;@Demas2009]
+    and advanced magnetic resonance methods
+    [@FranckFreed2015;@Franck2009].
+We will also apply techniques that we have already developed to
+    systems that remain poorly understood,
+    despite their central importance
+    to understanding
+    materials function or to understanding disease.
+For example, *the Ras protein system* is integral to cell signal
+    pathways and the development of novel cancer drugs,
+    *polymer electrolyte membranes* are essential to ion transport
+    in H~2~/O~2~- and methanol-based fuel cells
+    -- as well as sensor devices,
+    while biological light-harvesting systems, such as
+    *Photosystem II*,
+    are believed to integrate nanoscale water channels to aid in
+    their function.
+Nonetheless, the interplay between all these systems and water has yet to be
+    fully explored.
+
+***The Franck lab is looking for interested graduate students and
+    undergraduate researchers in Fall 2016***,
+    and welcomes any inquiries.
+    (feel free to contact Dr. Franck by email).
+Students in the Franck lab will
+    have the opportunity to work with
+    materials or biological systems.
+In addition,
+    they will gain expertise
+    developing new
+    spectroscopic methods
+    using physics, electronics,
+    and computer programming.
+Students who capitalize on these opportunities will have a unique
+    and powerful skill-set.
+
+References (Selected Publications)
+==================================
