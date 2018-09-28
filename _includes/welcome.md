@@ -1,8 +1,9 @@
-The Franck lab is a brand new lab at Syracuse University. Research in
-the Franck lab is highly interdisciplinary, but also extremely
-accessible to students from a variety of backgrounds. We employ a mix of
-synthetic tools, biochemistry, analytical chemistry, and chemical
-physics.
+A new and exciting lab at Syracuse University, consisting of a
+[PI](People.html#john-m-franck), the first class of two graduate
+students, and three motivated undergraduates. Research in the Franck lab
+is highly interdisciplinary, but also extremely accessible to students
+from a variety of backgrounds. We employ a mix of synthetic tools,
+biochemistry, analytical chemistry, and chemical physics.
 
 Our goal:
 ---------
@@ -13,6 +14,15 @@ The resulting insight will improve our ability to design drugs and
 synthetic materials. In particular, we specialize in magnetic resonance
 techniques that communicate with both electron and nuclear spins to
 probe nanometer-scale structure and dynamics.
+
+Proteins are the molecular motors that drive all life, and most drugs
+are designed to interact with proteins. It is increasingly clear that
+water molecules at the surface of proteins control their structure and
+function; while researchers have developed methods that can study the
+structure of proteins, there are no accessible methods to spatially map
+the hydration water. We propose to develop and apply a magnetic
+resonance based spectroscopic method for routine, robust, and accessible
+measurements of the properties of these key surface water molecules.
 
 Why hydration water?
 --------------------
