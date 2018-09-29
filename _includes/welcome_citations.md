@@ -1,55 +1,23 @@
 A new and exciting lab at Syracuse University,
-    we employ a mix of
-    synthetic tools,
-    biochemistry, analytical chemistry,
-    and chemical physics.
-Research in the Franck lab is highly interdisciplinary,
-    but also extremely accessible to students from a variety of
-    backgrounds.
-
-The lab consists of a [PI](People.html#john-m-franck),
+    consisting of a [PI](People.html#john-m-franck),
     the first class of two graduate students,
     and three motivated undergraduates.
 
-## Our goal:
 
-Our lab develops unorthodox spectroscopic techniques
-    to investigate how water interacts 
-    with the surfaces of proteins and other macromolecules.
-The resulting insight will improve our ability to design drugs
-    and synthetic materials.
-In particular,
-    we specialize in magnetic resonance techniques
-    that communicate with both electron and
-    nuclear spins to probe
-    nanometer-scale structure and dynamics.
+Research in the Franck lab is highly
+    interdisciplinary,
+    but also extremely accessible to students from
+    a variety of backgrounds.
+We employ a mix of
+    chemical physics,
+    biochemistry,
+    analytical chemistry,
+    and
+    synthetic tools
+    in order to develop unorthodox spectroscopic
+    techniques that investigate how water interacts
+    with the surfaces of proteins and soft materials.
 
-Proteins are the molecular motors that drive
-    all life,
-    and most drugs are designed to interact with
-    proteins.
-It is increasingly clear that water molecules
-    at the surface of proteins control their
-    structure and function;
-    while researchers have developed methods that
-    can study the structure of proteins,
-    there are no accessible methods to spatially
-    map the hydration water.
-We propose to develop and apply a magnetic
-    resonance based spectroscopic method for
-    routine, robust,
-    and accessible measurements of the properties
-    of these key surface water molecules.
-
-
-## Why hydration water?
-While tools have been developed for
-    characterizing static structures,
-    we still need techniques that can study
-    dynamic arrangements of molecules
-    and, most urgently,
-    the arrangement
-    of water molecules.
 Even though water appears uniform
     on a macroscopic scale,
     it behaves quite differently
@@ -67,6 +35,60 @@ If we zoom in to the first few layers of water
 In both biomolecules and synthetic materials,
     we know that these differently behaved "hydration waters" are
     key to determining interactions.
+The layer of water surrounding oil molecules
+    that drive the separation of water and oil are the
+    simplest example of hydration water,
+    but the more general case,
+    especially for macromolecules that present a
+    surface with variable properties to the solvent,
+    is far more interesting.
+
+## Our goal:
+
+Since comprehensive methods for mapping out
+    the structure of the hydration layer do not
+    currently exist,
+    the acquisition of this information is crucial
+    to the future development of the chemistry of
+    macromolecules.
+The resulting insight will improve our ability
+    to design drugs and synthetic materials.
+In particular,
+    we specialize in magnetic resonance techniques
+    that communicate with both electron and nuclear
+    spins to probe nanometer-scale structure and
+    dynamics.
+
+For example, proteins are the molecular motors
+    that drive all life,
+    and most drugs are designed to interact with
+    proteins.
+It is increasingly clear that water molecules
+    at the surface of proteins control their
+    structure and function;
+    while researchers have developed methods that
+    can study the structure of proteins,
+    there are no accessible methods to spatially
+    map the hydration water.
+Similarly,
+    researchers have identified a direct link
+    between the behavior of hydration water
+    associated with synthetic materials and the
+    properties of those materials.
+We develop and apply magnetic-resonance-based
+    spectroscopic methods for routine, robust,
+    and accessible measurements of the properties
+    of these key hydration water molecules.
+
+
+## Why hydration water?
+While tools have been developed for
+    characterizing static structures,
+    we still need techniques that can study
+    dynamic arrangements of molecules
+    and, most urgently,
+    the arrangement
+    of water molecules.
 
 ## General
 
