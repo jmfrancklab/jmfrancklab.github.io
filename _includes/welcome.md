@@ -15,9 +15,15 @@ We employ a mix of
     in order to develop unorthodox spectroscopic
     techniques that investigate how water interacts
     with the surfaces of proteins and soft materials.
+In particular,
+    we specialize in magnetic resonance techniques
+    that communicate with both electron and nuclear
+    spins to probe nanometer-scale structure and
+    dynamics.
 
 ***The Franck lab is looking for interested graduate students and
-undergraduate researchers in Fall 2016***, and welcomes any inquiries.
+undergraduate researchers in Fall 2018 and Spring 2018***,
+and welcomes any inquiries.
 (feel free to contact Dr. Franck by email (jmfranck at syr.edu)). Students in the Franck lab
 will have the opportunity to work with materials or biological systems.
 In addition, they will gain expertise developing new spectroscopic

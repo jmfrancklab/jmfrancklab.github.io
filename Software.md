@@ -31,3 +31,12 @@ and [documentation](http://jmfrancklab.github.io/pyspecdata/index.html).
 
 ## pyNLSL
 
+In collaboration with researchers at Cornell's ACERT
+facility,
+we are developing a Python wrapper to the NLSL MOMD ESR
+spectral simulation and fitting software.
+The resulting tool will allow us to integrate the
+powerful MOMD simulation software developed at ACERT
+(in the lab of Prof. J. Freed) with modern graphical display and
+optimization libraries while preserving all the
+optimizations integrated into the original code base.

@@ -7,71 +7,29 @@ attribution: J.M. Franck
 
 ## General
 
+### Hydration (Surface, Interfacial, ...) Water
+
 Even though water appears uniform
     on a macroscopic scale,
     it behaves quite differently
     on the nanoscale.
 If we zoom in to the first few layers of water
-    molecules near a surface,
+    molecules near the surface of a protein or polymer
+    (in fact, near any macromolecule or macromolecular assembly),
     we see that
     hydrogen bonds break
     and
     individual water molecules move
     at rates
-    anywhere from a couple times
+    anywhere from two times
     slower to hundreds of times slower than those in the bulk
     liquid.
-In both biomolecules and synthetic materials,
-    we know that these differently behaved "hydration waters" are
+We know that these differently behaved "hydration waters" are
     key to determining interactions.
-The layer of water surrounding oil molecules
-    that drive the separation of water and oil are the
-    simplest example of hydration water,
-    but the more general case,
-    especially for macromolecules that present a
-    surface with variable properties to the solvent,
-    is far more interesting.
 
-## Our goal:
-
-Since comprehensive methods for mapping out
-    the structure of the hydration layer do not
-    currently exist,
-    the acquisition of this information is crucial
-    to the future development of the chemistry of
-    macromolecules.
-The resulting insight will improve our ability
-    to design drugs and synthetic materials.
-In particular,
-    we specialize in magnetic resonance techniques
-    that communicate with both electron and nuclear
-    spins to probe nanometer-scale structure and
-    dynamics.
-
-For example, proteins are the molecular motors
-    that drive all life,
-    and most drugs are designed to interact with
-    proteins.
-It is increasingly clear that water molecules
-    at the surface of proteins control their
-    structure and function;
-    while researchers have developed methods that
-    can study the structure of proteins,
-    there are no accessible methods to spatially
-    map the hydration water.
-Similarly,
-    researchers have identified a direct link
-    between the behavior of hydration water
-    associated with synthetic materials and the
-    properties of those materials.
-We develop and apply magnetic-resonance-based
-    spectroscopic methods for routine, robust,
-    and accessible measurements of the properties
-    of these key hydration water molecules.
-
-
-## Why hydration water?
-While tools have been developed for
+The future of physical and analytical chemistry
+    will center on the fact that,
+    while tools have been developed for
     characterizing static structures,
     we still need techniques that can study
     dynamic arrangements of molecules
@@ -79,6 +37,37 @@ While tools have been developed for
     the arrangement
     of water molecules.
 
+Comprehensive methods for mapping out
+    the structure of the hydration layer do not
+    currently exist.
+The future of chemistry, broadly, depends on
+    techniques that will map out the structure
+    of the dynamic solvent that surrounds
+    macromolecules.
+The resulting insight will improve our ability
+    to design drugs and synthetic materials.
+In particular,
+    by developing technologies that can map out the
+    dynamic structure of hydration water,
+    we unlock an ability to design drugs that bind to
+    proteins currently deemed "undruggable,"
+    we can understand the energetics that cause
+    signaling proteins to bind to their partners,
+    and design polymer materials that conduct water in
+    unique ways.
+We can do all of this not be relying on our prowess as
+    chemists,
+    but through a direct and logical strategy.
+
+Most chemists and biologists can recognize one very
+    specific example of hydration water:
+The layer of water surrounding oil molecules
+    that drive the separation of water and oil are the
+    simplest example of hydration water,
+    but the more general case,
+    especially for macromolecules that present a
+    surface with variable properties to the solvent,
+    is far more interesting.
 
 # Chemical Labeling Strategy
 
@@ -143,11 +132,33 @@ This was even true when the large molecules significantly altered the
 
 ## How do Proteins Alter Nearby Solvent?
 
+Proteins are the molecular motors
+    that drive all life,
+    and most drugs are designed to interact with
+    proteins.
+It is increasingly clear that water molecules
+    at the surface of proteins control their
+    structure and function;
+    while researchers have developed methods that
+    can study the structure of proteins,
+    there are no accessible methods to spatially
+    map the hydration water.
+We develop and apply magnetic-resonance-based
+    spectroscopic methods for routine, robust,
+    and accessible measurements of the properties
+    of these key hydration water molecules.
+
 ## Lipid-Peptide Interactions 
 
 ## Spin Label Synthesis
 
 ## Unusual Water Molecules inside Polymer Systems
+
+Similarly,
+    researchers have identified a direct link
+    between the behavior of hydration water
+    associated with synthetic materials and the
+    properties of those materials.
 
 ## The future:
 In the Franck lab,

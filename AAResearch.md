@@ -9,48 +9,41 @@ attribution: J.M. Franck
 General
 -------
 
+### Hydration (Surface, Interfacial, ...) Water
+
 Even though water appears uniform on a macroscopic scale, it behaves
 quite differently on the nanoscale. If we zoom in to the first few
-layers of water molecules near a surface, we see that hydrogen bonds
-break and individual water molecules move at rates anywhere from a
-couple times slower to hundreds of times slower than those in the bulk
-liquid. In both biomolecules and synthetic materials, we know that these
-differently behaved "hydration waters" are key to determining
-interactions. The layer of water surrounding oil molecules that drive
+layers of water molecules near the surface of a protein or polymer (in
+fact, near any macromolecule or macromolecular assembly), we see that
+hydrogen bonds break and individual water molecules move at rates
+anywhere from two times slower to hundreds of times slower than those in
+the bulk liquid. We know that these differently behaved "hydration
+waters" are key to determining interactions.
+
+The future of physical and analytical chemistry will center on the fact
+that, while tools have been developed for characterizing static
+structures, we still need techniques that can study dynamic arrangements
+of molecules and, most urgently, the arrangement of water molecules.
+
+Comprehensive methods for mapping out the structure of the hydration
+layer do not currently exist. The future of chemistry, broadly, depends
+on techniques that will map out the structure of the dynamic solvent
+that surrounds macromolecules. The resulting insight will improve our
+ability to design drugs and synthetic materials. In particular, by
+developing technologies that can map out the dynamic structure of
+hydration water, we unlock an ability to design drugs that bind to
+proteins currently deemed "undruggable," we can understand the
+energetics that cause signaling proteins to bind to their partners, and
+design polymer materials that conduct water in unique ways. We can do
+all of this not be relying on our prowess as chemists, but through a
+direct and logical strategy.
+
+Most chemists and biologists can recognize one very specific example of
+hydration water: The layer of water surrounding oil molecules that drive
 the separation of water and oil are the simplest example of hydration
 water, but the more general case, especially for macromolecules that
 present a surface with variable properties to the solvent, is far more
 interesting.
-
-Our goal:
----------
-
-Since comprehensive methods for mapping out the structure of the
-hydration layer do not currently exist, the acquisition of this
-information is crucial to the future development of the chemistry of
-macromolecules. The resulting insight will improve our ability to design
-drugs and synthetic materials. In particular, we specialize in magnetic
-resonance techniques that communicate with both electron and nuclear
-spins to probe nanometer-scale structure and dynamics.
-
-For example, proteins are the molecular motors that drive all life, and
-most drugs are designed to interact with proteins. It is increasingly
-clear that water molecules at the surface of proteins control their
-structure and function; while researchers have developed methods that
-can study the structure of proteins, there are no accessible methods to
-spatially map the hydration water. Similarly, researchers have
-identified a direct link between the behavior of hydration water
-associated with synthetic materials and the properties of those
-materials. We develop and apply magnetic-resonance-based spectroscopic
-methods for routine, robust, and accessible measurements of the
-properties of these key hydration water molecules.
-
-Why hydration water?
---------------------
-
-While tools have been developed for characterizing static structures, we
-still need techniques that can study dynamic arrangements of molecules
-and, most urgently, the arrangement of water molecules.
 
 Chemical Labeling Strategy
 ==========================
@@ -98,6 +91,15 @@ solution<sup>2</sup>.*
 How do Proteins Alter Nearby Solvent?
 -------------------------------------
 
+Proteins are the molecular motors that drive all life, and most drugs
+are designed to interact with proteins. It is increasingly clear that
+water molecules at the surface of proteins control their structure and
+function; while researchers have developed methods that can study the
+structure of proteins, there are no accessible methods to spatially map
+the hydration water. We develop and apply magnetic-resonance-based
+spectroscopic methods for routine, robust, and accessible measurements
+of the properties of these key hydration water molecules.
+
 Lipid-Peptide Interactions
 --------------------------
 
@@ -106,6 +108,10 @@ Spin Label Synthesis
 
 Unusual Water Molecules inside Polymer Systems
 ----------------------------------------------
+
+Similarly, researchers have identified a direct link between the
+behavior of hydration water associated with synthetic materials and the
+properties of those materials.
 
 The future:
 -----------
@@ -134,61 +140,60 @@ systems and water has yet to be fully explored.
 References (Selected Publications) 
 ==================================
 
-1\. Franck JJM, Pavlova A, Scott JJA, Han S. "Quantitative cw Overhauser
+1\. Franck JM, Pavlova A, Scott JA, Han S. "Quantitative cw Overhauser
 effect dynamic nuclear polarization for the analysis of local water
 dynamics." *Prog Nucl Magn Reson Spectrosc*. Elsevier B.V. 2013
 Oct;74:33--56. PMID:
 [24083461](http://www.ncbi.nlm.nih.gov/pubmed/24083461)
 doi:[10.1016/j.pnmrs.2013.06.001](https://doi.org/10.1016/j.pnmrs.2013.06.001)
 
-2\. Franck JJM, Scott JJA, Han S. "Nonlinear scaling of surface water
-diffusion with bulk water viscosity of crowded solutions." *J Am Chem
-Soc*. 2013 Mar;135(11):4175--8. PMID:
+2\. Franck JM, Scott JA, Han S. "Nonlinear Scaling of Surface Water
+Diffusion with Bulk Water Viscosity of Crowded Solutions." *J Am Chem
+Soc*. 2013 Mar;135(11):4175--4178. PMID:
 [23347324](http://www.ncbi.nlm.nih.gov/pubmed/23347324)
 doi:[10.1021/ja3112912](https://doi.org/10.1021/ja3112912)
 
-3\. Hussain S, Franck JJM, Han S. "Transmembrane protein activation
-refined by site-specific hydration dynamics." *Angew Chem, Int Ed Engl*.
-2013 Feb;52(7):1953--8. PMID:
+3\. Hussain S, Franck JM, Han S. "Transmembrane Protein Activation
+Refined by Site-Specific Hydration Dynamics." *Angew Chem Int Ed*. 2013
+Feb;52(7):1953--1958. PMID:
 [23307344](http://www.ncbi.nlm.nih.gov/pubmed/23307344)
 doi:[10.1002/anie.201206147](https://doi.org/10.1002/anie.201206147)
 
-4\. Franck JJM, Ding Y, Stone K, Qin PPZ, Han S. "Anomalously Rapid
+4\. Franck JM, Ding Y, Stone K, Qin PZ, Han S. "Anomalously Rapid
 Hydration Water Diffusion Dynamics Near DNA Surfaces." *J Am Chem Soc*.
 2015 Sep;137(37):12013--12023.
 doi:[10.1021/jacs.5b05813](https://doi.org/10.1021/jacs.5b05813)
 
-5\. Franck JJM, Sokolovski M, Kessler N, Matalon E, Gordon-Grossman M,
-Han S-IS-I, Goldfarb D, Horovitz A. "Probing Water Density and Dynamics
-in the Chaperonin GroEL Cavity." *J Am Chem Soc*. 2014
-Jul;136(26):9396--403. PMID:
-[24888581](http://www.ncbi.nlm.nih.gov/pubmed/24888581)
+5\. Franck JM, Sokolovski M, Kessler N, Matalon E, Gordon-Grossman M, Han
+S, Goldfarb D, Horovitz A. "Probing Water Density and Dynamics in the
+Chaperonin GroEL Cavity." *J Am Chem Soc*. 2014 Jul;136(26):9396--403.
+PMID: [24888581](http://www.ncbi.nlm.nih.gov/pubmed/24888581)
 doi:[10.1021/ja503501x](https://doi.org/10.1021/ja503501x)
 
-6\. Franck JJM, Barnes RPR, Keller TJT, Kaufmann T, Han S. "Active
+6\. Franck JM, Barnes RP, Keller TJ, Kaufmann T, Han S. "Active
 cancellation -- A means to zero dead-time pulse EPR." *J Magn Reson*.
 2015 Dec;261:199--204.
 doi:[10.1016/j.jmr.2015.07.005](https://doi.org/10.1016/j.jmr.2015.07.005)
 
-7\. Kaufmann T, Keller TTJ, Franck JJM, Barnes RRP, Glaser SJS, Martinis
-JMJ, Han S. "DAC-board based X-band EPR spectrometer with arbitrary
-waveform control." *J Magn Reson*. 2013 Oct;235:95--108. PMID:
+7\. Kaufmann T, Keller TJ, Franck JM, Barnes RP, Glaser SJ, Martinis JM,
+Han S. "DAC-board based X-band EPR spectrometer with arbitrary waveform
+control." *J Magn Reson*. 2013 Oct;235:95--108. PMID:
 [23999530](http://www.ncbi.nlm.nih.gov/pubmed/23999530)
 doi:[10.1016/j.jmr.2013.07.015](https://doi.org/10.1016/j.jmr.2013.07.015)
 
-8\. Demas V, Franck JJM, Bouchard LSL, Sakellariou D, Meriles CAC, Martin
-R, Prado PJP, Bussandri A, Reimer JAJ, Pines A. "'Ex situ' magnetic
-resonance volume imaging." *Chem Phys Lett*. 2009 Jan;467(4-6):398--401.
+8\. Demas V, Franck JM, Bouchard LS, Sakellariou D, Meriles CA, Martin R,
+Prado PJ, Bussandri A, Reimer JA, Pines A. "'Ex situ' magnetic resonance
+volume imaging." *Chem Phys Lett*. 2009 Jan;467(4-6):398--401.
 doi:[10.1016/j.cplett.2008.11.069](https://doi.org/10.1016/j.cplett.2008.11.069)
 
-9\. Franck JJM, Chandrasekaran S, Dzikovski B, Dunnam CR, Freed JHJ.
+9\. Franck JM, Chandrasekaran S, Dzikovski B, Dunnam CR, Freed JH.
 "Focus: Two-dimensional electron-electron double resonance and molecular
 motions: The challenge of higher frequencies." *J Chem Phys*.
 2015;142(21):212302.
 doi:[10.1063/1.4917322](https://doi.org/10.1063/1.4917322)
 
-10\. Franck JJM, Demas V, Martin RWR, Bouchard L-SL-S, Pines A. "Shimmed
-matching pulses: simultaneous control of rf and static gradients for
+10\. Franck JM, Demas V, Martin RW, Bouchard L-S, Pines A. "Shimmed
+matching pulses: Simultaneous control of rf and static gradients for
 inhomogeneity correction." *J Chem Phys*. 2009 Dec;131(23):234506. PMID:
 [20025334](http://www.ncbi.nlm.nih.gov/pubmed/20025334)
 doi:[10.1063/1.3243850](https://doi.org/10.1063/1.3243850)
