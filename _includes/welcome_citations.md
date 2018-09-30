@@ -3,6 +3,7 @@ A new and exciting lab at Syracuse University,
     the first class of two graduate students,
     and three motivated undergraduates.
 
+![Group Photo, Fall 2018](group_photo_092918.png)
 
 Research in the Franck lab is highly
     interdisciplinary,
