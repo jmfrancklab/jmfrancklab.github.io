@@ -5,6 +5,85 @@ attribution: J.M. Franck
 ---
 # {{page.title}}
 
+## General
+
+Even though water appears uniform
+    on a macroscopic scale,
+    it behaves quite differently
+    on the nanoscale.
+If we zoom in to the first few layers of water
+    molecules near a surface,
+    we see that
+    hydrogen bonds break
+    and
+    individual water molecules move
+    at rates
+    anywhere from a couple times
+    slower to hundreds of times slower than those in the bulk
+    liquid.
+In both biomolecules and synthetic materials,
+    we know that these differently behaved "hydration waters" are
+    key to determining interactions.
+The layer of water surrounding oil molecules
+    that drive the separation of water and oil are the
+    simplest example of hydration water,
+    but the more general case,
+    especially for macromolecules that present a
+    surface with variable properties to the solvent,
+    is far more interesting.
+
+## Our goal:
+
+Since comprehensive methods for mapping out
+    the structure of the hydration layer do not
+    currently exist,
+    the acquisition of this information is crucial
+    to the future development of the chemistry of
+    macromolecules.
+The resulting insight will improve our ability
+    to design drugs and synthetic materials.
+In particular,
+    we specialize in magnetic resonance techniques
+    that communicate with both electron and nuclear
+    spins to probe nanometer-scale structure and
+    dynamics.
+
+For example, proteins are the molecular motors
+    that drive all life,
+    and most drugs are designed to interact with
+    proteins.
+It is increasingly clear that water molecules
+    at the surface of proteins control their
+    structure and function;
+    while researchers have developed methods that
+    can study the structure of proteins,
+    there are no accessible methods to spatially
+    map the hydration water.
+Similarly,
+    researchers have identified a direct link
+    between the behavior of hydration water
+    associated with synthetic materials and the
+    properties of those materials.
+We develop and apply magnetic-resonance-based
+    spectroscopic methods for routine, robust,
+    and accessible measurements of the properties
+    of these key hydration water molecules.
+
+
+## Why hydration water?
+While tools have been developed for
+    characterizing static structures,
+    we still need techniques that can study
+    dynamic arrangements of molecules
+    and, most urgently,
+    the arrangement
+    of water molecules.
+
+
+# Chemical Labeling Strategy
+
+Our work relies on a simple chemical labeling strategy:
+
 ## Initial examples:
 As a fundamental example,
     we looked at lipid bilayers
@@ -105,23 +184,6 @@ For example, *the Ras protein system* is integral to cell signal
     their function.
 Nonetheless, the interplay between all these systems and water has yet to be
     fully explored.
-
-***The Franck lab is looking for interested graduate students and
-    undergraduate researchers in Fall 2016***,
-    and welcomes any inquiries.
-    (feel free to contact Dr. Franck by email).
-Students in the Franck lab will
-    have the opportunity to work with
-    materials or biological systems.
-In addition,
-    they will gain expertise
-    developing new
-    spectroscopic methods
-    using physics, electronics,
-    and computer programming.
-Students who capitalize on these opportunities will have a unique
-    and powerful skill-set.
-
 
 References (Selected Publications)
 ==================================

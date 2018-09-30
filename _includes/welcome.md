@@ -1,7 +1,4 @@
-A new and exciting lab at Syracuse University,
-    consisting of a [PI](People.html#john-m-franck),
-    the first class of two graduate students,
-    and three motivated undergraduates.
+A new and exciting lab at Syracuse University:
 
 ![Group Photo, Fall 2018](assets/group_photo_092918.png)
 
@@ -18,8 +15,6 @@ We employ a mix of
     in order to develop unorthodox spectroscopic
     techniques that investigate how water interacts
     with the surfaces of proteins and soft materials.
-
-The links on the left (or the three bar icon) will allow you to learn more about our lab and research.
 
 ***The Franck lab is looking for interested graduate students and
 undergraduate researchers in Fall 2016***, and welcomes any inquiries.
