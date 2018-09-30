@@ -1,122 +1,9 @@
-A new and exciting lab at Syracuse University,
-    consisting of a [PI](People.html#john-m-franck),
-    the first class of two graduate students,
-    and three motivated undergraduates.
-
-![Group Photo, Fall 2018](assets/group_photo_092918.png)
-
-Research in the Franck lab is highly
-    interdisciplinary,
-    but also extremely accessible to students from
-    a variety of backgrounds.
-We employ a mix of
-    chemical physics,
-    biochemistry,
-    analytical chemistry,
-    and
-    synthetic tools
-    in order to develop unorthodox spectroscopic
-    techniques that investigate how water interacts
-    with the surfaces of proteins and soft materials.
-
-Even though water appears uniform
-    on a macroscopic scale,
-    it behaves quite differently
-    on the nanoscale.
-If we zoom in to the first few layers of water
-    molecules near a surface,
-    we see that
-    hydrogen bonds break
-    and
-    individual water molecules move
-    at rates
-    anywhere from a couple times
-    slower to hundreds of times slower than those in the bulk
-    liquid.
-In both biomolecules and synthetic materials,
-    we know that these differently behaved "hydration waters" are
-    key to determining interactions.
-The layer of water surrounding oil molecules
-    that drive the separation of water and oil are the
-    simplest example of hydration water,
-    but the more general case,
-    especially for macromolecules that present a
-    surface with variable properties to the solvent,
-    is far more interesting.
-
-## Our goal:
-
-Since comprehensive methods for mapping out
-    the structure of the hydration layer do not
-    currently exist,
-    the acquisition of this information is crucial
-    to the future development of the chemistry of
-    macromolecules.
-The resulting insight will improve our ability
-    to design drugs and synthetic materials.
-In particular,
-    we specialize in magnetic resonance techniques
-    that communicate with both electron and nuclear
-    spins to probe nanometer-scale structure and
-    dynamics.
-
-For example, proteins are the molecular motors
-    that drive all life,
-    and most drugs are designed to interact with
-    proteins.
-It is increasingly clear that water molecules
-    at the surface of proteins control their
-    structure and function;
-    while researchers have developed methods that
-    can study the structure of proteins,
-    there are no accessible methods to spatially
-    map the hydration water.
-Similarly,
-    researchers have identified a direct link
-    between the behavior of hydration water
-    associated with synthetic materials and the
-    properties of those materials.
-We develop and apply magnetic-resonance-based
-    spectroscopic methods for routine, robust,
-    and accessible measurements of the properties
-    of these key hydration water molecules.
-
-
-## Why hydration water?
-While tools have been developed for
-    characterizing static structures,
-    we still need techniques that can study
-    dynamic arrangements of molecules
-    and, most urgently,
-    the arrangement
-    of water molecules.
-
-## General
-
-Our work relies on a simple chemical labeling strategy:
-
-Students in the Franck lab have the opportunity to learn
-    and demonstrate experience in 
-    a wide range of skills applicable to their future careers,
-    ...
-    in fact a broader range of opportunities than in a more
-    traditional chemistry lab.
-
-Students joining the Franck lab will
-    have the opportunity to work with
-    a unique combination of state-of-the-art instruments,
-    as well as customized tools
-    available nowhere else in the world.
-
-Incoming students with an interest in
-    spectroscopy,
-    chemical physics,
-    biochemistry,
-    chemical synthesis,
-    or
-    analytical chemistry
-    are particularly encouraged to investigate the Franck lab
-    further.
+---
+layout: default
+title: Research
+attribution: J.M. Franck
+---
+# {{page.title}}
 
 ## Initial examples:
 As a fundamental example,
@@ -174,6 +61,15 @@ For example, employing the setup shown above,
 This was even true when the large molecules significantly altered the
     viscosity of the bulk solution [@Franck_crowding].*
 
+
+## How do Proteins Alter Nearby Solvent?
+
+## Lipid-Peptide Interactions 
+
+## Spin Label Synthesis
+
+## Unusual Water Molecules inside Polymer Systems
+
 ## The future:
 In the Franck lab,
     we will extend the power
@@ -225,6 +121,7 @@ In addition,
     and computer programming.
 Students who capitalize on these opportunities will have a unique
     and powerful skill-set.
+
 
 References (Selected Publications)
 ==================================
