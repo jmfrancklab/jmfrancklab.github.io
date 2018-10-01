@@ -58,11 +58,8 @@ the hydration water. We develop and apply magnetic-resonance-based
 spectroscopic methods for routine, robust, and accessible measurements
 of the properties of these key hydration water molecules.
 
-Lipid-Peptide Interactions
---------------------------
-
 An exciting example
-===================
+-------------------
 
 As a fundamental example, we looked at lipid bilayers -- structures that
 make up cell membranes. We developed (at other institutions) a
