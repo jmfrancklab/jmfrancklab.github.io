@@ -6,6 +6,8 @@ attribution: J. Franck
 # {{page.title}}
 
 {::options parse_block_html="true" /}
+# Principle Investigator
+
 <div class="mugshot">
 
 ![John](assets/JFgreytie_nobg.png)
@@ -25,6 +27,8 @@ attribution: J. Franck
 ## Eldon Hard
 
 ## Soliloquy Rhodes
+
+## Michelle Sahagian
 
 # Alumni
 
