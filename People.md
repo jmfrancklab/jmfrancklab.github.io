@@ -25,7 +25,7 @@ under the guidance of Prof. Songi Han.
 Here, he developed new, sensitive technologies for investigating
 the properties of water at the surfaces of proteins,
 polymers, lipids, and DNA.
-He completed further postdoctor studies and served as a
+He completed further postdoctoral studies and served as a
 research associate at the Advanced Center for ESR
 Technology (ACERT) at Cornell University,
 under the guidance of Prof. Jack Freed.
@@ -37,12 +37,12 @@ systems.
 These technologies are challenged only by difficulties
 with probing samples that generated short-lived signal;
 while at ACERT Prof. Franck pioneered
-studies that enabled detection of shorter-lived species than could
+work that enabled detection of shorter-lived species than could
 be proved previously.
 After beginning his position at Syracuse University,
-the laboratory was opened in the summer of 2017.
+the Franck laboratory was opened in the summer of 2017.
 Already, talented graduate students and undergraduate
-researchers have begun to make vigorous contributions.
+researchers have begun to make exciting and innovative contributions.
 
 <!-- click to continue is here: https://stackoverflow.com/questions/28334540/truncate-text-in-html-with-link-to-show-more-less-and-keep-elements-inside-->
 
