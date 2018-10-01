@@ -3,11 +3,9 @@ layout: default
 title: Research
 attribution: J.M. Franck
 ---
-# {{page.title}}
+# {{page.title}}: General
 
-## General
-
-### Hydration (Surface, Interfacial, ...) Water
+## Hydration (Surface, Interfacial, ...) Water
 
 Even though water appears uniform
     on a macroscopic scale,
@@ -73,7 +71,7 @@ The layer of water surrounding oil molecules
 
 Our work relies on a simple chemical labeling strategy:
 
-## Initial examples:
+# Initial examples:
 As a fundamental example,
     we looked at lipid bilayers
     -- structures that make up cell membranes.
@@ -196,5 +194,4 @@ For example, *the Ras protein system* is integral to cell signal
 Nonetheless, the interplay between all these systems and water has yet to be
     fully explored.
 
-References (Selected Publications)
-==================================
+# References (Selected Publications)
