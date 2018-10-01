@@ -67,11 +67,27 @@ The layer of water surrounding oil molecules
     surface with variable properties to the solvent,
     is far more interesting.
 
-# Chemical Labeling Strategy
+## How do Proteins Alter Nearby Solvent?
 
-Our work relies on a simple chemical labeling strategy:
+Proteins are the molecular motors
+    that drive all life,
+    and most drugs are designed to interact with
+    proteins.
+It is increasingly clear that water molecules
+    at the surface of proteins control their
+    structure and function;
+    while researchers have developed methods that
+    can study the structure of proteins,
+    there are no accessible methods to spatially
+    map the hydration water.
+We develop and apply magnetic-resonance-based
+    spectroscopic methods for routine, robust,
+    and accessible measurements of the properties
+    of these key hydration water molecules.
 
-# Initial examples:
+## Lipid-Peptide Interactions 
+
+# An exciting example
 As a fundamental example,
     we looked at lipid bilayers
     -- structures that make up cell membranes.
@@ -126,37 +142,6 @@ For example, employing the setup shown above,
     that are not chemically disposed to disrupt the hydration layer.
 This was even true when the large molecules significantly altered the
     viscosity of the bulk solution [@Franck_crowding].*
-
-
-## How do Proteins Alter Nearby Solvent?
-
-Proteins are the molecular motors
-    that drive all life,
-    and most drugs are designed to interact with
-    proteins.
-It is increasingly clear that water molecules
-    at the surface of proteins control their
-    structure and function;
-    while researchers have developed methods that
-    can study the structure of proteins,
-    there are no accessible methods to spatially
-    map the hydration water.
-We develop and apply magnetic-resonance-based
-    spectroscopic methods for routine, robust,
-    and accessible measurements of the properties
-    of these key hydration water molecules.
-
-## Lipid-Peptide Interactions 
-
-## Spin Label Synthesis
-
-## Unusual Water Molecules inside Polymer Systems
-
-Similarly,
-    researchers have identified a direct link
-    between the behavior of hydration water
-    associated with synthetic materials and the
-    properties of those materials.
 
 ## The future:
 In the Franck lab,
