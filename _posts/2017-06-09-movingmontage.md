@@ -9,5 +9,5 @@ tags: []
 
 The Franck Lab is completed and our magnets arrive.
 
-![Magnets](../assets/magnet_montage.png)
+![Magnets]({{"/assets/magnet_montage.png" | prepend: site.baseurl}})
 
