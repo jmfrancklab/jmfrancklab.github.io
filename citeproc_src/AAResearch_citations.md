@@ -53,19 +53,15 @@ In particular,
     signaling proteins to bind to their partners,
     and design polymer materials that conduct water in
     unique ways.
-We can do all of this not be relying on our prowess as
-    chemists,
-    but through a direct and logical strategy.
 
-Most chemists and biologists can recognize one very
-    specific example of hydration water:
-The layer of water surrounding oil molecules
-    that drive the separation of water and oil are the
-    simplest example of hydration water,
-    but the more general case,
+Most chemists and biologists recognize one very
+    simple example of hydration water:
+the layer of water surrounding oil molecules
+    that drive the separation of water and oil.
+    But the more general case,
     especially for macromolecules that present a
     surface with variable properties to the solvent,
-    is far more interesting.
+    is far more interesting and far less understood.
 
 ## How do Proteins Alter Nearby Solvent?
 
@@ -90,7 +86,7 @@ We develop and apply magnetic-resonance-based
 As a fundamental example,
     we looked at lipid bilayers
     -- structures that make up cell membranes.
-We developed (at other institutions) a specialized technique to
+We previously developed a specialized technique to
     characterize water near the bilayer surfaces.
 Our technique
     -- called Overhauser Effect Dynamic Nuclear
@@ -146,7 +142,7 @@ This was even true when the large molecules significantly altered the
 In the Franck lab,
     we will extend the power
     of ODNP-based techniques and integrate them with a toolbox of
-    previously developed techniques, for example:
+    other powerful techniques, for example:
     NMR techniques that can measure
     microscopic diffusion and flow,
     as well as electron spin resonance (ESR) techniques that interrogate local
@@ -161,7 +157,7 @@ Towards these ends,
     [@FranckBarnes2015;@Kaufmann2013;@Demas2009]
     and advanced magnetic resonance methods
     [@FranckFreed2015;@Franck2009].
-We will also apply techniques that we have already developed to
+We will apply these techniques to 
     systems that remain poorly understood,
     despite their central importance
     to understanding
@@ -175,8 +171,6 @@ For example, *the Ras protein system* is integral to cell signal
     *Photosystem II*,
     are believed to integrate nanoscale water channels to aid in
     their function.
-Nonetheless, the interplay between all these systems and water has yet to be
-    fully explored.
 
 # References (Selected Publications)
 
