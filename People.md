@@ -14,6 +14,36 @@ attribution: J. Franck
 
 ## John M. Franck
 
+John completed his PhD thesis under the guidance of
+Prof. Alex Pines at Berkeley, studying sophisticated
+methods of NMR pulse design and the development of
+portable and transportable NMR instruments.
+He worked as an Elings Prize Postdoctoral Fellow
+(California NanoSystems Institute)
+at the University of California, Santa Barbara,
+under the guidance of Prof. Songi Han.
+Here, he developed new, sensitive technologies for investigating
+the properties of water at the surfaces of proteins,
+polymers, lipids, and DNA.
+He completed further postdoctor studies and served as a
+research associate at the Advanced Center for ESR
+Technology (ACERT) at Cornell University,
+under the guidance of Prof. Jack Freed.
+There, he participated in studies that advanced the
+forefront of high-field high-frequency pulse ESR;
+techniques that provide detailed dynamic
+characterizations of proteins and other biomolecular
+systems.
+These technologies are challenged only by difficulties
+with probing samples that generated short-lived signal;
+while at ACERT Prof. Franck pioneered
+studies that enabled detection of shorter-lived species than could
+be proved previously.
+After beginning his position at Syracuse University,
+the laboratory was opened in the summer of 2017.
+Already, talented graduate students and undergraduate
+researchers have begun to make vigorous contributions.
+
 </div>
 
 # Graduate Researchers
