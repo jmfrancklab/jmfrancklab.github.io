@@ -5,7 +5,7 @@ attribution: J.M. Franck
 ---
 # {{page.title}}: General
 
-## Hydration (Surface, Interfacial, ...) Water
+## Hydration Water
 
 Even though water appears uniform
     on a macroscopic scale,
