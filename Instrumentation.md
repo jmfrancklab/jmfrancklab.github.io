@@ -3,6 +3,8 @@ layout: default
 title: In&shy;stru&shy;men&shy;ta&shy;tion
 attribution: J. Franck
 ---
+{::options parse_block_html="true" /}
+
 # {{page.title}}
 
 
@@ -19,9 +21,11 @@ instruments that enable protein expression and
 purification,
 in addition to standard synthetic capabilities.
 
-## Bruker ELEXSYS ESR Spectrometer
+## Bruker ELEXSYS-II ESR Spectrometer
 
-With its SuperX bridge the ELEXSYS spectrometer offers
+<div class="mugshot">
+![Bruker E500](assets/cw_elexsys.jpg)
+With its SuperX bridge the [Bruker ELEXSYS](https://www.bruker.com/products/mr/epr/elexsys/e500/overview.html){:target="blank"} spectrometer offers
 the latest in digital signal acquisition technology,
 allowing us to acquire high-quality cw ESR (electron
 spin resonance) spectra.
@@ -34,6 +38,10 @@ experiments that our lab specializes in.
 
 ## Bridge12 Microwave Amplifier
 
+<div class="mugshot">
+
+![Bridge12](assets/bridge12_system.png)
+
 We have integrated a high-power microwave amplifier built by
 [Bridge12 Technologies](http://www.bridge12.com/){:target="blank"}
 to our custom specifications
@@ -42,6 +50,8 @@ This system,
 which generates high power microwaves to saturate ESR
 transitions,
 also offers communication with automation scripts.
+
+</div>
 
 ## Home-Built NMR Spectrometer
 

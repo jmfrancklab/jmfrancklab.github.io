@@ -120,8 +120,11 @@ sensor devices, while biological light-harvesting systems, such as
 aid in their function. Nonetheless, the interplay between all these
 systems and water has yet to be fully explored.
 
-References (Selected Publications) 
+References (Selected Publications)
 ==================================
+
+[Link to Complete List of
+Publications](https://scholar.google.com/citations?user=TdqiwiIAAAAJ&hl=en&oi=ao){:target="blank"}
 
 1\. Franck JM, Pavlova A, Scott JA, Han S. "Quantitative cw Overhauser
 effect dynamic nuclear polarization for the analysis of local water

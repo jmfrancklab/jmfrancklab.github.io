@@ -179,4 +179,5 @@ Nonetheless, the interplay between all these systems and water has yet to be
     fully explored.
 
 # References (Selected Publications)
-[Complete List of Publications](https://scholar.google.com/citations?user=TdqiwiIAAAAJ&hl=en&oi=ao){:target="blank"}
+
+[Link to Complete List of Publications](https://scholar.google.com/citations?user=TdqiwiIAAAAJ&hl=en&oi=ao){:target="blank"}
