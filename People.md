@@ -44,6 +44,8 @@ the laboratory was opened in the summer of 2017.
 Already, talented graduate students and undergraduate
 researchers have begun to make vigorous contributions.
 
+<!-- click to continue is here: https://stackoverflow.com/questions/28334540/truncate-text-in-html-with-link-to-show-more-less-and-keep-elements-inside-->
+
 </div>
 
 # Graduate Researchers
