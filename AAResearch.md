@@ -35,16 +35,13 @@ developing technologies that can map out the dynamic structure of
 hydration water, we unlock an ability to design drugs that bind to
 proteins currently deemed "undruggable," we can understand the
 energetics that cause signaling proteins to bind to their partners, and
-design polymer materials that conduct water in unique ways. We can do
-all of this not be relying on our prowess as chemists, but through a
-direct and logical strategy.
+design polymer materials that conduct water in unique ways.
 
-Most chemists and biologists can recognize one very specific example of
-hydration water: The layer of water surrounding oil molecules that drive
-the separation of water and oil are the simplest example of hydration
-water, but the more general case, especially for macromolecules that
-present a surface with variable properties to the solvent, is far more
-interesting.
+Most chemists and biologists recognize one very simple example of
+hydration water: the layer of water surrounding oil molecules that drive
+the separation of water and oil. But the more general case, especially
+for macromolecules that present a surface with variable properties to
+the solvent, is far more interesting and far less understood.
 
 How do Proteins Alter Nearby Solvent?
 -------------------------------------
@@ -62,20 +59,19 @@ An exciting example
 -------------------
 
 As a fundamental example, we looked at lipid bilayers -- structures that
-make up cell membranes. We developed (at other institutions) a
-specialized technique to characterize water near the bilayer surfaces.
-Our technique -- called Overhauser Effect Dynamic Nuclear Polarization
-(ODNP)<sup>1</sup> -- tracks the motion of the water nuclei, and allows us to
-zoom in on the "hydration water" near the surface of the lipid bilayer
-(figure below). It allowed us to see that the hydration water moves
-about 5 times slower than bulk water<sup>2</sup>. Furthermore, by dramatically
-changing the characteristics of the bulk solution, we learned that an
-order of magnitude change in the viscosity barely affects the diffusion
-in the hydration layer<sup>2</sup>. We have also implemented this technique in
-systems with membrane proteins<sup>3</sup>, DNA<sup>4</sup>, and large protein folding
-chaperones<sup>5</sup>. The significant variations in the properties of the
-hydration water play in important role in how these surfaces interact in
-nature.
+make up cell membranes. We previously developed a specialized technique
+to characterize water near the bilayer surfaces. Our technique -- called
+Overhauser Effect Dynamic Nuclear Polarization (ODNP)<sup>1</sup> -- tracks the
+motion of the water nuclei, and allows us to zoom in on the "hydration
+water" near the surface of the lipid bilayer (figure below). It allowed
+us to see that the hydration water moves about 5 times slower than bulk
+water<sup>2</sup>. Furthermore, by dramatically changing the characteristics of
+the bulk solution, we learned that an order of magnitude change in the
+viscosity barely affects the diffusion in the hydration layer<sup>2</sup>. We
+have also implemented this technique in systems with membrane
+proteins<sup>3</sup>, DNA<sup>4</sup>, and large protein folding chaperones<sup>5</sup>. The
+significant variations in the properties of the hydration water play in
+important role in how these surfaces interact in nature.
 
 ![Hydration layer](for_website_160809.png)
 
@@ -100,25 +96,23 @@ The future:
 -----------
 
 In the Franck lab, we will extend the power of ODNP-based techniques and
-integrate them with a toolbox of previously developed techniques, for
-example: NMR techniques that can measure microscopic diffusion and flow,
-as well as electron spin resonance (ESR) techniques that interrogate
-local motions (cw ESR), that measure nanometer-scale distances (double
+integrate them with a toolbox of other powerful techniques, for example:
+NMR techniques that can measure microscopic diffusion and flow, as well
+as electron spin resonance (ESR) techniques that interrogate local
+motions (cw ESR), that measure nanometer-scale distances (double
 electron-electron resonance, i.e. "DEER") and that map out local
 arrangements of nuclei (electron-nuclear double resonance, *i.e.*
 "ENDOR" and electron spin echo envelope modulation, i.e. "ESEEM"<sup>5</sup>).
 Towards these ends, we will draw on expertise in spectrometer
-design<sup>6--8</sup> and advanced magnetic resonance methods<sup>9,10</sup>. We will also
-apply techniques that we have already developed to systems that remain
-poorly understood, despite their central importance to understanding
-materials function or to understanding disease. For example, *the Ras
-protein system* is integral to cell signal pathways and the development
-of novel cancer drugs, *polymer electrolyte membranes* are essential to
-ion transport in H<sub>2</sub>/O<sub>2</sub>- and methanol-based fuel cells -- as well as
-sensor devices, while biological light-harvesting systems, such as
-*Photosystem II*, are believed to integrate nanoscale water channels to
-aid in their function. Nonetheless, the interplay between all these
-systems and water has yet to be fully explored.
+design<sup>6--8</sup> and advanced magnetic resonance methods<sup>9,10</sup>. We will
+apply these techniques to systems that remain poorly understood, despite
+their central importance to understanding materials function or to
+understanding disease. For example, *the Ras protein system* is integral
+to cell signal pathways and the development of novel cancer drugs,
+*polymer electrolyte membranes* are essential to ion transport in
+H<sub>2</sub>/O<sub>2</sub>- and methanol-based fuel cells -- as well as sensor devices,
+while biological light-harvesting systems, such as *Photosystem II*, are
+believed to integrate nanoscale water channels to aid in their function.
 
 References (Selected Publications)
 ==================================

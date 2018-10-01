@@ -60,9 +60,10 @@ NMR (nuclear spin resonance) and ESR (electron spin resonance),
 we wanted to customize the design of our NMR spectrometer,
 eliminating all but the most essential components.
 Exceeding our expectations, we have implemented a very
-minimalistic design that currently employs standard
-test and measurement components as well as home-built
-circuitry to observe low-frequency low-volume NMR with high
+minimalistic design.
+This design currently employs only standard
+test and measurement components and home-built
+circuitry, but observes low-frequency low-volume NMR with high
 signal to noise.
 
 ## Biochemical Wetlab
