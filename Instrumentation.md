@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Instrumentation
+title: In&shy;stru&shy;men&shy;ta&shy;tion
 attribution: J. Franck
 ---
 # {{page.title}}
@@ -45,8 +45,10 @@ also offers communication with automation scripts.
 
 ## Home-Built NMR Spectrometer
 
-In order to optimize the integration
-
+In order to optimize the integration of 
+NMR (nuclear spin resonance) and ESR (electron spin resonance),
+we wanted to customize the design of our NMR spectrometer,
+eliminating all but the most essential components.
 To our surprise, we have been able to implement a very
 minimalistic design that currently employs standard
 test and measurement components and home-built
