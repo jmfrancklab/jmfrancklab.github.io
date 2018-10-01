@@ -9,7 +9,7 @@ attribution: J. Franck
 
 
 Our lab conducts Overhauser DNP (Dynamic Nuclear
-Polarization) on liquid state systems.
+Polarization) on liquid state and soft matter systems.
 This technique is a dual-resonance technique that
 involves simultaneous excitation of Electron Spin and
 Nuclear Spin resonances (ESR and NMR).
@@ -59,11 +59,10 @@ In order to optimize the integration of
 NMR (nuclear spin resonance) and ESR (electron spin resonance),
 we wanted to customize the design of our NMR spectrometer,
 eliminating all but the most essential components.
-To our surprise, we have been able to implement a very
+Exceeding our expectations, we have implemented a very
 minimalistic design that currently employs standard
-test and measurement components and home-built
-circuitry,
-yet can observe low-frequency low-volume NMR with high
+test and measurement components as well as home-built
+circuitry to observe low-frequency low-volume NMR with high
 signal to noise.
 
 ## Biochemical Wetlab
