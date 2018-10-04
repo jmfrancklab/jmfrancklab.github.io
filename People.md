@@ -58,10 +58,12 @@ researchers have begun to make exciting and innovative contributions.
 
 ![Samantha](assets/SMBetts_Image.png)
 
-Samantha completed her bachelor's degree at SUNY Fredonia in spring 2017,
-entered Syracuse University and was awarded the Syracuse University
-Graduate Fellowship in Fall 2017, and joined the Franck Lab as a graduate
-student in 2018. 
+Samantha completed her bachelor's degree at SUNY
+Fredonia in spring 2017,
+and was awarded the SU
+Graduate Fellowship when she started as
+a graduate student in Fall 2017,
+and joined the Franck Lab a few months later.
 Her current work includes simulated and experimental site-directed
 spin labeling, as well as the
 study of complex protein
