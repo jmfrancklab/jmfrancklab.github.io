@@ -52,7 +52,22 @@ researchers have begun to make exciting and innovative contributions.
 
 ## Alec Beaton
 
-## Samantha Betts
+<div class="mugshot">
+
+## Samantha M. Betts
+
+![Samantha](assets/SMBetts_Image.png)
+
+Samantha completed her bachelor's degree at SUNY Fredonia in spring 2017,
+entered Syracuse University and was awarded the Syracuse University
+Graduate Fellowship in Fall 2017, and joined the Franck Lab as a graduate
+student in 2018. 
+Her current work includes simulated and experimental site-directed
+spin labeling, as well as the
+study of complex protein
+environments *via* ODNP and ESR.
+
+</div>
 
 # Undergraduate Researchers
 
