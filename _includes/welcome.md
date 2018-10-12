@@ -22,7 +22,7 @@ In particular,
     dynamics.
 
 ***The Franck lab is looking for interested graduate students and
-undergraduate researchers in Fall 2018 and Spring 2018***,
+undergraduate researchers in Fall 2018 and Spring 2019***,
 and welcomes any inquiries. Prof. Franck can be contacted by email (jmfranck at syr.edu). Students in the Franck lab
 will have the opportunity to work with materials or biological systems.
 In addition, they will gain expertise developing new spectroscopic
