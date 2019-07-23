@@ -50,7 +50,29 @@ researchers have begun to make exciting and innovative contributions.
 
 # Graduate Researchers
 
+<div class="mugshot">
+
+![Alec](assets/AB_nobg_cropped.png)
+
 ## Alec Beaton
+
+Alec will use LS-ODNP to study the behavior of
+water in materials systems, such as reverse
+micelles and other soft matter. He is interested
+in integrating LS-ODNP measurements into
+existing multidimensional NMR techniques to
+obtain unique chemical information on these
+systems. Toward these efforts, Alec has built a
+15 MHz NMR spectrometer to perform ODNP, and he
+maintains an interest in instrument development
+and data processing. He is also involved in an
+ongoing collaboration with Emily Ripka from Dr.
+Maye's group studying diffusion of ligands at
+nanoparticle surfaces through multidimensional
+NMR techniques.
+ 
+
+</div>
 
 <div class="mugshot">
 
