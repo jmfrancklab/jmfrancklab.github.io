@@ -48,6 +48,19 @@ researchers have begun to make exciting and innovative contributions.
 
 </div>
 
+# Postdocs
+
+## Farhana Syed
+
+Farhana comes to our group with extensive experience
+working with proteorhodopsin,
+and is aiding in the extensive site-directed
+spin-labeling (SDSL) and isotopic expression of
+proteorhodopsin.
+She is also developing protocols for the SDSL of
+transport and signaling proteins and will be analyzing
+their hydration layers with ESR and ODNP.
+
 # Graduate Researchers
 
 <div class="mugshot">
@@ -93,6 +106,16 @@ environments *via* ODNP and ESR.
 
 </div>
 
+## Alexandria Guinness
+
+Alexandria works on SDSL of proteorhodopsin,
+and has begun developing protocols that employ
+deuterium NMR relaxometry to analyze
+"slowly" moving (ns-timescale) hydration waters,
+beginning with reverse micelles and lipid bilayers as
+model systems, and proceeding to proteorhodopsin and
+other proteins.
+
 # Undergraduate Researchers
 
 ## Eldon Hard
@@ -100,7 +123,6 @@ environments *via* ODNP and ESR.
 Eldon (planned graduation 2020) has worked both on the
 design of specialized microwave cavities for ODNP, as
 well as 
-
 ## Jazmine Richardson
 
 ## Katie Ackerman (REU 2019)
