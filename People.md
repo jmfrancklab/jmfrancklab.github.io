@@ -123,7 +123,8 @@ other proteins.
 Eldon (planned graduation 2020) has worked both on the
 design of specialized microwave cavities for ODNP, as
 well as 
-## Jazmine Richardson
+
+## Jazmine Richardson (REU 2019)
 Jazmine is a rising Sophomore here at Syracuse University 
 and is participating in the Louis Stokes Alliance for Minority
 Participation (LSAMP) REU for this summer and plans on continuing 
