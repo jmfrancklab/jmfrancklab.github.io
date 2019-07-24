@@ -97,22 +97,41 @@ environments *via* ODNP and ESR.
 
 ## Eldon Hard
 
-Eldon (planned graduation 2020) has worked both on the design of specialized microwave cavities for ODNP, as well as 
+Eldon (planned graduation 2020) has worked both on the
+design of specialized microwave cavities for ODNP, as
+well as 
+
+## Jazmine Richardson
+
+## Katie Ackerman (REU 2019)
+
+Katie is a visiting REU student from the University of
+Hawaii. She is engineering a temperature apparatus that
+will allow stable temperature controlled experiments to
+be conducted during ODNP.
 
 # Alumni
 
-## Soliloquy Rhodes (Undergrad)
-
-Soliloquy (graduated 2019) worked on the synthesis of small molecule spin labels as well as the design of an automated temperature control system for use with saturation-level microwaves.
-
-## Michelle Sahagian (Undergrad)
-
-Michelle (graduated 2019) worked on the synthesis of small molecule spin labels.
-
 ## Heta Desai (REU 2017)
 
-Synthesized the small molecule spin label Cat-1, demonstrated its capture inside lipid vesicles, and demonstrated its saturation performance relative to aminotempo.
+Synthesized the small molecule spin label Cat-1,
+demonstrated its capture inside lipid vesicles, and
+demonstrated its saturation performance relative to
+aminotempo.
 
 ## Isabela Ramirez (Undergrad)
 
-Worked briefly to initialize a project on mechanical automation of rf tuning and sample mixing.
+Worked briefly to initialize a project on mechanical
+automation of rf tuning and sample mixing.
+
+## Soliloquy Rhodes (Undergrad)
+
+Soliloquy (graduated 2019) worked on the synthesis of
+small molecule spin labels as well as the design of an
+automated temperature control system for use with
+saturation-level microwaves.
+
+## Michelle Sahagian (Undergrad)
+
+Michelle (graduated 2019) worked on the synthesis of
+small molecule spin labels.
