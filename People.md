@@ -124,6 +124,12 @@ Eldon (planned graduation 2020) has worked both on the
 design of specialized microwave cavities for ODNP, as
 well as 
 ## Jazmine Richardson
+Jazmine is a rising Sophomore here at Syracuse University 
+and is participating in the Louis Stokes Alliance for Minority
+Participation (LSAMP) REU for this summer and plans on continuing 
+in the Franck lab during the fall. She is working on site-directed 
+spin labeling mutant proteins to study the protein interactions 
+through ESR and PRE.
 
 ## Katie Ackerman (REU 2019)
 
