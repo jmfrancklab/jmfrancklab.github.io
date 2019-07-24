@@ -48,6 +48,19 @@ researchers have begun to make exciting and innovative contributions.
 
 </div>
 
+# Postdocs
+
+## Farhana Syed
+
+Farhana comes to our group with extensive experience
+working with proteorhodopsin,
+and is aiding in the extensive site-directed
+spin-labeling (SDSL) and isotopic expression of
+proteorhodopsin.
+She is also developing protocols for the SDSL of
+transport and signaling proteins and will be analyzing
+their hydration layers with ESR and ODNP.
+
 # Graduate Researchers
 
 <div class="mugshot">
@@ -93,24 +106,37 @@ environments *via* ODNP and ESR.
 
 </div>
 
-# Summer Researchers
+## Alexandria Guinness
 
-## Jazmine Richardson
-
-## Katie Ackerman
-Katie is a visitng REU student from the University of Hawaii. She is engineering a temperature apparatus that will allow stable temperature controlled experiments to be conducted during ODNP.
+Alexandria works on SDSL of proteorhodopsin,
+and has begun developing protocols that employ
+deuterium NMR relaxometry to analyze
+"slowly" moving (ns-timescale) hydration waters,
+beginning with reverse micelles and lipid bilayers as
+model systems, and proceeding to proteorhodopsin and
+other proteins.
 
 # Undergraduate Researchers
 
 ## Eldon Hard
 
-## Soliloquy Rhodes
+## Jazmine Richardson
 
-## Michelle Sahagian
+## Katie Ackerman
+
+Katie is a visitng REU student from the University of
+Hawaii. She is engineering a temperature apparatus that
+will allow stable temperature controlled experiments to
+be conducted during ODNP.
+
 
 # Alumni
 
 ## Heta Desai
 
 ## Isabela Ramirez
+
+## Soliloquy Rhodes
+
+## Michelle Sahagian
 
