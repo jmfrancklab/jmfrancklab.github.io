@@ -120,13 +120,23 @@ other proteins.
 
 ## Eldon Hard
 
-## Soliloquy Rhodes
+## Jazmine Richardson
 
-## Michelle Sahagian
+## Katie Ackerman
+
+Katie is a visitng REU student from the University of
+Hawaii. She is engineering a temperature apparatus that
+will allow stable temperature controlled experiments to
+be conducted during ODNP.
+
 
 # Alumni
 
 ## Heta Desai
 
 ## Isabela Ramirez
+
+## Soliloquy Rhodes
+
+## Michelle Sahagian
 
