@@ -92,6 +92,7 @@ study of complex protein
 environments *via* ODNP and ESR.
 
 </div>
+
 # Summer Researchers
 
 ## Jazmine Richardson
