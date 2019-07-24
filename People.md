@@ -92,6 +92,12 @@ study of complex protein
 environments *via* ODNP and ESR.
 
 </div>
+# Summer Researchers
+
+## Jazmine Richardson
+
+## Katie Ackerman
+Katie is a visitng REU student from the University of Hawaii. She is engineering a temperature apparatus that will allow stable temperature controlled experiments to be conducted during ODNP.
 
 # Undergraduate Researchers
 
