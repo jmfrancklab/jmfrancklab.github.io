@@ -110,7 +110,7 @@ environments *via* ODNP and ESR.
  
 ## Alexandria Guinness
 
-![Alexandria](assets/AGuinness.png)
+![Alexandria](MyDocuments/FranckResearch/AGuinness.png)
 
 Alexandria works on SDSL of proteorhodopsin,
 and has begun developing protocols that employ
