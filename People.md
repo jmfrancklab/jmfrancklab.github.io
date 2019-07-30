@@ -106,7 +106,11 @@ environments *via* ODNP and ESR.
 
 </div>
 
+<div class="mugshot">
+ 
 ## Alexandria Guinness
+
+![Alexandria](assets/AGuinness.png)
 
 Alexandria works on SDSL of proteorhodopsin,
 and has begun developing protocols that employ
