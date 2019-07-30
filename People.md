@@ -93,16 +93,17 @@ NMR techniques.
 
 ![Samantha](assets/SMBetts_Image.png)
 
-Samantha completed her bachelor's degree at SUNY
-Fredonia in spring 2017,
-and was awarded the SU
-Graduate Fellowship when she started as
-a graduate student in Fall 2017,
-and joined the Franck Lab a few months later.
-Her current work includes simulated and experimental site-directed
-spin labeling, as well as the
-study of complex protein
-environments *via* ODNP and ESR.
+Samantha joined the lab in Spring 2018 and is developing 
+a multi-modal approach to the investigation of complex 
+protein systems with site-directed spin labeling and ODNP 
+as a central method backed by ESR and PRE measurements and 
+spin labeling simulations using the Rosetta macromolecular 
+modeling suite. In efforts to develop the ODNP hardware, she
+constructed a python-based program to communicate with the 
+high-power microwave amplifier as well. She also led the 
+initial setup of the biochemistry lab and is an awardee of 
+the Syracuse University Graduate Fellowship.
+
 
 </div>
 
@@ -110,7 +111,7 @@ environments *via* ODNP and ESR.
  
 ## Alexandria Guinness
 
-![Alexandria](MyDocuments/FranckResearch/AGuinness.png)
+![Alexandria](assets/AGuinness.png)
 
 Alexandria works on SDSL of proteorhodopsin,
 and has begun developing protocols that employ
