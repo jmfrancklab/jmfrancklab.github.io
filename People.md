@@ -106,7 +106,11 @@ environments *via* ODNP and ESR.
 
 </div>
 
+<div class="mugshot">
+
 ## Alexandria Guinness
+
+![Alexandria](assets/AGuinness.png)
 
 Alexandria works on SDSL of proteorhodopsin,
 and has begun developing protocols that employ
@@ -115,6 +119,8 @@ deuterium NMR relaxometry to analyze
 beginning with reverse micelles and lipid bilayers as
 model systems, and proceeding to proteorhodopsin and
 other proteins.
+
+</div>
 
 # Undergraduate Researchers
 
