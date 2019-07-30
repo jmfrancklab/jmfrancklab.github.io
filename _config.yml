@@ -12,3 +12,6 @@ github_username:  jmfranck
 markdown: kramdown
 #markdown: redcarpet
 VMs_available: True
+assets:
+    sources:
+        - assets/
