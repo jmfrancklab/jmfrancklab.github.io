@@ -20,7 +20,7 @@
 
     .fading-equation {
       position: absolute;
-      color: #aaaaaa; /* Dark gray text color */
+      color: #303030; /* Dark gray text color */
       opacity: 0;
       transition: opacity 1s;
     }
@@ -62,9 +62,13 @@
       }
 
       // Function to create a fading math equation
-      function createFadingEquation() {
+      function createFadingEquation(index) {
+        if (index >= equationElements.length) {
+          index = 0; // Restart from the first equation
+        }
+
         // Create a new math element
-        var mathElement = equationElements[Math.floor(Math.random() * equationElements.length)].cloneNode(true);
+        var mathElement = equationElements[index].cloneNode(true);
         mathElement.classList.add('fading-equation');
 
         // Set random position within the page
@@ -88,16 +92,16 @@
           setTimeout(function() {
             // Remove the math element from the container
             mathContainer.removeChild(mathElement);
-          }, 1000); // Adjust the duration of the fade-out animation as needed
 
-          // Repeat the process with a new equation
-          createFadingEquation();
-        }, 3000); // Adjust the duration of the fade-in animation as needed
+            // Repeat the process with the next equation
+            createFadingEquation(index + 1);
+          }, 2000); // Adjust the duration of the fade-out animation as needed
+        }, index * 2000); // Adjust the delay between equations as needed
       }
 
       // Start multiple instances of the animation
-      for (var i = 0; i < 10; i++) {
-        createFadingEquation();
+      for (var i = 0; i < 20; i++) {
+        createFadingEquation(i);
       }
     });
   </script>
