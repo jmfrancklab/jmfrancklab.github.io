@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,42 +42,30 @@
       // Create a container for the math equations
       var mathContainer = document.getElementById('math-container');
 
-      // Function to generate a random equation from the array
-      function getRandomEquation() {
-        var equations = [
-          // Add your MathJax equations here
-          'E=mc^2',
-          '\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}',
-          'F(x) = \\int_{-\\infty}^{x} f(t) dt'
-        ];
-        var index = Math.floor(Math.random() * equations.length);
-        return equations[index];
-      }
+      // Array of equations
+      var equations = [
+        // Add your MathJax equations here
+        'E=mc^2',
+        '\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}',
+        'F(x) = \\int_{-\\infty}^{x} f(t) dt'
+      ];
 
-      // Function to pre-render and cache the equations
-      function preRenderEquations() {
-        for (var i = 0; i < equations.length; i++) {
-          var equation = equations[i];
-          var mathElement = document.createElement('div');
-          mathElement.innerHTML = '\\(' + equation + '\\)';
-          mathContainer.appendChild(mathElement);
-          MathJax.Hub.Queue(['Typeset', MathJax.Hub, mathElement]);
-        }
+      // Pre-render and cache the equations
+      var equationElements = [];
+      for (var i = 0; i < equations.length; i++) {
+        var equation = equations[i];
+        var mathElement = document.createElement('div');
+        mathElement.innerHTML = '\\(' + equation + '\\)';
+        mathContainer.appendChild(mathElement);
+        MathJax.Hub.Queue(['Typeset', MathJax.Hub, mathElement]);
+        equationElements.push(mathElement);
       }
-
-      // Pre-render the equations
-      var equations = [];
-      for (var i = 0; i < 5; i++) {
-        equations.push(getRandomEquation());
-      }
-      preRenderEquations();
 
       // Function to create a fading math equation
       function createFadingEquation() {
         // Create a new math element
-        var mathElement = document.createElement('div');
+        var mathElement = equationElements[Math.floor(Math.random() * equationElements.length)].cloneNode(true);
         mathElement.classList.add('fading-equation');
-        mathElement.innerHTML = '\\(' + equations[Math.floor(Math.random() * equations.length)] + '\\)';
 
         // Set random position within the page
         var left = Math.floor(Math.random() * window.innerWidth);
@@ -88,9 +77,7 @@
         mathContainer.appendChild(mathElement);
 
         // After rendering, set opacity to 1 to fade in
-        MathJax.Hub.Queue(['Typeset', MathJax.Hub, mathElement], function() {
-          mathElement.style.opacity = '1';
-        });
+        mathElement.style.opacity = '1';
 
         // Wait for fade-in animation to complete
         setTimeout(function() {
