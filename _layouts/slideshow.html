@@ -12,13 +12,24 @@
 
     .slideshow img {
       position: absolute;
-      left: 0;
       top: 0;
       width: 100%;
       height: 100%;
       opacity: 0;
-      transform: translateX(100%);
       transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    }
+
+    .slideshow .current {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .slideshow .previous {
+      transform: translateX(-100%);
+    }
+
+    .slideshow .next {
+      transform: translateX(100%);
     }
   </style>
 </head>
@@ -36,14 +47,19 @@
     var currentImage = 0;
 
     function showImage() {
-      for (var i = 0; i < images.length; i++) {
-        images[i].style.opacity = 0;
-        images[i].style.transform = 'translateX(100%)';
-      }
+      var prepreviousImage = (currentImage - 2 + images.length) % images.length;
+      var previousImage = (currentImage - 1 + images.length) % images.length;
+      var nextImage = (currentImage + 1) % images.length;
 
-      images[currentImage].style.opacity = 1;
-      images[currentImage].style.transform = 'translateX(0)';
-      currentImage = (currentImage + 1) % images.length;
+      images[prepreviousImage].classList.remove('previous');
+      images[previousImage].classList.remove('current');
+      images[currentImage].classList.remove('next');
+
+      images[currentImage].classList.add('current');
+      images[previousImage].classList.add('previous');
+      images[nextImage].classList.add('next');
+
+      currentImage = nextImage;
 
       setTimeout(showImage, 5000); // Change slide every 5 seconds
     }
