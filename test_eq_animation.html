@@ -20,7 +20,7 @@
 
     .fading-equation {
       position: absolute;
-      color: #ffffff; /* Dark gray text color */
+      color: #555555; /* Dark gray text color */
       opacity: 0;
       transition: opacity 1s;
     }
@@ -54,12 +54,30 @@
         return equations[index];
       }
 
+      // Function to pre-render and cache the equations
+      function preRenderEquations() {
+        for (var i = 0; i < equations.length; i++) {
+          var equation = equations[i];
+          var mathElement = document.createElement('div');
+          mathElement.innerHTML = '\\(' + equation + '\\)';
+          mathContainer.appendChild(mathElement);
+          MathJax.Hub.Queue(['Typeset', MathJax.Hub, mathElement]);
+        }
+      }
+
+      // Pre-render the equations
+      var equations = [];
+      for (var i = 0; i < 5; i++) {
+        equations.push(getRandomEquation());
+      }
+      preRenderEquations();
+
       // Function to create a fading math equation
       function createFadingEquation() {
         // Create a new math element
         var mathElement = document.createElement('div');
         mathElement.classList.add('fading-equation');
-        mathElement.innerHTML = '\\(' + getRandomEquation() + '\\)'; // Wrap equation with MathJax delimiters
+        mathElement.innerHTML = '\\(' + equations[Math.floor(Math.random() * equations.length)] + '\\)';
 
         // Set random position within the page
         var left = Math.floor(Math.random() * window.innerWidth);
@@ -70,9 +88,8 @@
         // Append math element to the container
         mathContainer.appendChild(mathElement);
 
-        // Trigger re-rendering of MathJax
+        // After rendering, set opacity to 1 to fade in
         MathJax.Hub.Queue(['Typeset', MathJax.Hub, mathElement], function() {
-          // After rendering, set opacity to 1 to fade in
           mathElement.style.opacity = '1';
         });
 
@@ -93,7 +110,7 @@
       }
 
       // Start multiple instances of the animation
-      for (var i = 0; i < 20; i++) {
+      for (var i = 0; i < 30; i++) {
         createFadingEquation();
       }
     });
