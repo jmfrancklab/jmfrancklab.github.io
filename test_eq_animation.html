@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,24 +12,23 @@
     .container {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start; /* Adjust alignment */
       height: 100vh;
-      overflow: auto;
+      overflow: auto; /* Added scrollable area */
     }
 
     .content {
       width: 400px;
       background-color: #ffffff; /* White content area */
       padding: 20px;
-      z-index: 1;
     }
-
 
     #math-container {
       position: fixed;
       width: 100%;
       height: 100%;
       pointer-events: none;
+      z-index: -1;
     }
 
     .fading-equation {
@@ -38,6 +36,15 @@
       color: #303030; /* Dark gray text color */
       opacity: 0;
       transition: opacity 1s;
+    }
+
+    .title {
+      width: 100%;
+      background-color: #ffffff; /* White background */
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
     }
   </style>
   <!-- Include MathJax library -->
@@ -53,11 +60,9 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
+      <!-- Add more content here -->
     </div>
   </div>
-
 
   <script>
     // Wait for the page to load
