@@ -17,6 +17,7 @@
       width: 100%;
       height: 100%;
       opacity: 0;
+      transform: translateX(100%);
       transition: transform 1s ease-in-out, opacity 1s ease-in-out;
     }
   </style>
@@ -37,7 +38,7 @@
     function showImage() {
       for (var i = 0; i < images.length; i++) {
         images[i].style.opacity = 0;
-        images[i].style.transform = 'translateX(-100%)';
+        images[i].style.transform = 'translateX(100%)';
       }
 
       images[currentImage].style.opacity = 1;
