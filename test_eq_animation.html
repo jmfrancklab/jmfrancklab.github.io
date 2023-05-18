@@ -9,12 +9,14 @@
       background-color: #000000; /* Black background */
       overflow: hidden;
     }
+
     .container {
       display: flex;
       justify-content: center;
       align-items: flex-start; /* Adjust alignment */
       height: 100vh;
       overflow: auto; /* Added scrollable area */
+      padding-top: 20px; /* Add padding to push content down */
     }
 
     .content {
@@ -38,12 +40,19 @@
       transition: opacity 1s;
     }
 
+    .title-container {
+      background-color: #eeeeee; /* Gray background */
+      position: sticky;
+      top: -20px;
+      z-index: 1; /* Ensure title is on top */
+    }
+
     .title {
       width: 100%;
-      background-color: #ffffff; /* White background */
       padding: 20px;
+      padding-left: 0px;
+      padding-right: 0px;
       text-align: center;
-      position: sticky;
       top: 0;
     }
   </style>
@@ -54,7 +63,11 @@
   <div id="math-container"></div>
   <div class="container">
     <div class="content">
-      <h1>Main Webpage Title</h1>
+        <div class="title-container">
+            <div class="title">
+                <h1>Main Webpage Title</h1>
+            </div>
+        </div>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
