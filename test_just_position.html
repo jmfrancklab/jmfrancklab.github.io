@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000000; /* Black background */
+      overflow: hidden;
+    }
+
+    .page-container {
+      justify-content: center;
+      text-align: center;
+      /*align-items: flex-start; /* Adjust alignment */*/
+      align-items: center; /* Adjust alignment */
+      height: 100vh; /* viewpower percentage */
+      overflow: auto; /* Added scrollable area */
+      padding-top: 100px; /* Add padding to push content down */
+    }
+
+    .content {
+      display: inline-block;
+      width: 400px;
+      background-color: #ffffff; /* White content area */
+      padding: 20px;
+      position: relative;
+    }
+
+    .floating-top {
+      /* this will stick -- need something that will stick under it */
+      background-color: #ffffff00; /* Gray background */
+      position: sticky;
+      top: -100px;
+      z-index: 1; /* Ensure title is on top */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="page-container">
+      <div class="floating-top">
+          <img src="header_only.png" width=20%>
+      </div>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id diam eget tortor fringilla finibus at id leo. Curabitur lobortis turpis quis ipsum lobortis, vel ultricies sem tincidunt. Sed lacinia gravida sem, ac semper lorem. Proin auctor semper tellus, ac iaculis enim pellentesque sit amet. Ut nec diam quis erat volutpat laoreet. Sed vulputate consequat est, in ultricies risus pellentesque non. Donec nec tincidunt tortor. Fusce malesuada varius augue, vitae malesuada purus tincidunt vitae. Quisque consequat, orci nec fermentum scelerisque, leo arcu scelerisque nisl, et hendrerit odio massa ut nisl.</p>
+      <!-- Add more content here -->
+    </div>
+  </div>
+
+</body>
+</html>
