@@ -222,7 +222,8 @@ pre {
     }
 }
 .wrapper {
-    width: #{100%};
+    max-width: #{$content-width};
+    z-index: 0;
     //width: #{$right-width - $spacing-unit};
     //width: 30%;
     margin-right: auto;

@@ -34,8 +34,7 @@ h1 {
 }
 .site-header {
     // Positioning context for the mobile navigation icon
-    min-height: 100px;
-    height: 100%;
+    min-height: 50px;
 }
 
 .site-title {
@@ -52,11 +51,12 @@ h1 {
     margin: 0 auto 0;
     line-height: normal;
     border: 0px;
-    width: 80%;
+    width: 100%;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 0;
     height: 100%;
+    padding-top: 10px;
 
     .text{
         display: none;
@@ -72,6 +72,7 @@ h1 {
     .page-link {
         color: $syracuse-orange;
         line-height: $base-line-height;
+        white-space: nowrap;
 
         // Gaps between nav items, but not on the first one
         //&:not(:first-child) {
@@ -80,6 +81,15 @@ h1 {
     }
     .trigger{
         font-weight: bold;
+        /*background-color: rgba(255, 255, 255, 0.5);*/
+        background: linear-gradient(to right, transparent, #ffffffe0, #ffffffe0, transparent);
+        border-color: black;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        border-style: solid;
+        border-image: linear-gradient(to right, transparent, black, black, transparent) 1;
         a {
             text-decoration-color: #{rgba($top-bg-color,0.75)};
             &:hover{
@@ -198,6 +208,12 @@ h1 {
     max-height: 75px;
     width: auto;
     height: auto;
+    position: relative;
+    z-index: +6;
+}
+.main-text{
+    background-color: white;
+    padding: 20px;
 }
 
 .footer-col-wrapper {
@@ -261,7 +277,7 @@ h1 {
     justify-content: center;
     text-align: center;
     align-items: center; /* Adjust alignment */
-    height: 100vh; /* viewpower percentage */
+    height: 100vh; /* viewport percentage */
     overflow: auto; /* Added scrollable area */
     padding-top: 100px; /* Add padding to push content down */
 }
