@@ -8,28 +8,26 @@ h1 {
     text-align: center;
 }
 .floating-top {
-    background-color: #ffffff00; /* transparent*/
+    /* this will stick -- need something that will stick under it */
+    background-color: #ffffff00; /* Gray background */
     position: sticky;
     top: -100px;
-    width: 100%;
-    border: 0;
-    height: #{$top-bar-height};
-    z-index: +5;
+    z-index: 1; /* Ensure title is on top */
 }
 .floating-top .decoration{
     position: relative;
     background: #{$top-bg-color};
     width: 95%;
     display: block;
-    max-width: #{-4px+$content-width};
+    max-width: #{$content-width};
     margin-left: auto;
     margin-right: auto;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.33);
-    border: 2px solid rgb(33,41,28);
+    //border: 2px solid rgb(33,41,28);
     //border-top: 5px solid $grey-color-dark;
     //border-bottom: 3px solid $grey-color-dark;
-    border-top-left-radius: #{$curve-radius};
-    border-top-right-radius: #{$curve-radius};
+    //border-top-left-radius: #{$curve-radius};
+    //border-top-right-radius: #{$curve-radius};
     height: #{$top-bar-height};
 }
 .site-header {
