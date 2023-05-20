@@ -1,42 +1,27 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+    {% include head.html %}
 
-  <body>
+    <body>
+        <div class="page-container">
+            {% include header.html %}
 
-    {% include header.html %}
-
-    <div class="page-content">
-        <table class="invisible-table">
-            <tr>
-                <td colspan=2 class="top">
-                    <div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="left"><!--should be based on left width and overlap width-->
-                    <div class="left-wrapper">
-                        {% include nav_links.html %}
-                    </div>
-                </td>
-                <td class="right" rowspan=2>
-                    <div class="wrapper">
-                        {{ content }}
-                        {% include footer.html %}
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="bottom"><!--should be based on left width and overlap width-->
-                    <img src="{{ site.baseurl }}/syracuse_campus.png" class="left-image"/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="bottom-pad">
-    </div>
-  </body>
+            {% include nav_links.html %}
+            <div class="wrapper">
+                {{ content }}
+                {% include footer.html %}
+            </div>
+            <table class="invisible-table">
+                <tr>
+                    <td class="bottom"><!--should be based on left width and overlap width-->
+                        <img src="{{ site.baseurl }}/syracuse_campus.png" class="left-image"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="bottom-pad">
+        </div>
+    </body>
 
 </html>

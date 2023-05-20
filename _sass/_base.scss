@@ -222,11 +222,10 @@ pre {
     }
 }
 .wrapper {
-    width: #{0.5*$overlap-width+100%};
+    width: #{100%};
     //width: #{$right-width - $spacing-unit};
     //width: 30%;
     margin-right: auto;
-    margin-left: #{-1*$overlap-width};
     margin-top: 0;
     display: inline-block;
     vertical-align: top;
