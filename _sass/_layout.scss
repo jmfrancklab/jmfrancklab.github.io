@@ -11,7 +11,7 @@ h1 {
     /* this will stick -- need something that will stick under it */
     background-color: #ffffff00; /* Gray background */
     position: sticky;
-    top: -100px;
+    top: -$page-top-pad;
     z-index: 1; /* Ensure title is on top */
 }
 .floating-top .decoration{
@@ -109,7 +109,7 @@ h1 {
         top: 9px;
         right: 0px;
         background-color: $background-color;
-        border: 1px solid $grey-color-light;
+        border: 2px solid $grey-color-dark;
         border-radius: 5px;
         text-align: left;
         width: 35px;
@@ -123,7 +123,7 @@ h1 {
             width: 36px;
             height: 26px;
             line-height: 0;
-            padding-top: 10px;
+            padding-top: 4px;
             text-align: center;
 
             > svg {
@@ -142,7 +142,8 @@ h1 {
             line-height: normal;
         }
         &:hover{
-            width: 80%;
+            float: right;
+            width: 20%;
             height: 300px;
             ul {
                 display: block;
@@ -162,12 +163,14 @@ h1 {
             padding-bottom: 5px;
             height: 100%;
             font-weight: bold;
+            background: none;
         }
         &:hover .text{
             display: inline;
             font-weight: bold;
             text-align: left;
             horizontal-align: left;
+            margin-left: 2px;
             width: 50%;
         }
         .page-link {
@@ -279,7 +282,7 @@ h1 {
     align-items: center; /* Adjust alignment */
     height: 100vh; /* viewport percentage */
     overflow: auto; /* Added scrollable area */
-    padding-top: 100px; /* Add padding to push content down */
+    padding-top: $page-top-pad; /* Add padding to push content down */
 }
 .left-wrapper {
     position: relative;
