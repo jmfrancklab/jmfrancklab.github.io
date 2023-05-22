@@ -15,11 +15,12 @@ $small-font-size:  math.div($base-font-size, 1.75);
 $base-line-height: 1.5;
 $page-top-pad: 50px;
 
-$spacing-unit:     5px;
-$left-width:       25%;
-$overlap-width:    7%;
-$right-width:      75%;
-$curve-radius:     3px;
+$spacing-unit:        5px;
+$left-width:          25%;
+$overlap-width:       7%;
+$right-width:         25%;
+$curve-radius:        3px;
+$middle-image-height: 120px;
 
 $text-color:       #111;
 $text-hover-color: rgba(0,255,255,0.5);

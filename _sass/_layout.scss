@@ -187,8 +187,9 @@ h1 {
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding: $spacing-unit 0 0 0; /* top, right, bottom, left*/
     z-index: -5;
+    background-color: white;
 }
 
 .footer-heading {
@@ -329,11 +330,20 @@ h1 {
             border: 0px;
         }
     }
-    .left td{
+    .left{
         width: #{$left-width};
+        text-align: left;
     }
     .right{
         width: #{$right-width};
+        text-align: right;
+    }
+    .middle{
+        text-align: center;
+        max-height: $middle-image-height;
+    }
+    .middle img{
+        max-height: $middle-image-height;
     }
     .bottom{
         border: 0px;
@@ -341,6 +351,9 @@ h1 {
         padding: 0px;
         height: 100%;
         vertical-align: bottom;
+    }
+    div {
+        margin: $spacing-unit;
     }
 }
 .top-content {
