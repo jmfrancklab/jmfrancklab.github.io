@@ -195,7 +195,7 @@ h1 {
 .footer-heading {
     font-size: 18px;
     font-size: 0.9vw;
-    margin-bottom: math.div($spacing-unit, 2);
+    margin-bottom: ($spacing-unit)/( 2);
 }
 
 .contact-list,
@@ -226,14 +226,14 @@ h1 {
     font-size: 15px;
     font-size: 0.7vw;
     color: $grey-color;
-    margin-left: math.div(-$spacing-unit, 2);
+    margin-left: (-$spacing-unit)/( 2);
     @extend %clearfix;
 }
 
 .footer-col {
     float: left;
-    margin-bottom: math.div($spacing-unit, 2);
-    padding-left: math.div($spacing-unit, 2);
+    margin-bottom: ($spacing-unit)/( 2);
+    padding-left: ($spacing-unit)/( 2);
 }
 
 .footer-col-1 {
