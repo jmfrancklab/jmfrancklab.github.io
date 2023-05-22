@@ -9,7 +9,7 @@ h1 {
 }
 .floating-top {
     /* this will stick -- need something that will stick under it */
-    background-color: #ffffff00; /* Gray background */
+    background-color: #ffffff00; /* white background */
     position: sticky;
     top: -$page-top-pad;
     z-index: 1; /* Ensure title is on top */

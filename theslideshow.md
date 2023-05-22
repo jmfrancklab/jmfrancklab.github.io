@@ -1,5 +1,0 @@
----
-layout: slideshow
----
-
-chatgpt slideshow
