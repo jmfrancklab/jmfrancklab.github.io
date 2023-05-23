@@ -1,6 +1,4 @@
-A new and exciting lab at Syracuse University:
-
-![Group Photo, Fall 2018](assets/group_photo_092918.png)
+{% include slideshow.html %}
 
 Research in the Franck lab is highly
     interdisciplinary,

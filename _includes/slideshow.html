@@ -11,6 +11,7 @@
 <script>
     var images = document.querySelectorAll('.slideshow img');
     var currentImage = 0;
+    var currentTimeout = 1000;
 
     function showImage() {
             var prepreviousImage = (currentImage - 2 + images.length) % images.length;
@@ -27,7 +28,8 @@
 
             currentImage = nextImage;
 
-            setTimeout(showImage, 5000); // Change slide every 5 seconds
+            setTimeout(showImage, currentTimeout);
+            currentTimeout = 4000; // Change slide every 1.5 seconds -- must be longer than ease inout
         }
 
     showImage();
