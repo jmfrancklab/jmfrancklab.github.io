@@ -444,3 +444,34 @@ h1 {
         }
     }
 }
+
+//{{{ slideshow
+.slideshow {
+	position: relative;
+	width: 50%; /* Adjust the width as needed */
+	height: 400px; /* Adjust the height as needed */
+	overflow: hidden;
+}
+
+.slideshow img {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.slideshow .current {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.slideshow .previous {
+	transform: translateX(-100%);
+}
+
+.slideshow .next {
+	transform: translateX(100%);
+}
+//}}} slideshow
