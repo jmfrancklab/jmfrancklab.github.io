@@ -52,56 +52,12 @@ researchers have begun to make exciting and innovative contributions.
 
 &nbsp;
 
+{% for thisperson in site.people %}
 <div class="mugshot">
-
-## Alexandria Guinness
-
-![Alex Guinness](assets/alex_photo.png)
-
-Alex has automated large portions of the ODNP experiment and data
-processing,
-and performs detailed investigations to improve the sensitivity of the
-ODNP measurement.
-Currently, she applies these techniques to the study of hydration
-water on the surface of Ras.
-
-&nbsp;
-&nbsp;
-
+## {{ thisperson.name }}
+{{ thisperson.content }}
 </div>
-
-<div class="mugshot">
-
-## Warren Kincaid
-
-![Warren Kincaid](assets/warren_photo.png)
-
-Warren has two projects:
-In one, develops efficient protocols for site-directed spin labeling and
-expression of the light-activated proton pump proteorhodopsin,
-and investigates sites with anomalous hydration along the surface
-or proteorhodopsin.
-In the other project, he employes Ansys Electronics
-to design dual NMR-ESR resonators with improved sensitivity.
-He focuses on developing new simulation protocols that apply
-broadly to the design of couple microwave resonators.
-
-</div>
-
-<div class="mugshot">
-
-## Romana Shathy
-
-![Romana Shathy](assets/romana_photo_top.png)
-
-Romana is a 1<sup>st</sup> year graduate student.
-She synthesizes small molecule spin labels that allow her to probe the
-microviscosity (*via* ESR)
-and the local diffusivity (*via* ODNP) of small pockets of water.
-Beginning with reverse micelles, she plans to expand her studies to
-a variety of (especially energy-relevant) porous materials.
-
-</div>
+{% endfor %}
 
 # Alumni
 
@@ -115,6 +71,9 @@ a variety of (especially energy-relevant) porous materials.
 
 ## Undergraduates
 
+| Natasha Prince | Natasha helped to refine our protocol for trans-membrane protocol expression, and worked on customized dialysis devices to precisely control the solvent environment. She graduated with distinction in chemistry, and has proceeded to graduate studies of Art Conservation and Forensics. |
+| Conal Gallagher | Conal worked on the synthesis of small molecule spin labels.  After graduation, he joined a small startup in the Bay Area, followed by graduate studies in Forensics. |
+| Jessica Khuc | Jessica worked with Farhana on generating multiple SDSL mutants of Ras. |
 | Eldon Hard | Began our project on the simulation of microwave resonators.  Graduated and enrolled in the PhD program at USC. |
 | Heta Desai (REU 2017) | Synthesized the small molecule spin label Cat-1, demonstrated its capture inside lipid vesicles, and demonstrated its saturation performance relative to aminotempo. |
 | Isabela Ramirez       |  Worked briefly to initialize a project on mechanical automation of rf tuning and sample mixing. |
