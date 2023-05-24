@@ -1,5 +1,32 @@
-
 {% include slideshow.html %}
+
+The forefront of modern chemistry involves understanding how very large molecules react and move. 
+During such motions, hundreds or even thousands of water molecules rearrange, and change their properties. 
+The resulting change in properties can contribute enormous amounts of chemical energy to a reaction.
+Yet, our ability to probe these changes remains surprisingly limited. 
+
+Magnetic Resonance offers a surprisingly fertile ground for developing entirely new tools, because
+particle spins engage in
+interesting and complex quantum mechanics.
+For example,
+nanoscale aggregates isolate
+small pockets of water, 
+the resulting confinement alters the hydrogen bonding network.
+Meanwhile, the confinement also slows down the motion of the water molecules.
+These effects result in a change (respectively) of the
+electron cloud density and of
+the lifetime of the spin states.
+We have developed a measurement that reads out the *correlation* between
+the hydrogen bonding strength and the rotational motion in confined water pools.
+By measuring this correlation as a function of the size of the water pool,
+we've identified a distinct inflection point at a couple nanometers at which the water matrix changes dramatically.
+
+In another example, we can employ mutagenesis to attach a spin label on the surface of proteins, 
+which are involved in cancer signaling pathways (KRas), 
+as well as transmembrane proton pumps (proteorhodopsin).
+Mutagenesis allows us to create a set of samples that are primed for measurement of water at a series of different sites.
+We employ specialized measurements to watch how the translational diffusivity of the water changes as we move from site to site along the surface. 
+>>>>>>> master
 
 Research in the Franck lab is highly
     interdisciplinary,
@@ -14,18 +41,5 @@ We employ a mix of
     in order to develop unorthodox spectroscopic
     techniques that investigate how water interacts
     with the surfaces of proteins and soft materials.
-In particular,
-    we specialize in magnetic resonance techniques
-    that communicate with both electron and nuclear
-    spins to probe nanometer-scale structure and
-    dynamics.
-
-***The Franck lab is looking for interested graduate students and
-undergraduate researchers in Fall 2018 and Spring 2019***,
-and welcomes any inquiries. Prof. Franck can be contacted by email (jmfranck at syr.edu). Students in the Franck lab
-will have the opportunity to work with materials or biological systems.
-In addition, they will gain expertise developing new spectroscopic
-methods using physics, electronics, and computer programming. Students
-who capitalize on these opportunities will have a unique and powerful
-skill-set.
-
+***The Franck lab is looking for talented graduate students and
+undergraduate researchers in Fall 2023***.
