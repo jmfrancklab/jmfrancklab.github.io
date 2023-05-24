@@ -26,7 +26,6 @@ which are involved in cancer signaling pathways (KRas),
 as well as transmembrane proton pumps (proteorhodopsin).
 Mutagenesis allows us to create a set of samples that are primed for measurement of water at a series of different sites.
 We employ specialized measurements to watch how the translational diffusivity of the water changes as we move from site to site along the surface. 
->>>>>>> master
 
 Research in the Franck lab is highly
     interdisciplinary,
