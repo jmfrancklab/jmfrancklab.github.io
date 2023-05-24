@@ -1,12 +1,13 @@
+{% include slideshow.html %}
+
 The forefront of modern chemistry involves understanding how very large molecules react and move. 
 During such motions, hundreds or even thousands of water molecules rearrange, and change their properties. 
 The resulting change in properties can contribute enormous amounts of chemical energy to a reaction.
-
 Yet, our ability to probe these changes remains surprisingly limited. 
+
 Magnetic Resonance offers a surprisingly fertile ground for developing entirely new tools, because
 particle spins engage in
 interesting and complex quantum mechanics.
-
 For example,
 nanoscale aggregates isolate
 small pockets of water, 
@@ -25,6 +26,7 @@ which are involved in cancer signaling pathways (KRas),
 as well as transmembrane proton pumps (proteorhodopsin).
 Mutagenesis allows us to create a set of samples that are primed for measurement of water at a series of different sites.
 We employ specialized measurements to watch how the translational diffusivity of the water changes as we move from site to site along the surface. 
+>>>>>>> master
 
 Research in the Franck lab is highly
     interdisciplinary,

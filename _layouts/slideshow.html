@@ -34,37 +34,6 @@
   </style>
 </head>
 <body>
-  <div class="slideshow">
-    {% for image in site.static_files %}
-      {% if image.path contains 'slideshow/' %}
-        <img src="{{ image.path }}" alt="{{ image.name }}">
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <script>
-    var images = document.querySelectorAll('.slideshow img');
-    var currentImage = 0;
-
-    function showImage() {
-      var prepreviousImage = (currentImage - 2 + images.length) % images.length;
-      var previousImage = (currentImage - 1 + images.length) % images.length;
-      var nextImage = (currentImage + 1) % images.length;
-
-      images[prepreviousImage].classList.remove('previous');
-      images[previousImage].classList.remove('current');
-      images[currentImage].classList.remove('next');
-
-      images[currentImage].classList.add('current');
-      images[previousImage].classList.add('previous');
-      images[nextImage].classList.add('next');
-
-      currentImage = nextImage;
-
-      setTimeout(showImage, 5000); // Change slide every 5 seconds
-    }
-
-    showImage();
-  </script>
+	{% include slideshow.html %}
 </body>
 </html>
