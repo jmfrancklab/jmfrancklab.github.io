@@ -3,7 +3,6 @@ layout: default
 ---
 
 <div class="home">
-    <h1>Welcome!</h1>
     {% capture my_include %}{% include welcome.md %}{% endcapture %}<!--need to assign the content to a variable first-->
     {{ my_include | markdownify }}<!--then, we can render it-->
 

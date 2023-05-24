@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: math.div($spacing-unit, 2);
+    margin-bottom: ($spacing-unit)/( 2);
 }
 
 p {
@@ -110,7 +110,7 @@ h2:after {
     margin-left:0px;
     height:0.5px;
     position:absolute;
-    background:lightgrey;
+	background: linear-gradient(to right, transparent, #a0a0a0, #a0a0a0);
 }
 
 h1{
@@ -121,6 +121,7 @@ h2{
 }
 h3{
     font-size: #{$mediumer-font-size};
+	text-indent: 15px;
 }
 
 
@@ -150,7 +151,7 @@ a {
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
-    padding-left: math.div($spacing-unit, 2);
+    padding-left: ($spacing-unit)/( 2);
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
@@ -197,7 +198,6 @@ pre {
     margin-bottom: 0;
     margin-left: 0;
     z-index: -1;
-    border-bottom-left-radius: #{$curve-radius};
 }
 .top-wrapper {
     width: 100%;
@@ -211,8 +211,8 @@ pre {
     @include media-query($on-laptop) {
         width: 100%;
         max-width: #{$content-width};
-        padding-right: math.div($spacing-unit, 2);
-        padding-left: math.div($spacing-unit, 2);
+        padding-right: ($spacing-unit)/( 2);
+        padding-left: ($spacing-unit)/( 2);
     }
 }
 .top-left {
@@ -238,8 +238,8 @@ pre {
     @extend %clearfix;
 
     @include media-query($on-laptop) {
-        padding-right: math.div($spacing-unit, 2);
-        padding-left: math.div($spacing-unit, 2);
+        padding-right: ($spacing-unit)/( 2);
+        padding-left: ($spacing-unit)/( 2);
     }
 }
 .nav-wrapper {
@@ -255,8 +255,8 @@ pre {
     @extend %clearfix;
 
     @include media-query($on-laptop) {
-        padding-right: math.div($spacing-unit, 2);
-        padding-left: math.div($spacing-unit, 2);
+        padding-right: ($spacing-unit)/( 2);
+        padding-left: ($spacing-unit)/( 2);
     }
 }
 
@@ -309,22 +309,26 @@ table tr:first-child th {
 
 .mugshot img {
   float: left;
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 90px;
+  max-height: 90px;
   width: auto;
   height: auto;
-  padding-right: 10pt;
+  padding-right: 5pt;
+  display: block;
+  position: relative;
+  top: -14px;
 }
 
 .mugshot p {
   text-indent: 0px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .mugshot h2 {
   position: relative;
-  top: 18px;
+  text-align: left;
   left: 0px;
+  margin-bottom: 0px;
 }
 //tbody {
 //    border:3px solid black;

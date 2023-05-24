@@ -1,25 +1,25 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@use "sass:math";
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/css?family=PT+Serif);
 
 // Our variables
 $base-font-family: 'PT Serif',serif;
-$base-font-size:   16px;
+$base-font-size:   16px; // doesn't look the same on localhost vs. pages
 $large-font-size:  $base-font-size * 1.25;
-$medium-font-size: math.div(($base-font-size+$large-font-size),2);
-$mediumer-font-size: math.div(($base-font-size+$medium-font-size),2);
-$small-font-size:  math.div($base-font-size, 1.75);
+$medium-font-size: (($base-font-size+$large-font-size))/(2);
+$mediumer-font-size: (($base-font-size+$medium-font-size))/(2);
+$small-font-size:  ($base-font-size)/(1.25);
 $base-line-height: 1.5;
-$page-top-pad: 50px;
+$page-top-pad: 0px;
 
-$spacing-unit:     5px;
-$left-width:       25%;
-$overlap-width:    7%;
-$right-width:      75%;
-$curve-radius:     3px;
+$spacing-unit:        5px;
+$left-width:          25%;
+$overlap-width:       7%;
+$right-width:         25%;
+$curve-radius:        3px;
+$middle-image-height: 100px;
 
 $text-color:       #111;
 $text-hover-color: rgba(0,255,255,0.5);
@@ -50,8 +50,8 @@ $leftimage-width:  400px;
 // Using media queries with like this:
 // @include media-query($on-palm) {
 //     .wrapper {
-//         padding-right: math.div($spacing-unit, 2);
-//         padding-left: math.div($spacing-unit, 2);
+//         padding-right: ($spacing-unit)/( 2);
+//         padding-left: ($spacing-unit)/( 2);
 //     }
 // }
 @mixin media-query($device) {

@@ -9,7 +9,7 @@ h1 {
 }
 .floating-top {
     /* this will stick -- need something that will stick under it */
-    background-color: #ffffff00; /* Gray background */
+    background-color: #ffffff00; /* white background */
     position: sticky;
     top: -$page-top-pad;
     z-index: 1; /* Ensure title is on top */
@@ -187,14 +187,15 @@ h1 {
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding: $spacing-unit 0 0 0; /* top, right, bottom, left*/
     z-index: -5;
+    background-color: white;
 }
 
 .footer-heading {
     font-size: 18px;
     font-size: 0.9vw;
-    margin-bottom: math.div($spacing-unit, 2);
+    margin-bottom: ($spacing-unit)/( 2);
 }
 
 .contact-list,
@@ -219,20 +220,21 @@ h1 {
 .main-text{
     background-color: white;
     padding: 20px;
+	text-align: left;
 }
 
 .footer-col-wrapper {
     font-size: 15px;
     font-size: 0.7vw;
     color: $grey-color;
-    margin-left: math.div(-$spacing-unit, 2);
+    margin-left: (-$spacing-unit)/( 2);
     @extend %clearfix;
 }
 
 .footer-col {
     float: left;
-    margin-bottom: math.div($spacing-unit, 2);
-    padding-left: math.div($spacing-unit, 2);
+    margin-bottom: ($spacing-unit)/( 2);
+    padding-left: ($spacing-unit)/( 2);
 }
 
 .footer-col-1 {
@@ -329,11 +331,20 @@ h1 {
             border: 0px;
         }
     }
-    .left td{
+    .left{
         width: #{$left-width};
+        text-align: left;
     }
     .right{
         width: #{$right-width};
+        text-align: right;
+    }
+    .middle{
+        text-align: center;
+        max-height: $middle-image-height;
+    }
+    .middle img{
+        max-height: $middle-image-height;
     }
     .bottom{
         border: 0px;
@@ -341,6 +352,9 @@ h1 {
         padding: 0px;
         height: 100%;
         vertical-align: bottom;
+    }
+    div {
+        margin: $spacing-unit;
     }
 }
 .top-content {
@@ -431,6 +445,7 @@ h1 {
         }
     }
 }
+
 #math-container {
     position: fixed;
     width: 100%;
@@ -445,3 +460,48 @@ h1 {
     opacity: 0;
     transition: opacity 1s;
 }
+
+//{{{ slideshow
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slideshow {
+    position: relative;
+	width: 100%; /* Adjust the width as needed */
+    max-width: 100%;
+    height: 50vh; /* Adjust the height as needed */
+    overflow: hidden;
+    background-color: #ffffff00;
+}
+
+.slideshow img {
+    position: absolute;
+    top: 0;
+    height: 50vh;
+    opacity: 0;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    background-color: #ffffff00;
+}
+
+.slideshow .current {
+	opacity: 1;
+	transform: translateX(-50%) translateX(0px);
+    background-color: #ffffff00;
+}
+
+.slideshow .previous {
+	opacity: 0;
+	transform: translateX(-50%) translateX(-25vw);
+    background-color: #ffffff00;
+}
+
+.slideshow .next {
+	opacity: 0;
+	transform: translateX(-50%) translateX(+25vw);
+    background-color: #ffffff00;
+}
+//}}} slideshow

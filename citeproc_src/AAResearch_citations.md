@@ -81,21 +81,21 @@ We develop and apply magnetic-resonance-based
     and accessible measurements of the properties
     of these key hydration water molecules.
 
-## An exciting example
+## A fundamental example
 
 As a fundamental example,
-    we looked at lipid bilayers
+    consider lipid bilayers
     -- structures that make up cell membranes.
-We previously developed a specialized technique to
+Dr. Franck and his colleagues previously developed a specialized technique to
     characterize water near the bilayer surfaces.
 Our technique
     -- called Overhauser Effect Dynamic Nuclear
-    Polarization (ODNP) [@FranckPNMRS] --
+    Polarization (ODNP) [@FranckPNMRS;@FranckMethEnz2018] --
     tracks the motion of the water nuclei,
     and allows us to zoom in on the
     "hydration water" near the surface of the lipid bilayer
     (figure below).
-It allowed us to
+It allowed them to
     see that the hydration water moves about 5
     times slower than bulk water [@Franck_crowding].
 Furthermore, by dramatically
@@ -105,7 +105,7 @@ Furthermore, by dramatically
     an order of magnitude change in the viscosity
     barely affects the diffusion in the hydration
     layer [@Franck_crowding].
-We have also implemented this technique
+They have also implemented this technique
     in systems with membrane proteins [@Hussain2013],
     DNA [@Franck2015DNA],
     and large protein folding chaperones [@FranckGroES].
@@ -138,39 +138,23 @@ For example, employing the setup shown above,
 This was even true when the large molecules significantly altered the
     viscosity of the bulk solution [@Franck_crowding].*
 
-## The future:
-In the Franck lab,
-    we will extend the power
-    of ODNP-based techniques and integrate them with a toolbox of
-    other powerful techniques, for example:
-    NMR techniques that can measure
-    microscopic diffusion and flow,
-    as well as electron spin resonance (ESR) techniques that interrogate local
-    motions (cw ESR),
-    that measure nanometer-scale distances (double
-    electron-electron resonance, i.e. "DEER”)
-    and that map out local arrangements of nuclei
-    (electron-nuclear double resonance, *i.e.* "ENDOR" and electron spin echo
-    envelope modulation, i.e. "ESEEM” [@FranckGroES]).
-Towards these ends,
-    we will draw on expertise in spectrometer design
+## Current Research:
+
+In the Franck lab, we currently push the limits of the ODNP technique to
+	retrieve new and more detailed information about hydration water.
+Towards this end,
+    we draw on expertise in spectrometer design
     [@FranckBarnes2015;@Kaufmann2013;@Demas2009]
     and advanced magnetic resonance methods
     [@FranckFreed2015;@Franck2009].
-We will apply these techniques to 
-    systems that remain poorly understood,
-    despite their central importance
-    to understanding
-    materials function or to understanding disease.
-For example, *the Ras protein system* is integral to cell signal
-    pathways and the development of novel cancer drugs,
-    *polymer electrolyte membranes* are essential to ion transport
-    in H~2~/O~2~- and methanol-based fuel cells
-    -- as well as sensor devices,
-    while biological light-harvesting systems, such as
-    *Photosystem II*,
-    are believed to integrate nanoscale water channels to aid in
-    their function.
+We have already developed a cogent explanation
+	of the ODNP technique [@FranckMethEnz2018],
+	as well as a new, powerful, and general scheme
+	for visualizing and processing magnetic resonance data [@BeatonCoherence2022].
+We are investigating the water on the insides of reverse micelles,
+	which provide controllable pockets of water,
+	as well as mapping out more subtle details in the water along the surface of proteins,
+	both globular signaling proteins, as well as trans-membrane proteins.
 
 # References (Selected Publications)
 
