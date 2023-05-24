@@ -1,5 +1,7 @@
 {% include slideshow.html %}
 
+<small>(Website under development: captions are forthcoming!)</small>
+
 Research in the Franck lab is highly
     interdisciplinary,
     but also extremely accessible to students from
