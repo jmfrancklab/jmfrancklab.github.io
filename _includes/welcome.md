@@ -1,21 +1,24 @@
 {% include slideshow.html %}
 
 The forefront of modern chemistry involves understanding how very large molecules react and move. 
-During such motions, hundreds or even thousands of water molecules rearrange, and change their properties. 
+During such motions, hundreds or even thousands of water molecules rearrange and change their properties. 
 The resulting change in properties can contribute enormous amounts of chemical energy to a reaction.
 Yet, our ability to probe these changes remains surprisingly limited. 
 
-Magnetic Resonance offers a surprisingly fertile ground for developing entirely new tools, because
+Magnetic Resonance offers a surprisingly fertile ground for developing entirely new spectroscopic measurements, because
 particle spins engage in
 interesting and complex quantum mechanics.
-For example,
+
+In one example,
+when
 nanoscale aggregates isolate
 small pockets of water, 
 the resulting confinement alters the hydrogen bonding network.
 Meanwhile, the confinement also slows down the motion of the water molecules.
 These effects result in a change (respectively) of the
 electron cloud density and of
-the lifetime of the spin states.
+the lifetime of the spin states,
+and magnetic resonance can measure both of these.
 We have developed a measurement that reads out the *correlation* between
 the hydrogen bonding strength and the rotational motion in confined water pools.
 By measuring this correlation as a function of the size of the water pool,
