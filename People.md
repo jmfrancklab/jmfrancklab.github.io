@@ -22,12 +22,12 @@ He worked as an Elings Prize Postdoctoral Fellow
 (California NanoSystems Institute)
 at the University of California, Santa Barbara,
 under the guidance of Prof. Songi Han.
-Here, he developed new, sensitive technologies for investigating
+There, he developed new, sensitive technologies for investigating
 the properties of water at the surfaces of proteins,
 polymers, lipids, and DNA.
 He completed further postdoctoral studies and served as a
-research associate at the Advanced Center for ESR
-Technology (ACERT) at Cornell University,
+research associate at the Advanced Center for the ESR
+Technology Center (ACERT) at Cornell University,
 under the guidance of Prof. Jack Freed.
 There, he participated in studies that advanced the
 forefront of high-field high-frequency pulse ESR;
@@ -39,10 +39,8 @@ with probing samples that generated short-lived signal;
 while at ACERT Prof. Franck pioneered
 work that enabled detection of shorter-lived species than could
 be proved previously.
-After beginning his position at Syracuse University,
-the Franck laboratory was opened in the summer of 2017.
-Already, talented graduate students and undergraduate
-researchers have begun to make exciting and innovative contributions.
+After joining Syracuse as a PI and setting up his lab,
+he received the NSF CAREER award (2021).
 
 <!-- click to continue is here: https://stackoverflow.com/questions/28334540/truncate-text-in-html-with-link-to-show-more-less-and-keep-elements-inside-->
 
