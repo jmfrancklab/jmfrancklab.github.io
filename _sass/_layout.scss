@@ -473,7 +473,7 @@ h1 {
     position: relative;
 	width: 100%; /* Adjust the width as needed */
     height: 50vh; /* Adjust the height as needed */
-    max-height: $content-width; /* prevents aspect ratio problems */
+    max-height: 40vw; /* prevents aspect ratio problems as long as better than 2/1*/
     overflow: hidden;
     background-color: #ffffff00;
 }
