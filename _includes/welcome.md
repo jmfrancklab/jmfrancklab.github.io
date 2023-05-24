@@ -1,6 +1,5 @@
-{% include slideshow.html %}
 
-<small>(Website under development: captions are forthcoming!)</small>
+{% include slideshow.html %}
 
 Research in the Franck lab is highly
     interdisciplinary,
