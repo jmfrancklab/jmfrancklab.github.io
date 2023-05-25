@@ -40,7 +40,7 @@ while at ACERT Prof. Franck pioneered
 work that enabled detection of shorter-lived species than could
 be proved previously.
 After joining Syracuse as a PI and setting up his lab,
-he received the NSF CAREER award (2021).
+he received the NSF CAREER award (2022).
 
 <!-- click to continue is here: https://stackoverflow.com/questions/28334540/truncate-text-in-html-with-link-to-show-more-less-and-keep-elements-inside-->
 
