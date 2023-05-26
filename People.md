@@ -63,9 +63,21 @@ he received the NSF CAREER award (2022).
 
 ## Graduates and Postdocs 
 
-### Alec Beaton
+### Alec Beaton (PhD)
 
-### Farhana Syed
+Alec employed both ODNP and <sup>2</sup>H NMR to observe confined water inside reverse micelles.
+
+He also pioneered the DCCT technique for the display of maximally multiplexed information about the various coherence pathway signals present in an NMR experiment; he applied this technique to identify faint signals in low-field NMR and to perform mean-field-averaged correlation alignment to dramatically improve signal to noise and signal quality in the presence of variable magnetic fields.
+
+Alec currently works at Bruker Biospin.
+
+### Farhana Syed (Postdoc)
+
+Farhana performed site-directed spin labeling on the protein K-Ras.
+
+### Samantha Betts (MS)
+
+Sam refined a protocol for the expression and site-directed spin labeling of Proteorhodopsin, and also worked on overmodulation reconstruction.
 
 ## Undergraduates
 
