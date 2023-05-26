@@ -78,6 +78,7 @@ Farhana performed site-directed spin labeling on the protein K-Ras.
 ### Samantha Betts (MS)
 
 Sam refined a protocol for the expression and site-directed spin labeling of Proteorhodopsin, and also worked on overmodulation reconstruction.
+Sam currently works at the Aldon Corporation as a Product Developer.
 
 ## Undergraduates
 
