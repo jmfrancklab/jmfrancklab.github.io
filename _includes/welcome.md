@@ -1,47 +1,21 @@
 {% include slideshow.html %}
 
-The forefront of modern chemistry involves understanding how very large molecules react and move. 
-During such motions, hundreds or even thousands of water molecules rearrange and change their properties. 
-The resulting change in properties can contribute enormous amounts of chemical energy to a reaction.
-Yet, our ability to probe these changes remains surprisingly limited. 
+<figure class="nanoscale-hero">
+    <img src="{{ site.baseurl }}/assets/nanoscale_molecule.png" alt="A spin-labeled molecule together with the hydration water molecules that surround it, illustrated at the nanoscale">
+    <figcaption>The nanoscale view at the heart of our research: a spin label reporting on the water molecules that surround it.</figcaption>
+</figure>
 
-Magnetic Resonance offers a surprisingly fertile ground for developing entirely new spectroscopic measurements, because
-particle spins engage in
-interesting and complex quantum mechanics.
+The Franck Lab develops new magnetic-resonance-based spectroscopic techniques to
+see how water behaves at the nanoscale -- at the surfaces of proteins, membranes,
+and other soft materials. This "hydration water" plays a central role in how
+these systems function, yet it remains remarkably difficult to observe directly.
+We draw on chemical physics, biochemistry, and custom instrument design to build
+tools that can watch it move.
 
-In one example,
-when
-nanoscale aggregates isolate
-small pockets of water, 
-the resulting confinement alters the hydrogen bonding network.
-Meanwhile, the confinement also slows down the motion of the water molecules.
-These effects result in a change (respectively) of the
-electron cloud density and of
-the lifetime of the spin states,
-and magnetic resonance can measure both of these.
-We have developed a measurement that reads out the *correlation* between
-the hydrogen bonding strength and the rotational motion in confined water pools.
-By measuring this correlation as a function of the size of the water pool,
-we've identified a distinct inflection point at a couple nanometers at which the water matrix changes dramatically.
+[Learn more about our research &rarr;](AAResearch.html)
 
-In another example, we can employ mutagenesis to attach a spin label on the surface of proteins, 
-which are involved in cancer signaling pathways (KRas), 
-as well as transmembrane proton pumps (proteorhodopsin).
-Mutagenesis allows us to create a set of samples that are primed for measurement of water at a series of different sites.
-We employ specialized measurements to watch how the translational diffusivity of the water changes as we move from site to site along the surface. 
+Our work is highly interdisciplinary and welcomes students from a wide range of
+backgrounds. ***The Franck Lab is open to working with talented graduate
+students, undergraduate researchers, and postdocs.***
 
-Research in the Franck lab is highly
-    interdisciplinary,
-    but also extremely accessible to students from
-    a variety of backgrounds.
-We employ a mix of
-    chemical physics,
-    biochemistry,
-    analytical chemistry,
-    and
-    synthetic tools
-    in order to develop unorthodox spectroscopic
-    techniques that investigate how water interacts
-    with the surfaces of proteins and soft materials.
-***The Franck lab is looking for talented graduate students and
-undergraduate researchers in Fall 2023***.
+[See opportunities in the lab &rarr;](Skills.html) &middot; [Meet the team &rarr;](People.html)

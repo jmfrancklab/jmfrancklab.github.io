@@ -70,7 +70,7 @@ and large protein folding chaperones<sup>6</sup>. The significant variations in
 the properties of the hydration water play in important role in how
 these surfaces interact in nature.
 
-![Hydration layer](for_website_160809.png)
+![Hydration layer](for_website_160809_labeled.png)
 
 *This image illustrates ODNP of water in the hydration layer of a lipid
 bilayer. This is one example of many studies that are possible with
@@ -102,6 +102,42 @@ micelles, which provide controllable pockets of water, as well as
 mapping out more subtle details in the water along the surface of
 proteins, both globular signaling proteins, as well as trans-membrane
 proteins.
+
+When nanoscale aggregates such as reverse micelles isolate small pockets
+of water, the resulting confinement alters the hydrogen bonding network;
+meanwhile, the confinement also slows down the motion of the water
+molecules. These effects result in a change (respectively) of the
+electron cloud density and of the lifetime of the spin states, and
+magnetic resonance can measure both of these. We have developed a
+measurement that reads out the *correlation* between the hydrogen
+bonding strength and the rotational motion in confined water pools. By
+measuring this correlation as a function of the size of the water pool,
+we've identified a distinct inflection point at a couple nanometers at
+which the water matrix changes dramatically.
+
+![Reverse micelle](assets/reverse_micelle_water.png)
+
+*A reverse micelle isolates a small, controllable pool of water (bottom)
+-- zooming in (top) reveals individual water molecules surrounding a
+spin label near the micelle's core. By varying the size of the micelle,
+we control the size of the confined water pool and directly observe how
+confinement reshapes the hydrogen-bonding network and slows molecular
+motion.*
+
+We also employ mutagenesis to attach a spin label at a series of sites
+on the surface of proteins, including cancer signaling proteins (KRas)
+as well as transmembrane proton pumps (proteorhodopsin). This allows us
+to create a set of samples that are primed for measurement of water at a
+series of different sites, so that we can watch how the translational
+diffusivity of the water changes as we move from site to site along the
+surface.
+
+![KRas](assets/slideshow/Ras.gif)
+
+*Mutagenesis lets us install a spin label (red) at a chosen site on the
+surface of a signaling protein such as KRas, so that we can measure the
+hydration water dynamics at that specific location and compare across
+sites.*
 
 # References (Selected Publications)
 

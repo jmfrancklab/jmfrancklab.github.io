@@ -2,14 +2,37 @@
     <div class="slideshow">
         {% for image in site.static_files %}
         {% if image.path contains 'slideshow/' %}
-        <img src="{{ image.path }}" alt="{{ image.name }}">
+        {% assign basename = image.name | remove: image.extname %}
+        {% case basename %}
+        {% when '00group_photo_092918' %}
+            {% assign caption = 'The Franck Lab group' %}
+        {% when 'DCCT' %}
+            {% assign caption = 'DCCT: a new way to visualize multiplexed coherence pathways in magnetic resonance data' %}
+        {% when 'glowing_liposome_from_present' %}
+            {% assign caption = 'Probing water dynamics at the surface of a lipid bilayer' %}
+        {% when 'instrument' %}
+            {% assign caption = 'Custom-built ESR/NMR instrumentation in the Franck Lab' %}
+        {% when 'proteorhodopsin' %}
+            {% assign caption = 'Site-directed spin labeling of the membrane protein proteorhodopsin' %}
+        {% when 'Ras' %}
+            {% assign caption = 'Mapping hydration water across the surface of the signaling protein K-Ras' %}
+        {% when 'RM', 'RM_static' %}
+            {% assign caption = 'Water confined inside a reverse micelle' %}
+        {% when 'spectral_density' %}
+            {% assign caption = 'Extracting spectral density information from ODNP measurements' %}
+        {% else %}
+            {% assign caption = image.name %}
+        {% endcase %}
+        <img src="{{ image.path }}" alt="{{ caption }}" data-caption="{{ caption }}">
         {% endif %}
         {% endfor %}
     </div>
+    <div class="slideshow-caption"></div>
 </div>
 
 <script>
     var images = document.querySelectorAll('.slideshow img');
+    var captionEl = document.querySelector('.slideshow-caption');
     var currentImage = 0;
     var currentTimeout = 1000;
 
@@ -25,6 +48,10 @@
             images[currentImage].classList.add('current');
             images[previousImage].classList.add('previous');
             images[nextImage].classList.add('next');
+
+            if (captionEl) {
+                captionEl.textContent = images[currentImage].dataset.caption || '';
+            }
 
             currentImage = nextImage;
 

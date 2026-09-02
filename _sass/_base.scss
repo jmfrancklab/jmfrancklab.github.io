@@ -23,7 +23,6 @@ body {
     -webkit-text-size-adjust: 100%;
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Black background */
     overflow: hidden;
 }
 
@@ -309,11 +308,12 @@ table tr:first-child th {
 
 .mugshot img {
   float: left;
-  max-width: 90px;
-  max-height: 90px;
+  max-width: 180px;
+  max-height: 220px;
   width: auto;
   height: auto;
-  padding-right: 5pt;
+  padding-right: 12pt;
+  padding-bottom: 5pt;
   display: block;
   position: relative;
   top: -14px;
@@ -329,6 +329,27 @@ table tr:first-child th {
   text-align: left;
   left: 0px;
   margin-bottom: 0px;
+}
+
+/**
+ * Bibliography (pandoc/citeproc hanging-indent references, see Research page)
+ */
+h1[id^="references"] ~ p {
+    text-indent: 0;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.csl-left-margin {
+    float: left;
+    min-width: 2.2em;
+    text-align: right;
+    padding-right: 0.4em;
+}
+
+.csl-right-inline {
+    display: block;
+    margin-left: 2.6em;
 }
 //tbody {
 //    border:3px solid black;

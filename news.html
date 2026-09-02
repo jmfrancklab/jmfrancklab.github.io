@@ -5,12 +5,15 @@ attribution: J. Franck
 ---
 
 <div class="home">
-  <h2>Posts</h1>
+  <h2>Posts</h2>
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
+      <li class="news-item">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        {{post.content}}
+        <div class="news-excerpt">
+          {{ post.content | strip_html | truncatewords: 40 }}
+        </div>
       </li>
     {% endfor %}
   </ul>

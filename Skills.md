@@ -1,31 +1,34 @@
 ---
 layout: default
-title: Skills
+title: Join the Lab
 attribution: J. Franck
 ---
 # {{page.title}}
 
-Students in the Franck lab have the opportunity to learn
-    and demonstrate experience in 
-    a wide range of skills applicable to their future careers,
-    in fact a broader range of opportunities than in a more
-    traditional chemistry lab:
-    ranging from the engineering of new spectrometer software,
-    to the development of customized [software](Software.html),
-    to biochemical expression methods.
+***The Franck Lab is open to working with talented graduate students,
+undergraduate researchers, and postdocs.***
 
-Students joining the Franck lab will
-    have the opportunity to work with
-    a unique combination of state-of-the-art instruments,
-    as well as customized tools
-    available nowhere else in the world.
+Our research is highly interdisciplinary, so we welcome students from a wide
+range of backgrounds -- and offer a broader range of skill-building
+opportunities than in a more traditional chemistry lab. Depending on your
+interests, you can gain hands-on experience in:
 
-Incoming students with an interest in
-    spectroscopy,
-    chemical physics,
-    biochemistry,
-    chemical synthesis,
-    or
-    analytical chemistry
-    are particularly encouraged to investigate the Franck lab
-    further.
+* **Spectrometer instrumentation & engineering** -- designing and building
+  custom ESR/NMR hardware, microwave resonators, and control electronics.
+* **Scientific software development** -- extending our
+  [custom data-processing and simulation software](Software.html), often with
+  no previous programming experience required.
+* **Chemical synthesis** -- designing and making small-molecule spin labels.
+* **Biochemistry** -- protein expression, purification, and site-directed spin
+  labeling of proteins such as KRas and proteorhodopsin.
+* **Analytical & physical chemistry** -- applying magnetic resonance methods
+  to understand hydration water at biological and material interfaces.
+
+Students joining the lab work with a unique combination of state-of-the-art
+and custom-built instruments available nowhere else in the world.
+
+Incoming students with an interest in spectroscopy, chemical physics,
+biochemistry, chemical synthesis, or analytical chemistry are particularly
+encouraged to get in touch. See [our research](AAResearch.html) for more on
+what we study, or [meet the team](People.html) to see who you'd be working
+with.
