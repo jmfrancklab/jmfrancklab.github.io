@@ -22,7 +22,19 @@ one-time switch has to be done in the GitHub web UI:
 ### One-time setup
 
 Requires Ruby with headers to compile native gems (`ruby-dev` on
-Debian/Ubuntu — `sudo apt install ruby-dev`), then:
+Debian/Ubuntu — `sudo apt install ruby-dev`).
+
+`gem install --user-install` puts executables in a per-user directory that's
+usually *not* on your `PATH` yet, so add it first — otherwise the `bundle`
+command below won't be found:
+
+```bash
+export PATH="$(gem environment | grep 'USER INSTALLATION DIRECTORY' | sed 's/.*: //')/bin:$PATH"
+```
+
+Add that same line to your shell profile (`~/.bashrc` etc.) if you want it
+to persist across terminal sessions — it only affects the current shell
+otherwise. Then:
 
 ```bash
 gem install --user-install bundler
@@ -32,15 +44,6 @@ bundle install
 
 (`vendor/bundle` and `.bundle/` are gitignored — this installs gems locally
 into the repo without touching the system Ruby.)
-
-If `bundle` isn't on your `PATH` afterward, find the user install directory
-with:
-
-```bash
-gem environment | grep 'USER INSTALLATION DIRECTORY'
-```
-
-and add `<that path>/bin` to your `PATH` (e.g. in your shell profile).
 
 ### Build and serve
 
