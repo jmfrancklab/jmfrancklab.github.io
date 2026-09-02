@@ -28,7 +28,11 @@ h1 {
     //border-bottom: 3px solid $grey-color-dark;
     //border-top-left-radius: #{$curve-radius};
     //border-top-right-radius: #{$curve-radius};
-    height: #{$top-bar-height};
+    // taller than $top-bar-height (used elsewhere, e.g. the footer) --
+    // scaled up from it to keep the same ~50% title-image overflow the
+    // original design had, now that the logo itself is taller (see
+    // .title-image)
+    height: 75px;
 }
 .site-header {
     // Positioning context for the mobile navigation icon
@@ -211,7 +215,12 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
-    max-height: 75px;
+    // header_only.png's aspect ratio changed (2-line subtitle made it taller,
+    // 283.82965x98.610115 vs the old 290.84485x67.863762) -- constrain by
+    // width instead of height so the title renders at its original physical
+    // size and the extra height it now needs is preserved rather than
+    // squashed.
+    max-width: 325px;
     width: auto;
     height: auto;
     position: relative;
