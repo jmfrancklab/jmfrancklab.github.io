@@ -11,3 +11,8 @@ sed -i 's/~\([^~]\{0,10\}\)~/<sub>\1<\/sub>/g' AAResearch.md
 sed -i '/^::: *$/d' AAResearch.md
 sed -i '/^::: {#ref/d' AAResearch.md
 sed -i 's/{#references-[^}]*}//' AAResearch.md
+# pandoc emits its own (colon-less) span-IAL syntax for the CSL bibliography
+# entries, which kramdown does not understand (kramdown requires a colon:
+# {: .class}); convert those spans to literal HTML so kramdown renders them
+# instead of printing the raw brackets/braces.
+python3 convert_csl_spans.py AAResearch.md

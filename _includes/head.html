@@ -51,6 +51,14 @@
                           var equation = equations[i];
                           var mathElement = document.createElement('div');
                           mathElement.innerHTML = '\\(' + equation + '\\)';
+                          // this cached template is only ever cloned from (see
+                          // createFadingEquation below) -- keep it off-screen so it
+                          // doesn't sit, fully visible, stacked in the page's
+                          // top-left corner (MathJax still needs it in the DOM to
+                          // typeset it, so we can't just skip appending it)
+                          mathElement.style.position = 'absolute';
+                          mathElement.style.left = '-9999px';
+                          mathElement.style.top = '-9999px';
                           mathContainer.appendChild(mathElement);
                           MathJax.Hub.Queue(['Typeset', MathJax.Hub, mathElement]);
                           equationElements.push(mathElement);

@@ -115,15 +115,6 @@ measuring this correlation as a function of the size of the water pool,
 we've identified a distinct inflection point at a couple nanometers at
 which the water matrix changes dramatically.
 
-![Reverse micelle](assets/reverse_micelle_water.png)
-
-*A reverse micelle isolates a small, controllable pool of water (bottom)
--- zooming in (top) reveals individual water molecules surrounding a
-spin label near the micelle's core. By varying the size of the micelle,
-we control the size of the confined water pool and directly observe how
-confinement reshapes the hydrogen-bonding network and slows molecular
-motion.*
-
 We also employ mutagenesis to attach a spin label at a series of sites
 on the surface of proteins, including cancer signaling proteins (KRas)
 as well as transmembrane proton pumps (proteorhodopsin). This allows us
@@ -132,88 +123,81 @@ series of different sites, so that we can watch how the translational
 diffusivity of the water changes as we move from site to site along the
 surface.
 
-![KRas](assets/slideshow/Ras.gif)
-
-*Mutagenesis lets us install a spin label (red) at a chosen site on the
-surface of a signaling protein such as KRas, so that we can measure the
-hydration water dynamics at that specific location and compare across
-sites.*
-
 # References (Selected Publications)
 
 [Link to Complete List of
 Publications](https://scholar.google.com/citations?user=TdqiwiIAAAAJ&hl=en&oi=ao){:target="blank"}
 
-[1. ]{.csl-left-margin}[Franck JM, Pavlova A, Scott JA, Han S.
-"[Quantitative cw Overhauser effect dynamic nuclear polarization for the
-analysis of local water dynamics]{.nocase}." *Prog Nucl Magn Reson
+<span class="csl-left-margin">1. </span><span class="csl-right-inline">Franck JM, Pavlova A, Scott JA, Han S.
+"<span class="nocase">Quantitative cw Overhauser effect dynamic nuclear polarization for the
+analysis of local water dynamics</span>." *Prog Nucl Magn Reson
 Spectrosc*. Elsevier B.V.; 2013 Oct;74:33--56. PMID:
 [24083461](https://www.ncbi.nlm.nih.gov/pubmed/24083461)
-doi:[10.1016/j.pnmrs.2013.06.001](https://doi.org/10.1016/j.pnmrs.2013.06.001)]{.csl-right-inline}
+doi:[10.1016/j.pnmrs.2013.06.001](https://doi.org/10.1016/j.pnmrs.2013.06.001)</span>
 
-[2. ]{.csl-left-margin}[Franck JMJM, Han S. "[Overhauser Dynamic Nuclear
-Polarization for the Study of Hydration Dynamics, Explained]{.nocase}."
+<span class="csl-left-margin">2. </span><span class="csl-right-inline">Franck JMJM, Han S. "<span class="nocase">Overhauser Dynamic Nuclear
+Polarization for the Study of Hydration Dynamics, Explained</span>."
 In: Wand AJ, editor. *Biol NMR part b*. Academic Press; 2019. p.
 131--175.
-doi:[10.1016/bs.mie.2018.09.024](https://doi.org/10.1016/bs.mie.2018.09.024)]{.csl-right-inline}
+doi:[10.1016/bs.mie.2018.09.024](https://doi.org/10.1016/bs.mie.2018.09.024)</span>
 
-[3. ]{.csl-left-margin}[Franck JM, Scott JA, Han S. "[Nonlinear Scaling
+<span class="csl-left-margin">3. </span><span class="csl-right-inline">Franck JM, Scott JA, Han S. "<span class="nocase">Nonlinear Scaling
 of Surface Water Diffusion with Bulk Water Viscosity of Crowded
-Solutions]{.nocase}." *J Am Chem Soc*. 2013 Mar;135(11):4175--4178.
+Solutions</span>." *J Am Chem Soc*. 2013 Mar;135(11):4175--4178.
 PMID: [23347324](https://www.ncbi.nlm.nih.gov/pubmed/23347324)
-doi:[10.1021/ja3112912](https://doi.org/10.1021/ja3112912)]{.csl-right-inline}
+doi:[10.1021/ja3112912](https://doi.org/10.1021/ja3112912)</span>
 
-[4. ]{.csl-left-margin}[Hussain S, Franck JM, Han S. "[Transmembrane
+<span class="csl-left-margin">4. </span><span class="csl-right-inline">Hussain S, Franck JM, Han S. "<span class="nocase">Transmembrane
 Protein Activation Refined by Site-Specific Hydration
-Dynamics]{.nocase}." *Angew Chemie Int Ed*. 2013 Feb;52(7):1953--1958.
+Dynamics</span>." *Angew Chemie Int Ed*. 2013 Feb;52(7):1953--1958.
 PMID: [23307344](https://www.ncbi.nlm.nih.gov/pubmed/23307344)
-doi:[10.1002/anie.201206147](https://doi.org/10.1002/anie.201206147)]{.csl-right-inline}
+doi:[10.1002/anie.201206147](https://doi.org/10.1002/anie.201206147)</span>
 
-[5. ]{.csl-left-margin}[Franck JM, Ding Y, Stone K, Qin PZ, Han S.
+<span class="csl-left-margin">5. </span><span class="csl-right-inline">Franck JM, Ding Y, Stone K, Qin PZ, Han S.
 "Anomalously Rapid Hydration Water Diffusion Dynamics Near DNA
 Surfaces." *J Am Chem Soc*. 2015 Sep;137(37):12013--12023.
-doi:[10.1021/jacs.5b05813](https://doi.org/10.1021/jacs.5b05813)]{.csl-right-inline}
+doi:[10.1021/jacs.5b05813](https://doi.org/10.1021/jacs.5b05813)</span>
 
-[6. ]{.csl-left-margin}[Franck JM, Sokolovski M, Kessler N, Matalon E,
-Gordon-Grossman M, Han S, Goldfarb D, Horovitz A. "[Probing Water
-Density and Dynamics in the Chaperonin GroEL Cavity.]{.nocase}" *J Am
+<span class="csl-left-margin">6. </span><span class="csl-right-inline">Franck JM, Sokolovski M, Kessler N, Matalon E,
+Gordon-Grossman M, Han S, Goldfarb D, Horovitz A. "<span class="nocase">Probing Water
+Density and Dynamics in the Chaperonin GroEL Cavity.</span>" *J Am
 Chem Soc*. 2014 Jul;136(26):9396--403. PMID:
 [24888581](https://www.ncbi.nlm.nih.gov/pubmed/24888581)
-doi:[10.1021/ja503501x](https://doi.org/10.1021/ja503501x)]{.csl-right-inline}
+doi:[10.1021/ja503501x](https://doi.org/10.1021/ja503501x)</span>
 
-[7. ]{.csl-left-margin}[Franck JM, Barnes RP, Keller TJ, Kaufmann T, Han
-S. "[Active cancellation -- A means to zero dead-time pulse
-EPR]{.nocase}." *J Magn Reson*. 2015 Dec;261:199--204.
-doi:[10.1016/j.jmr.2015.07.005](https://doi.org/10.1016/j.jmr.2015.07.005)]{.csl-right-inline}
+<span class="csl-left-margin">7. </span><span class="csl-right-inline">Franck JM, Barnes RP, Keller TJ, Kaufmann T, Han
+S. "<span class="nocase">Active cancellation -- A means to zero dead-time pulse
+EPR</span>." *J Magn Reson*. 2015 Dec;261:199--204.
+doi:[10.1016/j.jmr.2015.07.005](https://doi.org/10.1016/j.jmr.2015.07.005)</span>
 
-[8. ]{.csl-left-margin}[Kaufmann T, Keller TJ, Franck JM, Barnes RP,
-Glaser SJ, Martinis JM, Han S. "[DAC-board based X-band EPR spectrometer
-with arbitrary waveform control.]{.nocase}" *J Magn Reson*. 2013
+<span class="csl-left-margin">8. </span><span class="csl-right-inline">Kaufmann T, Keller TJ, Franck JM, Barnes RP,
+Glaser SJ, Martinis JM, Han S. "<span class="nocase">DAC-board based X-band EPR spectrometer
+with arbitrary waveform control.</span>" *J Magn Reson*. 2013
 Oct;235:95--108. PMID:
 [23999530](https://www.ncbi.nlm.nih.gov/pubmed/23999530)
-doi:[10.1016/j.jmr.2013.07.015](https://doi.org/10.1016/j.jmr.2013.07.015)]{.csl-right-inline}
+doi:[10.1016/j.jmr.2013.07.015](https://doi.org/10.1016/j.jmr.2013.07.015)</span>
 
-[9. ]{.csl-left-margin}[Demas V, Franck JM, Bouchard LS, Sakellariou D,
-Meriles CA, Martin R, Prado PJ, Bussandri A, Reimer JA, Pines A. "['Ex
-situ' magnetic resonance volume imaging]{.nocase}." *Chem Phys Lett*.
+<span class="csl-left-margin">9. </span><span class="csl-right-inline">Demas V, Franck JM, Bouchard LS, Sakellariou D,
+Meriles CA, Martin R, Prado PJ, Bussandri A, Reimer JA, Pines A. "<span class="nocase">'Ex
+situ' magnetic resonance volume imaging</span>." *Chem Phys Lett*.
 2009 Jan;467(4-6):398--401.
-doi:[10.1016/j.cplett.2008.11.069](https://doi.org/10.1016/j.cplett.2008.11.069)]{.csl-right-inline}
+doi:[10.1016/j.cplett.2008.11.069](https://doi.org/10.1016/j.cplett.2008.11.069)</span>
 
-[10. ]{.csl-left-margin}[Franck JM, Chandrasekaran S, Dzikovski B,
-Dunnam CR, Freed JH. "[Focus: Two-dimensional electron-electron double
+<span class="csl-left-margin">10. </span><span class="csl-right-inline">Franck JM, Chandrasekaran S, Dzikovski B,
+Dunnam CR, Freed JH. "<span class="nocase">Focus: Two-dimensional electron-electron double
 resonance and molecular motions: The challenge of higher
-frequencies]{.nocase}." *J Chem Phys*. 2015;142(21):212302.
-doi:[10.1063/1.4917322](https://doi.org/10.1063/1.4917322)]{.csl-right-inline}
+frequencies</span>." *J Chem Phys*. 2015;142(21):212302.
+doi:[10.1063/1.4917322](https://doi.org/10.1063/1.4917322)</span>
 
-[11. ]{.csl-left-margin}[Franck JM, Demas V, Martin RW, Bouchard L-S,
-Pines A. "[Shimmed matching pulses: Simultaneous control of rf and
-static gradients for inhomogeneity correction]{.nocase}." *J Chem Phys*.
+<span class="csl-left-margin">11. </span><span class="csl-right-inline">Franck JM, Demas V, Martin RW, Bouchard L-S,
+Pines A. "<span class="nocase">Shimmed matching pulses: Simultaneous control of rf and
+static gradients for inhomogeneity correction</span>." *J Chem Phys*.
 2009 Dec;131(23):234506. PMID:
 [20025334](https://www.ncbi.nlm.nih.gov/pubmed/20025334)
-doi:[10.1063/1.3243850](https://doi.org/10.1063/1.3243850)]{.csl-right-inline}
+doi:[10.1063/1.3243850](https://doi.org/10.1063/1.3243850)</span>
 
-[12. ]{.csl-left-margin}[Beaton AA, Guinness A, Franck JM. "[A
+<span class="csl-left-margin">12. </span><span class="csl-right-inline">Beaton AA, Guinness A, Franck JM. "<span class="nocase">A
 modernized view of coherence pathways applied to magnetic resonance
-experiments in unstable, inhomogeneous fields]{.nocase}." *J Chem Phys*.
+experiments in unstable, inhomogeneous fields</span>." *J Chem Phys*.
 2022 Nov;157(17):174204.
-doi:[10.1063/5.0105388](https://doi.org/10.1063/5.0105388)]{.csl-right-inline}
+doi:[10.1063/5.0105388](https://doi.org/10.1063/5.0105388)</span>

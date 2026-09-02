@@ -1,10 +1,5 @@
 {% include slideshow.html %}
 
-<figure class="nanoscale-hero">
-    <img src="{{ site.baseurl }}/assets/nanoscale_molecule.png" alt="A spin-labeled molecule together with the hydration water molecules that surround it, illustrated at the nanoscale">
-    <figcaption>The nanoscale view at the heart of our research: a spin label reporting on the water molecules that surround it.</figcaption>
-</figure>
-
 The Franck Lab develops new magnetic-resonance-based spectroscopic techniques to
 see how water behaves at the nanoscale -- at the surfaces of proteins, membranes,
 and other soft materials. This "hydration water" plays a central role in how

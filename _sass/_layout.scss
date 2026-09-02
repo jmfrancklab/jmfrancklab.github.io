@@ -28,64 +28,7 @@ h1 {
     //border-bottom: 3px solid $grey-color-dark;
     //border-top-left-radius: #{$curve-radius};
     //border-top-right-radius: #{$curve-radius};
-    height: 80px;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    height: 100%;
-    padding: 4px 10px;
-    box-sizing: border-box;
-}
-
-.brand-molecule {
-    max-width: none;
-    height: 68px;
-    width: auto;
-    flex-shrink: 0;
-}
-
-.brand-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1.15;
-}
-
-.site-name {
-    font-family: $base-font-family;
-    font-weight: bold;
-    font-size: 30px;
-    letter-spacing: 0.5px;
-    color: #eef6ff;
-}
-
-.site-tagline {
-    font-family: $base-font-family;
-    font-style: italic;
-    font-size: 13px;
-    color: #9fc3e6;
-}
-
-@include media-query($on-palm) {
-    .floating-top .decoration {
-        height: 58px;
-    }
-    .brand {
-        gap: 8px;
-    }
-    .brand-molecule {
-        height: 46px;
-    }
-    .site-name {
-        font-size: 19px;
-    }
-    .site-tagline {
-        font-size: 9px;
-    }
+    height: #{$top-bar-height};
 }
 .site-header {
     // Positioning context for the mobile navigation icon
@@ -98,7 +41,7 @@ h1 {
     margin: 0 auto 0;
     &,
     &:visited {
-        color: $syracuse-orange;
+        color: $acert-red;
     }
 }
 
@@ -125,7 +68,7 @@ h1 {
     }
 
     .page-link {
-        color: $syracuse-orange;
+        color: $acert-red;
         line-height: $base-line-height;
         white-space: nowrap;
 
@@ -214,7 +157,7 @@ h1 {
                     padding: 0px;
                 }
                 //list-style: square inside;
-                //color: #{$syracuse-orange};
+                //color: #{$acert-red};
             }
         }
         &:hover .trigger {
@@ -263,6 +206,17 @@ h1 {
 .social-media-list img {
     margin-bottom: -15px;
 }
+.title-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    max-height: 75px;
+    width: auto;
+    height: auto;
+    position: relative;
+    z-index: +6;
+}
 .main-text{
     background-color: white;
     padding: 20px;
@@ -291,7 +245,7 @@ h1 {
 .footer-col-2 {
     width: -webkit-calc(20% - (#{$spacing-unit} / 2));
     width:         calc(20% - (#{$spacing-unit} / 2));
-    max-width: 50px;// this is the syracuse seal
+    max-width: 50px;// this is the ACERT logo
 }
 
 .footer-col-3 {
@@ -547,31 +501,6 @@ h1 {
     font-style: italic;
     font-size: #{$small-font-size};
     color: $grey-color-dark;
-}
-
-.nanoscale-hero {
-    float: right;
-    max-width: 160px;
-    margin: 0 0 10px 20px;
-    text-align: center;
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    figcaption {
-        font-size: #{$small-font-size};
-        font-style: italic;
-        color: $grey-color;
-        margin-top: 4px;
-    }
-
-    @include media-query($on-palm) {
-        float: none;
-        max-width: 130px;
-        margin: 0 auto 10px;
-    }
 }
 
 .slideshow {

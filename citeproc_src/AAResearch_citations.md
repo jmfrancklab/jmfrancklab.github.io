@@ -167,26 +167,12 @@ water pools. By measuring this correlation as a function of the size of the
 water pool, we've identified a distinct inflection point at a couple
 nanometers at which the water matrix changes dramatically.
 
-![Reverse micelle](assets/reverse_micelle_water.png)
-
-*A reverse micelle isolates a small, controllable pool of water (bottom) --
-zooming in (top) reveals individual water molecules surrounding a spin label
-near the micelle's core. By varying the size of the micelle, we control the
-size of the confined water pool and directly observe how confinement reshapes
-the hydrogen-bonding network and slows molecular motion.*
-
 We also employ mutagenesis to attach a spin label at a series of sites on the
 surface of proteins, including cancer signaling proteins (KRas) as well as
 transmembrane proton pumps (proteorhodopsin). This allows us to create a set of
 samples that are primed for measurement of water at a series of different
 sites, so that we can watch how the translational diffusivity of the water
 changes as we move from site to site along the surface.
-
-![KRas](assets/slideshow/Ras.gif)
-
-*Mutagenesis lets us install a spin label (red) at a chosen site on the
-surface of a signaling protein such as KRas, so that we can measure the
-hydration water dynamics at that specific location and compare across sites.*
 
 # References (Selected Publications)
 
