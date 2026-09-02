@@ -14,11 +14,11 @@ I received the following commentary from an expert, and want to make these updat
     > justified two-line block, I fixed a hidden-background-layer bug, wired
     > up the two missing raster images (`nitroxide.png`/`water.png`, now in
     > `assets/`), re-rendered the PNG, and resized the CSS to match. Green
-    > outline on "The Franck Lab": **still there, untouched** — my first
-    > attempt at removing it was the crude replacement you rejected, so I
-    > backed that all the way out and haven't touched it since. Still open —
-    > want me to take another pass at just the color/outline, leaving the
-    > new subtitle layout alone?
+    > outline on "The Franck Lab": now done too — the title was 4 stacked
+    > colored copies of the same text (black shadow, cyan, yellow, white);
+    > the cyan+yellow layers together are what read as green. Removed just
+    > those two, kept the black drop-shadow + white text. Subtitle's own
+    > glow left as-is.
 
 *   You should keep things brief on the homepage and just make a quick summary
     of research and opportunities on this page. You can then link it your other
