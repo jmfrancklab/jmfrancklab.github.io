@@ -278,8 +278,8 @@
       </group>
       <text macro="report-details" suffix=". "/>
       <text macro="access"/>
-      <text macro="pmcid"/>
-      <text macro="doi"/>
+      <!-- PMID/PMCID/DOI are appended by _layouts/bibliography.html as
+           clickable links instead of being rendered as plain text here -->
     </layout>
   </bibliography>
 </style>

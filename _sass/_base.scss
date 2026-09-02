@@ -332,24 +332,18 @@ table tr:first-child th {
 }
 
 /**
- * Bibliography (pandoc/citeproc hanging-indent references, see Research page)
+ * Bibliography (jekyll-scholar, see Research page)
  */
-h1[id^="references"] ~ p {
-    text-indent: 0;
-    overflow: hidden;
+.bibliography {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.bibliography li {
+    text-indent: -2.2em;
+    padding-left: 2.2em;
     margin-bottom: 10px;
-}
-
-.csl-left-margin {
-    float: left;
-    min-width: 2.2em;
-    text-align: right;
-    padding-right: 0.4em;
-}
-
-.csl-right-inline {
-    display: block;
-    margin-left: 2.6em;
 }
 //tbody {
 //    border:3px solid black;

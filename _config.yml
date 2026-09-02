@@ -18,3 +18,15 @@ assets:
 collections:
     people:
       output: true
+
+plugins:
+    - jekyll-scholar
+
+scholar:
+    style: edited-pmid-format.csl
+    locale: en
+    source: .
+    bibliography: references.bib
+    bibliography_template: bibliography
+    sort_by: none
+    order: ascending
