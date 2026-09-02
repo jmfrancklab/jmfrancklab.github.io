@@ -4,6 +4,9 @@ I received the following commentary from an expert, and want to make these updat
 
     > Done — `$background-color: #0a2540`.
 
+    This color is good HOWEVER, for the color behind the main top/title image
+    should be the same color as the rest of the background!!
+
 *   Homepage - The name would look better without the green outline and you
     need to make the nanoscale view more prominent. I am not sure what image
     there, but maybe a larger one that shows a water molecule? Also, labels to
@@ -19,6 +22,11 @@ I received the following commentary from an expert, and want to make these updat
     > the cyan+yellow layers together are what read as green. Removed just
     > those two, kept the black drop-shadow + white text. Subtitle's own
     > glow left as-is.
+
+    I disagreed with the expert here -- I liked the green glow.  You helped to
+    edit the main title slide, but then you didn't adjust positioning
+    appropriately, so that the title image png overlaps visually with the menu
+    times underneath!!
 
 *   You should keep things brief on the homepage and just make a quick summary
     of research and opportunities on this page. You can then link it your other
@@ -59,41 +67,8 @@ I received the following commentary from an expert, and want to make these updat
     > Done — card layout with title/date/excerpt per post instead of a flat
     > dump of full post content.
 
-Also, it's supposed to pull the list of publications from a bib (or yaml, I
-forget) file (built by Jekyll) and the formatting currently doesn't work
-correctly.
-
-> It's a `.bib` file (`references.bib`) — there's no yaml. Jekyll now
-> genuinely builds the publications list from it on every deploy, via
-> jekyll-scholar (Gemfile + `_config.yml` scholar block, using your existing
-> `edited-pmid-format.csl` for both in-text citations and the bibliography).
-> `citeproc_src/AAResearch_citations.md` is gone -- it's folded directly into
-> `AAResearch.md`, which is now the live source: pandoc's `[@key]` markers
-> became `{% cite key %}` tags, the manual reference list became
-> `{% bibliography --cited_in_order %}`. Retired `apply_citations.sh` and
-> `convert_csl_spans.py` (no longer needed).
->
-> jekyll-scholar isn't in GitHub Pages' default-build plugin whitelist, so
-> this needed a GitHub Actions workflow (`.github/workflows/pages.yml`) to
-> build and deploy instead — **you'll need to flip Settings → Pages →
-> "Build and deployment" → Source to "GitHub Actions"** (currently
-> "Deploy from a branch"); I can't change that from here. The workflow
-> triggers on push to `master`.
->
-> Verified via `bundle exec jekyll serve`: real hanging-indent numbered
-> bibliography in citation order, working DOI/PMID links (citeproc-ruby
-> doesn't auto-linkify those like pandoc did, so I added them back via a
-> small `_layouts/bibliography.html` template), linked superscript in-text
-> citations.
-
-Finally, change all of the Syracuse branding to ACERT branding (including changing the syracuse to ACERT 501(c)3).
-I have supplied acert_logo.svg that you can use to replace the syracuse logo,
-and you're encouraged to convert this to png if you think it would give better
-display/faster rendering.
-
-> Done — footer's Syracuse Seal replaced with `acert_logo.png` (converted
-> from your svg), and the nav/link accent color changed from Syracuse orange
-> to ACERT red (`#df0909`, pulled from the logo). Left the "JMF Faculty Page"
-> footer link and the Syracuse campus photo alone — those read as factual/
-> institutional rather than decorative branding to me. Flag if you want
-> those changed too.
+*   The bottom left png image previously had an image with a gradient fade that
+    was a picture of syracuse university.  Replace this instead with the ACERT
+    image.  The ACERT image should also have a drop shadow (make and commmit an
+    svg on your way to making the png!) generated from svg clone → black → 50%
+    transparency and some blur, behind, and translate down and right
