@@ -26,15 +26,16 @@ Debian/Ubuntu — `sudo apt install ruby-dev`).
 
 `gem install --user-install` puts executables in a per-user directory that's
 usually *not* on your `PATH` yet, so add it first — otherwise the `bundle`
-command below won't be found:
+command below won't be found. Add this line to your shell profile
+(`~/.bashrc` etc.):
 
 ```bash
-export PATH="$(gem environment | grep 'USER INSTALLATION DIRECTORY' | sed 's/.*: //')/bin:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/<ruby-version>/bin:$PATH"
 ```
 
-Add that same line to your shell profile (`~/.bashrc` etc.) if you want it
-to persist across terminal sessions — it only affects the current shell
-otherwise. Then:
+(check the exact path with `gem environment | grep 'USER INSTALLATION DIRECTORY'`),
+then either open a new terminal or run `source ~/.bashrc` so the current one
+picks it up too. Then:
 
 ```bash
 gem install --user-install bundler
