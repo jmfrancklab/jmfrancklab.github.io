@@ -63,21 +63,28 @@ Also, it's supposed to pull the list of publications from a bib (or yaml, I
 forget) file (built by Jekyll) and the formatting currently doesn't work
 correctly.
 
-> It's a `.bib` file (`references.bib`) — there's no yaml, and Jekyll was
-> never actually building this (no plugin/gem for it ever existed in this
-> repo's history). The real pipeline: `apply_citations.sh` runs pandoc
-> against `references.bib` and commits a static, pre-expanded `AAResearch.md`
-> — Jekyll just renders that file like any other page. The formatting bug
-> was pandoc emitting its own span-attribute syntax that kramdown (Jekyll's
-> markdown engine) doesn't understand, so it printed literal brackets/braces
-> instead of a formatted list. Fixed the actual bug (converts to real HTML
-> spans now) and verified it renders as a proper hanging-indent numbered
-> list with working DOI/PMID links. You separately asked to go further and
-> have Jekyll genuinely build this from the `.bib` on every deploy via
-> GitHub Actions + jekyll-scholar — that infra work (Gemfile, workflow file,
-> `_config.yml` scholar block, converting `citeproc_src` to live `{% cite %}`
-> tags) is still pending; want me to proceed with it, or is the current
-> (now-working) pandoc pipeline good enough?
+> It's a `.bib` file (`references.bib`) — there's no yaml. Jekyll now
+> genuinely builds the publications list from it on every deploy, via
+> jekyll-scholar (Gemfile + `_config.yml` scholar block, using your existing
+> `edited-pmid-format.csl` for both in-text citations and the bibliography).
+> `citeproc_src/AAResearch_citations.md` is gone -- it's folded directly into
+> `AAResearch.md`, which is now the live source: pandoc's `[@key]` markers
+> became `{% cite key %}` tags, the manual reference list became
+> `{% bibliography --cited_in_order %}`. Retired `apply_citations.sh` and
+> `convert_csl_spans.py` (no longer needed).
+>
+> jekyll-scholar isn't in GitHub Pages' default-build plugin whitelist, so
+> this needed a GitHub Actions workflow (`.github/workflows/pages.yml`) to
+> build and deploy instead — **you'll need to flip Settings → Pages →
+> "Build and deployment" → Source to "GitHub Actions"** (currently
+> "Deploy from a branch"); I can't change that from here. The workflow
+> triggers on push to `master`.
+>
+> Verified via `bundle exec jekyll serve`: real hanging-indent numbered
+> bibliography in citation order, working DOI/PMID links (citeproc-ruby
+> doesn't auto-linkify those like pandoc did, so I added them back via a
+> small `_layouts/bibliography.html` template), linked superscript in-text
+> citations.
 
 Finally, change all of the Syracuse branding to ACERT branding (including changing the syracuse to ACERT 501(c)3).
 I have supplied acert_logo.svg that you can use to replace the syracuse logo,
