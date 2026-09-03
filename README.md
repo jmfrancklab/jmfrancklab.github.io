@@ -2,6 +2,21 @@
 
 Source for the Franck Lab website (Jekyll, deployed via GitHub Pages).
 
+## Editable content
+
+Where to make day-to-day content edits, without touching layout/CSS:
+
+| What | Where |
+| --- | --- |
+| Site title, contact email, description | `_config.yml` |
+| PI bio (John Franck's own section) | `People.md` (hand-written, at the top) |
+| Everyone else on the People page (grad students, alumni, undergrads) | `_data/people.yml` — one entry per person: `name`, `status` (`active`/`alumnus`), `level` (`PhD`/`Masters`/`postdoc`/`undergrad`), optional `photo` (path under `assets/`), and `description` (a YAML `\|` block for the bio paragraph(s)) |
+| Research / Instrumentation / Software / Join the Lab pages | `AAResearch.md`, `Instrumentation.md`, `Software.md`, `Skills.md` (each is Markdown with a `title:` in its front matter — that's what shows in the nav bar and page heading) |
+| Lab News posts | `_posts/` — one file per post, named `YYYY-MM-DD-slug.md` |
+| Publications | `references.bib` (the library that's actually rendered on the Software/Research bibliography section via jekyll-scholar) — `library_abbrev_utf8.bib` is a separate, larger personal reference library, not the one the site renders |
+| Photos, logos, and other images | `assets/` |
+| Ongoing feedback / to-do log from site reviews | `INSTRUCTIONS.md` — running log of requested changes and what's been done for each |
+
 ## 1. Switch GitHub Pages to build via Actions
 
 The site now needs jekyll-scholar to build the publications page, which

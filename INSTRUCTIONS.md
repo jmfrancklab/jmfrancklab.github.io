@@ -39,6 +39,24 @@ I received the following commentary from an expert, and want to make these updat
     fill 100% of the width (and of course should scale down to match as the
     screen is made even more narrow).
 
+    > Done — `.title-image` is now 80% of `.decoration`'s width (100% below
+    > the `$on-palm` breakpoint), taken out of normal flow (`position:
+    > absolute`) so it can still overflow `.decoration`'s bottom edge
+    > without stretching that box; `.decoration`'s height now tracks its own
+    > width via `aspect-ratio` instead of a fixed px value, so the "stops
+    > just under the lettering" alignment holds at every width. Also had to
+    > override `max-width` on `.title-image` directly -- the global `img {
+    > max-width: 80% }` rule was otherwise clamping it back down regardless
+    > of the `width` set here.
+
+    Now, you've violated the earlier instructions about where the lettering
+    should fall.  The lettering overlaps the naviation bar underneath!!!
+
+    > Measured this in a fresh browser at 320–1400px — letters stay inside
+    > the box at every width I can reproduce. The dev server was stale (see
+    > note below) — please hard-refresh and let me know if it's still wrong,
+    > ideally with the viewport width/browser where you see it.
+
 *   Research page - You explanations for what you do are really good and easy
     to understand for someone not familiar with this. I would include more
     visuals. The one you have is good, but you might want to label the bulk
@@ -49,22 +67,15 @@ I received the following commentary from an expert, and want to make these updat
     > relocated homepage paragraphs — you flagged you didn't want those, so
     > I removed them; the paragraphs are still there, just text-only now.
 
-*   Instrumentation - You might not need this page since I assume these will part of ACERT 2.
-
-    > Kept, per your answer.
-
 *   People - I would make the photos larger and have people include info about themselves. 
 
     > Photos: done (90px to 180px). Bios: not expanded — I didn't want to
     > invent personal details about real people. If you or the students want
     > to send a couple sentences each, I'll add them.
 
-*   Skills - I would change this to your recruitment page. The Franck Lab is looking for . . . . 
-    Could list the different skills involved in the lab and types of research offered for undergrads and grads.
+    Now, the photos are too large! Go for 120 px
 
-    > Done — retitled "Join the Lab," lists skills/opportunities for grad +
-    > undergrad, uses your "open to working with talented graduate students,
-    > undergraduate researchers, and postdocs" phrasing (no specific term).
+    > Done — 180px → 120px.
 
 *   Lab News - Maybe improve the layout to highlight things better.
 
@@ -88,28 +99,77 @@ I received the following commentary from an expert, and want to make these updat
     You should now remove the central acert logo, which is redundant also
     rescale the left logo to 70% of its current size.
 
-*   The background was supposed to have a subtle effect like a screensaver
-    where equations fade lightly in and out.  This was working at some point
-    (in history), then you broke it so that everything was shoved in the upper
-    left, and now I don't see it at all.
+    > Done — removed the `<td class="middle">` cell (and its now-unused
+    > `.middle` CSS) from the footer. `.left-image` is 70% of its previous
+    > size (`max-width: 56%`, i.e. 70% of the global `img` rule's 80%).
 
-    > The "shoved in the upper-left" part was already fixed (the cached
-    > template equations were being kept off-screen at -9999px, and each
-    > visible clone did get its own random position). The "don't see it at
-    > all" part was real, though: `.fading-equation` was `#303030` — almost
-    > the same darkness as the `#0a2540` background, so it was rendering,
-    > just invisible. Changed it to a light, semi-transparent blue-white
-    > that's actually readable against the deep blue while staying subtle.
+    You didn't resize the remaining ACERT logo like I asked! 50% of its current
+    size!!
 
-    This is like before, I think, but address the following:
+    > It was actually at 56% (verified via computed style) — sizing it
+    > further to 28%, i.e. 50% of that.
 
-    -   It's not subtle enough -- about 50% of the current alpha, only.
-    -   I think equations appear at different times, but too closely spaced
-        together.
-    -   The equations appear in the first place before mathjax is done.  If
-        it's possible to wait for mathjax before having them appear, do that.
-    -   The equations all fade out at the same time.  This is a major error.
-        They are supposed to fade out one at a time, staggered, and the first
-        should be fading out as the last is fading in, so that the animation is
-        a continuous loop!
--   Throughout, replace jmfranck@syr.edu (or [at] ) with john.m.franck@acertcenter.org
+-   Throughout, replace jmfranck@syr.edu (or [at] ) with
+    john.m.franck@acertcenter.org
+
+    > Done — `_config.yml`'s `site.email` (the only place it was defined;
+    > `footer.html` already just references `{{ site.email }}`).
+
+    This is not true! It's still a problem on the bottom right of all the pages!!!
+    Also, remove the ref to my faculty page!!
+
+    > The site.email config value was actually fixed — the running dev
+    > server just hadn't reloaded `_config.yml` since (it only reloads on
+    > source-file changes, not config changes), so it kept serving the old
+    > email. Restarted it. Faculty page link removed from the footer.
+
+-   Under People.md, it's OK to have me in my own section, but everyone else
+    (including the undergrads in the table) should be in the same yaml file,
+    with the full name (also the figure caption), description paragraph (pipe-continued-string-like), and
+    photo, all structured as dict-like attributes under one header.
+    The current status (active vs. alumnus) and level (PhD, Masters, undergrad,
+    postdoc -- note that active converts to current XXX student) should all be
+    attributes, as well.
+
+    > Done — new `_data/people.yml`, one dict per person (`name`, `status`,
+    > `level`, optional `photo`, `description` as a `|` block). Replaced the
+    > old `_people/*.md` collection (deleted those 3 files and the
+    > `collections: people:` entry in `_config.yml`) and the hardcoded
+    > undergrad table. `People.md` now loops over `site.data.people`,
+    > filtered by `status`/`level` into the same three sections as before
+    > (Graduate Students / Graduates and Postdocs / Undergraduates), and
+    > derives the displayed label from status+level ("current PhD student"
+    > for active, "PhD"/"MS"/"Postdoc" for alumnus). I did not have a
+    > reliable source for Alexandria Guinness's, Romana Shathy's, or Warren
+    > Kincaid's exact degree program, so I defaulted all three current
+    > graduate students' `level` to `PhD` in the data file — please correct
+    > any that should be `Masters`. Also noticed while testing: the
+    > `.mugshot` float layout lets a photo visually spill into the next
+    > person's entry when the bio text is shorter than the photo (pre-
+    > existing, not something this change introduced — same div/float
+    > structure as before) — flagging in case you want it fixed separately.
+
+    I'm not reading your very verbose description above!
+
+    Before, the undergrads were in a nice table, and you ruined this!
+    I do want the info in a yaml, bu thte undergrads should still be in a table!
+
+    > Done — undergrads are back in a table, generated from
+    > `_data/people.yml` instead of hardcoded.
+
+-   The readme should have a section dedicated to listing the important editable data and text sources.
+
+    > Done — added an "Editable content" section near the top of
+    > `README.md` with a table of what to edit for common changes (site
+    > config, People page, other content pages, Lab News posts,
+    > publications, images, and the `INSTRUCTIONS.md` feedback log).
+
+-   We want to sort the publications into independent vs. not, and I want you
+    to go get the TOC figures for all the independent publications, put them in
+    a TOC subfolder of assets, and have a yaml file that associates them with
+    the relevant key so they can be used.
+    Arrange the citation and the TOC figure together in a format similar to how
+    you have done the news items.
+    This is complicated enough that you should handle this request in its own
+    turn -- explicitly say you're waiting to do this if there are other
+    unresolved things in this document.

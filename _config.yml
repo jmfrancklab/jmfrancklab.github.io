@@ -1,6 +1,6 @@
 # Site settings
 title: Franck Lab
-email: jmfranck [at] syr.edu
+email: john.m.franck@acertcenter.org
 description: > # this means to ignore newlines until "baseurl:"
     ©2023 J.M. Franck
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -15,9 +15,6 @@ VMs_available: True
 assets:
     sources:
         - assets/
-collections:
-    people:
-      output: true
 
 plugins:
     - jekyll-scholar

@@ -1,0 +1,115 @@
+# Lab members, except the PI (who has a hand-written section directly in
+# People.md). status: active | alumnus. level: PhD | Masters | postdoc |
+# undergrad. When status is active, People.md displays this as
+# "current <level> student" (or "current postdoc" for postdocs); when
+# alumnus, it displays just the level.
+- name: Alexandria Guinness
+  status: active
+  level: PhD
+  photo: assets/alex_photo.png
+  description: |
+    Alex has automated large portions of the ODNP experiment and data
+    processing,
+    and performs detailed investigations to improve the sensitivity of the
+    ODNP measurement.
+    Currently, she applies these techniques to the study of hydration
+    water on the surface of Ras.
+
+- name: Romana Shathy
+  status: active
+  level: PhD
+  photo: assets/romana_photo_top.png
+  description: |
+    Romana is a 1<sup>st</sup> year graduate student.
+    She synthesizes small molecule spin labels that allow her to probe the
+    microviscosity (*via* ESR)
+    and the local diffusivity (*via* ODNP) of small pockets of water.
+    Beginning with reverse micelles, she plans to expand her studies to
+    a variety of (especially energy-relevant) porous materials.
+
+- name: Warren Kincaid
+  status: active
+  level: PhD
+  photo: assets/warren_photo.png
+  description: |
+    Warren has two projects:
+    In one, he develops efficient protocols for site-directed spin labeling and
+    expression of the light-activated proton pump proteorhodopsin,
+    and investigates sites with anomalous hydration along the surface
+    or proteorhodopsin.
+    In the other project, he employes Ansys Electronics
+    to design dual NMR-ESR resonators with improved sensitivity.
+    He focuses on developing new simulation protocols that apply
+    broadly to the design of couple microwave resonators.
+
+- name: Alec Beaton
+  status: alumnus
+  level: PhD
+  description: |
+    Alec employed both ODNP and <sup>2</sup>H NMR to observe confined water inside reverse micelles.
+
+    He also pioneered the DCCT technique for the display of maximally multiplexed information about the various coherence pathway signals present in an NMR experiment; he applied this technique to identify faint signals in low-field NMR and to perform mean-field-averaged correlation alignment to dramatically improve signal to noise and signal quality in the presence of variable magnetic fields.
+
+    Alec currently works at Bruker Biospin.
+
+- name: Farhana Syed
+  status: alumnus
+  level: postdoc
+  description: |
+    Farhana performed site-directed spin labeling on the protein K-Ras.
+
+- name: Samantha Betts
+  status: alumnus
+  level: Masters
+  photo: assets/SMBetts_Image.png
+  description: |
+    Sam refined a protocol for the expression and site-directed spin labeling of Proteorhodopsin, and also worked on overmodulation reconstruction.
+    Sam currently works at the Aldon Corporation as a Product Developer.
+
+- name: Natasha Prince
+  status: alumnus
+  level: undergrad
+  description: |
+    Natasha helped to refine our protocol for trans-membrane protocol expression, and worked on customized dialysis devices to precisely control the solvent environment. She graduated with distinction in chemistry, and has proceeded to graduate studies of Art Conservation and Forensics.
+
+- name: Conal Gallagher
+  status: alumnus
+  level: undergrad
+  description: |
+    Conal worked on the synthesis of small molecule spin labels. After graduation, he joined a small startup in the Bay Area, followed by graduate studies in Forensics.
+
+- name: Jessica Khuc
+  status: alumnus
+  level: undergrad
+  description: |
+    Jessica worked with Farhana on generating multiple SDSL mutants of Ras.
+
+- name: Eldon Hard
+  status: alumnus
+  level: undergrad
+  description: |
+    Began our project on the simulation of microwave resonators. Graduated and enrolled in the PhD program at USC.
+
+- name: Heta Desai
+  status: alumnus
+  level: undergrad
+  description: |
+    As a 2017 REU (Research Experience for Undergraduates) student, Heta synthesized the small molecule spin label Cat-1, demonstrated its capture inside lipid vesicles, and demonstrated its saturation performance relative to aminotempo.
+
+- name: Isabela Ramirez
+  status: alumnus
+  level: undergrad
+  description: |
+    Worked briefly to initialize a project on mechanical automation of rf tuning and sample mixing.
+
+- name: Soliloquy Rhodes
+  status: alumnus
+  level: undergrad
+  description: |
+    Soliloquy (graduated 2019) worked on the synthesis of small molecule spin labels as well as the design of an automated temperature control system for use with saturation-level microwaves.
+
+- name: Michelle Sahagian
+  status: alumnus
+  level: undergrad
+  description: |
+    (Graduated 2019) worked on the synthesis of small molecule spin labels.

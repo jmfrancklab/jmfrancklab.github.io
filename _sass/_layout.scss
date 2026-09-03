@@ -30,12 +30,19 @@ h1 {
     //border-top-right-radius: #{$curve-radius};
     // stops just under the bottom of "the Franck lab" white lettering in
     // header_only.png (bottom of the letters sits ~59px into the 114px-tall
-    // source image, i.e. ~30px at the .title-image display width) -- the
-    // drop shadow and subtitle below that, plus the lower part of the
-    // molecule graphic on the left, are meant to hang off the bottom edge
-    // and overlap the nav row underneath (intentional, for visual depth;
-    // this only reads cleanly because $top-bg-color matches $background-color)
-    height: 30px;
+    // source image) -- the drop shadow and subtitle below that, plus the
+    // lower part of the molecule graphic on the left, are meant to hang off
+    // the bottom edge and overlap the nav row underneath (intentional, for
+    // visual depth; this only reads cleanly because $top-bg-color matches
+    // $background-color). .title-image is a fixed fraction of this
+    // element's own width (80%, 100% on palm), so height tracks width via
+    // aspect-ratio instead of a fixed px value: 650/(0.8*59) desktop,
+    // 650/59 on palm.
+    aspect-ratio: 13.7712;
+
+    @include media-query($on-palm) {
+        aspect-ratio: 11.0169;
+    }
 }
 .site-header {
     // Positioning context for the mobile navigation icon
@@ -215,19 +222,27 @@ h1 {
 }
 .title-image{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    // header_only.png's aspect ratio changed (2-line subtitle made it taller,
-    // 283.82965x98.610115 vs the old 290.84485x67.863762) -- constrain by
-    // width instead of height so the title renders at its original physical
-    // size and the extra height it now needs is preserved rather than
-    // squashed.
-    max-width: 325px;
-    width: auto;
+    // taken out of normal flow (rather than margin: 0 auto) so its height
+    // doesn't stretch .decoration's own aspect-ratio-driven height -- it's
+    // meant to overflow that box's bottom edge, not grow it
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    // sized relative to .decoration, which is itself sized to match the
+    // main content column -- so this is ~80% of the main white text area.
+    // max-width is repeated here (matching width) because the global
+    // `img { max-width: 80% }` rule would otherwise clamp this back down
+    // regardless of the width set below
+    width: 80%;
+    max-width: 80%;
     height: auto;
-    position: relative;
     z-index: +6;
+
+    @include media-query($on-palm) {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 .main-text{
     background-color: white;
@@ -350,13 +365,6 @@ h1 {
     .right{
         width: #{$right-width};
         text-align: right;
-    }
-    .middle{
-        text-align: center;
-        max-height: $middle-image-height;
-    }
-    .middle img{
-        max-height: $middle-image-height;
     }
     .bottom{
         border: 0px;
@@ -495,8 +503,9 @@ h1 {
     position: absolute;
     // light enough to actually read against the deep-blue $background-color
     // (the old #303030 dark gray was almost the same darkness as the page
-    // background, so the equations were rendering but invisible)
-    color: rgba(180, 205, 235, 0.6);
+    // background, so the equations were rendering but invisible) but at half
+    // the alpha of the first pass, so it stays a subtle background effect
+    color: rgba(180, 205, 235, 0.3);
     opacity: 0;
     transition: opacity 1s;
 }

@@ -65,6 +65,14 @@
                           equationElements.push(mathElement);
                       }
 
+                var VISIBLE_MS = 2000; // how long an equation stays fully visible
+                var FADE_MS = 1000; // matches the 1s opacity transition in CSS
+                var NUM_SLOTS = 20; // number of concurrently-cycling equations
+                // spacing between slots' initial appearance -- sized to roughly
+                // one equation's full on-screen lifetime so slots overlap
+                // (one fading out as another fades in) instead of bunching up
+                var STAGGER_MS = (VISIBLE_MS + 2 * FADE_MS) / NUM_SLOTS;
+
                 // Function to create a fading math equation
                 function createFadingEquation(index) {
                           if (index >= equationElements.length) {
@@ -97,16 +105,29 @@
                                               // Remove the math element from the container
                                               mathContainer.removeChild(mathElement);
 
-                                              // Repeat the process with the next equation
-                                              createFadingEquation(index + 1);
-                                          }, 2000); // Adjust the duration of the fade-out animation as needed
-                                }, 2000); // Adjust the delay between equations as needed
+                                              // Repeat with the next equation, after a randomized
+                                              // pause -- this lets each slot's cycle drift out of
+                                              // lockstep with the others so the staggering doesn't
+                                              // collapse back into a synchronized loop over time
+                                              setTimeout(function() {
+                                                        createFadingEquation(index + 1);
+                                                    }, Math.random() * STAGGER_MS * NUM_SLOTS);
+                                          }, FADE_MS);
+                                }, VISIBLE_MS);
                       }
 
-                // Start multiple instances of the animation
-                for (var i = 0; i < 20; i++) {
-                          createFadingEquation(i);
-                      }
+                // Wait until MathJax has actually finished typesetting the
+                // cached templates before starting the animation, so equations
+                // don't briefly appear as raw, un-rendered TeX source
+                MathJax.Hub.Queue(function() {
+                          // Start multiple instances of the animation, staggered
+                          // so they don't all appear/disappear in lockstep
+                          for (var i = 0; i < NUM_SLOTS; i++) {
+                                    setTimeout((function(slot) {
+                                              return function() { createFadingEquation(slot); };
+                                          })(i), i * STAGGER_MS);
+                                }
+                      });
             });
       // end math animation javascript
   </script>
