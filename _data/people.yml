@@ -61,7 +61,6 @@
 - name: Samantha Betts
   status: alumnus
   level: Masters
-  photo: assets/SMBetts_Image.png
   description: |
     Sam refined a protocol for the expression and site-directed spin labeling of Proteorhodopsin, and also worked on overmodulation reconstruction.
     Sam currently works at the Aldon Corporation as a Product Developer.

@@ -173,3 +173,5 @@ I received the following commentary from an expert, and want to make these updat
     This is complicated enough that you should handle this request in its own
     turn -- explicitly say you're waiting to do this if there are other
     unresolved things in this document.
+-   There is a full line of whitespace under each of the images -- this is
+    weird, and the text should be wrapping to fill that space.
