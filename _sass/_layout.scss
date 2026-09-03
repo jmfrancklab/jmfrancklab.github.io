@@ -22,26 +22,37 @@ h1 {
     max-width: #{$content-width};
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.33);
+    // negative spread pulls the shadow's un-blurred rect in from every edge
+    // by exactly the blur radius, so the blur only ever reaches past the
+    // box on the (positive-offset) bottom side -- zero bleed on the left
+    // and right, unlike a plain `0 5px 5px` blur which still spreads a few
+    // px sideways past the box edges.
+    box-shadow: 0 6px 6px -6px rgba(0,0,0,0.45);
     //border: 2px solid rgb(33,41,28);
     //border-top: 5px solid $grey-color-dark;
     //border-bottom: 3px solid $grey-color-dark;
     //border-top-left-radius: #{$curve-radius};
     //border-top-right-radius: #{$curve-radius};
-    // stops just under the bottom of "the Franck lab" white lettering in
-    // header_only.png (bottom of the letters sits ~59px into the 114px-tall
-    // source image) -- the drop shadow and subtitle below that, plus the
-    // lower part of the molecule graphic on the left, are meant to hang off
-    // the bottom edge and overlap the nav row underneath (intentional, for
-    // visual depth; this only reads cleanly because $top-bg-color matches
-    // $background-color). .title-image is a fixed fraction of this
-    // element's own width (80%, 100% on palm), so height tracks width via
-    // aspect-ratio instead of a fixed px value: 650/(0.8*59) desktop,
-    // 650/59 on palm.
-    aspect-ratio: 13.7712;
+    // stops right at the baseline of the subtitle's second line ("biological
+    // and material surfaces"), i.e. just before that line's one descender
+    // (the "g" in "biological") -- so the subtitle's actual letterforms
+    // always have blue background behind them (no collision with the nav
+    // row's link text), while that single "g" hangs off the bottom edge and
+    // just touches the nav row underneath, echoing the same effect the
+    // title lettering's shadow + the molecule graphic already have. The
+    // title itself (including "group"'s own descenders, which land well
+    // above this row) stays fully planted on the blue background.
+    // Source-image row math (header_only.png is 650x144): subtitle line 2's
+    // baseline sits at row 109 -- aspect-ratio = 650/(0.8*109) desktop,
+    // 650/109 on palm. NOTE: these numbers are keyed to header_only.png's
+    // own pixel dimensions and text layout -- if that file is ever
+    // re-rendered at a different size/layout, re-measure (open it, scan
+    // alpha channel rows for the target feature) and recompute both values
+    // (see git history / INSTRUCTIONS.md around 2026-09-03 for the method).
+    aspect-ratio: 7.4541;
 
     @include media-query($on-palm) {
-        aspect-ratio: 11.0169;
+        aspect-ratio: 5.9633;
     }
 }
 .site-header {
@@ -507,7 +518,7 @@ h1 {
     // the alpha of the first pass, so it stays a subtle background effect
     color: rgba(180, 205, 235, 0.3);
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 3s;
 }
 
 //{{{ slideshow

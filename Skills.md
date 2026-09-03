@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Join the Lab
+title: Join the Group
 attribution: J. Franck
 ---
 # {{page.title}}

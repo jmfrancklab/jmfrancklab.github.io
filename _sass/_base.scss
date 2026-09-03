@@ -309,6 +309,16 @@ table tr:first-child th {
     border-bottom: 3px;
 }
 
+.mugshot {
+  // establishes a block formatting context so this div always fully
+  // contains its own floated photo, regardless of whether the bio text is
+  // taller or shorter than the photo -- without this, a short bio lets the
+  // photo bleed down into the next person's entry (the next .mugshot's own
+  // float then stacks below the still-uncleared one, visibly displacing
+  // that person's heading/photo).
+  display: flow-root;
+}
+
 .mugshot img {
   float: left;
   max-width: 120px;
@@ -316,10 +326,21 @@ table tr:first-child th {
   width: auto;
   height: auto;
   padding-right: 12pt;
-  padding-bottom: 5pt;
+  // padding-bottom was 5pt -- like the old `position: relative; top:`
+  // offset below, padding is part of the float's own box, so it was real
+  // reserved space below the visible photo that text couldn't enter even
+  // though nothing was there. Removed.
+  padding-bottom: 0;
   display: block;
-  position: relative;
-  top: -14px;
+  // margin-top (not `position: relative; top:`) so the raise actually
+  // affects layout -- a relatively-positioned float is shifted only for
+  // painting, so surrounding text still wraps as if the float were at its
+  // original (lower) position, leaving a permanent dead zone below the
+  // visible photo where text can't start. A negative margin genuinely
+  // moves the float, so the space reserved for wrapping moves with it and
+  // that gap closes, while still keeping the same overlap-with-the-content-
+  // above effect.
+  margin-top: -16px;
 }
 
 .mugshot p {
@@ -347,6 +368,49 @@ table tr:first-child th {
     text-indent: -2.2em;
     padding-left: 2.2em;
     margin-bottom: 10px;
+}
+
+/**
+ * Publication cards (independent-lab publications paired with their TOC
+ * figure, styled to match the .news-item cards on the Lab News page)
+ */
+.pub-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f4f7fb;
+    border-left: 4px solid $brand-color;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+
+    img {
+        max-width: 200px;
+        max-height: 160px;
+        width: auto;
+        height: auto;
+        flex-shrink: 0;
+        border-radius: 2px;
+    }
+
+    .bibliography {
+        margin: 0;
+        flex: 1;
+    }
+
+    .bibliography li {
+        text-indent: 0;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    @include media-query($on-palm) {
+        flex-direction: column;
+
+        img {
+            max-width: 100%;
+        }
+    }
 }
 //tbody {
 //    border:3px solid black;

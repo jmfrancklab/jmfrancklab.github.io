@@ -45,6 +45,28 @@ up, check for these before re-editing code that's actually already right:
   browser) rather than just re-reading the CSS, when a report contradicts
   what the source says it should do.
 
+## Verifying visually
+
+The owner runs `bundle exec jekyll serve` (or similar) themselves and
+normally leaves it running at `http://localhost:4000` throughout a session.
+Don't try to start, stop, or manage that process yourself — just point a
+headless browser at `http://localhost:4000` directly to check a change.
+System Chromium is installed at `/usr/bin/chromium`; with `playwright`
+(already installed), pass `executable_path="/usr/bin/chromium"` to
+`chromium.launch()` (the bundled Playwright browser binary is not
+installed, so a plain `chromium.launch()` with no args will fail).
+
+If `http://localhost:4000` isn't responding, don't work around it (e.g. by
+running your own `jekyll build`/`serve` in the background, or by reasoning
+about the compiled output some other way) — stop and ask the owner to start
+their dev server, then continue once it's up.
+
+When extracting an actual image asset (e.g. a figure from a publisher's
+page) rather than just checking layout, fetch the real image URL directly
+(inspect the page's HTML/meta tags for it) — don't screenshot-and-crop a
+rendered page section as a substitute; that produces a blurry, low-quality
+result, not the actual asset.
+
 ## Branch workflow
 
 Work happens on `try_claude_for_editing`, not `master` (see README.md

@@ -178,4 +178,23 @@ changes as we move from site to site along the surface.
 
 [Link to Complete List of Publications](https://scholar.google.com/citations?user=TdqiwiIAAAAJ&hl=en&oi=ao){:target="blank"}
 
-{% bibliography --cited_in_order %}
+## Independent Research (Franck Lab, Syracuse University)
+
+{% for pub in site.data.toc_figures %}
+{% assign pub_key = pub[0] %}
+{% assign pub_figure = pub[1] %}
+{% capture pub_reference %}{% bibliography --query @*[key={{ pub_key }}] %}{% endcapture %}
+<div class="pub-card">
+
+<img src="{{ pub_figure }}" alt="TOC figure for {{ pub_key }}">
+
+{{ pub_reference | replace: '">1. ', '">' }}
+
+</div>
+{% endfor %}
+
+## Earlier Publications (PhD and Postdoctoral Work)
+
+{% assign exclude_query = "" %}
+{% for pub in site.data.toc_figures %}{% unless forloop.first %}{% assign exclude_query = exclude_query | append: " && " %}{% endunless %}{% assign exclude_query = exclude_query | append: "key!=" | append: pub[0] %}{% endfor %}
+{% bibliography --cited_in_order --query @*[{{ exclude_query }}] %}

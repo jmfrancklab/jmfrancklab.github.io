@@ -43,7 +43,15 @@
                           '\\varepsilon(p) = k_{\\sigma} s(p) T_1(p) C_{SL} |\\omega_e/\\omega_H|',
                           'k_{\\rho} = \\frac{3}{5} k_{low} + \\frac{7}{5}k_{\\sigma}',
                           'F_2^{(0)}(\\mathbf{r}) = \\sqrt{\\frac{3}{2}} \\frac{r^2 - 3 r_z^2}{r^5}',
-                          'k_\\sigma s(p) = \\frac{k_\\sigma s_{max} p}{p_{1/2}+p}'
+                          'k_\\sigma s(p) = \\frac{k_\\sigma s_{max} p}{p_{1/2}+p}',
+                          '\\omega_0 = \\gamma B_0',
+                          '\\frac{dM_z}{dt} = -\\frac{M_z-M_0}{T_1}',
+                          'J(\\omega) = \\frac{2\\tau_c}{1+\\omega^2\\tau_c^2}',
+                          'b_{IS} = \\frac{\\mu_0 \\gamma_I \\gamma_S \\hbar}{4\\pi r^3}',
+                          '\\delta = \\frac{\\nu-\\nu_{ref}}{\\nu_{ref}}\\times 10^6',
+                          'P = \\tanh\\left(\\frac{\\hbar\\omega_0}{2k_BT}\\right)',
+                          '\\frac{1}{T_2} = \\frac{1}{2T_1} + \\frac{1}{T_{2}^{*}}',
+                          '\\Delta E = g\\mu_B B_0'
                       ];
 
                 // Pre-render and cache the equations
@@ -66,7 +74,7 @@
                       }
 
                 var VISIBLE_MS = 2000; // how long an equation stays fully visible
-                var FADE_MS = 1000; // matches the 1s opacity transition in CSS
+                var FADE_MS = 3000; // matches the 3s opacity transition in CSS
                 var NUM_SLOTS = 20; // number of concurrently-cycling equations
                 // spacing between slots' initial appearance -- sized to roughly
                 // one equation's full on-screen lifetime so slots overlap

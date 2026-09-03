@@ -1,0 +1,9 @@
+# Maps each independent-lab (Franck lab, Syracuse) publication's bibtex key
+# (from references.bib) to its TOC/graphical-abstract figure in assets/TOC/.
+# Used by AAResearch.md to render a publication card (figure + citation) for
+# each independent-lab paper, instead of the plain bibliography list used for
+# earlier (PhD/postdoc) publications. Add a line here for each new
+# independent-lab paper as it is published.
+BeatonCoherence2022: assets/TOC/BeatonCoherence2022.png
+BeatonRotational2024: assets/TOC/BeatonRotational2024.jpg
+GuinnessNoise2025: assets/TOC/GuinnessNoise2025.jpg

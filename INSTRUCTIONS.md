@@ -16,6 +16,18 @@ I received the following commentary from an expert, and want to make these updat
     right side of the title.  See the next point -- you want to resolve
     together with this.
 
+    WHY ISN'T THIS RESOLVED!!! I realize this is the drop-shadow for the top
+    blue background box that floats over the white text block.  It SHOULD have
+    a drop shadow, but in the initial view, it's bottom edge should be below
+    the bottom of the naviation bar (it's not) and when scrolling, should come
+    to the bottom edge of the "nanoscale view" text (it doesn't), and the drop
+    shadow to the right of this box should NEVER be visible as it is now!!!
+
+    > Done — `.decoration` only covered the title, not the subtitle below
+    > it, so the subtitle sat unprotected on top of the nav links. Extended
+    > it to cover the subtitle too, and dropped the shadow's x-offset to 0
+    > so it never shows on the side.
+
 -   I've edited the header_only.svg again.  You need to convert it to a png,
     and then work on positioning.  Very specifically, the dark blue top
     background should come to just under the bottom of the white letters.  In
@@ -56,6 +68,17 @@ I received the following commentary from an expert, and want to make these updat
     > the box at every width I can reproduce. The dev server was stale (see
     > note below) — please hard-refresh and let me know if it's still wrong,
     > ideally with the viewport width/browser where you see it.
+
+    Your response here is not consistent with what I said!  Initially, the edge
+    of "nanoscale view" overlaps with "research" and "instrumentation"!!!!!!!
+    Then, when I scroll the central text column, the "nanoscale view" floats
+    above the white text block!!! (Only the very edge/shadow should float over
+    the white text block -- the rest should still have blue background under
+    it!!!)
+
+    > Done — same fix as above (`.decoration` now covers the subtitle), so
+    > this no longer happens at any scroll position. Let me know if the
+    > sticky box still doesn't reach far enough for you.
 
 *   Research page - You explanations for what you do are really good and easy
     to understand for someone not familiar with this. I would include more
@@ -173,5 +196,138 @@ I received the following commentary from an expert, and want to make these updat
     This is complicated enough that you should handle this request in its own
     turn -- explicitly say you're waiting to do this if there are other
     unresolved things in this document.
+
+    > Done — added 2 new 2024/2025 papers to references.bib (found via
+    > Scholar/PubMed search); independent set is now BeatonCoherence2022,
+    > BeatonRotational2024, GuinnessNoise2025 (Franck's own students,
+    > Syracuse). Got real TOC/graphical-abstract images for all 3 (PMC +
+    > ScienceDirect CDN; JCP one has no official TOC so reused the paper's
+    > own DCCT figure) into `assets/TOC/`, mapped in `_data/toc_figures.yml`.
+    > `AAResearch.md` now renders these as news-style cards (figure +
+    > citation), rest of bibliography unchanged below. Verified visually via
+    > Playwright screenshot, desktop and mobile.
 -   There is a full line of whitespace under each of the images -- this is
     weird, and the text should be wrapping to fill that space.
+
+    > Done — `Instrumentation.md` had a missing `</div>` (nesting everything
+    > after the Bruker photo inside its div) and headings sitting outside
+    > their `.mugshot` divs (so photos overlapped the heading above them).
+    > Fixed both, matching how `People.md` structures it.
+-   Change "Franck lab" in the title to "Franck research group" (requires svg edit and inkscape png generation)
+
+    > Done — edited the `flowPara` text in `header_only.svg` and re-rendered
+    > `header_only.png` via `inkscape --export-type=png` at the same 650x114
+    > size. The longer text still fits on one line with room to spare.
+
+    You need to raise the final (composite of clones) object so that the g
+    and p of group don't weird intersect with the subtitle (don't change the
+    size of the image, just push "the Franck research group" up).
+
+    > Done — nudged `g10792`'s transform (the title's shadow+fill clone
+    > group) up so the "g"/"p" descenders in "group" clear the subtitle
+    > line with a couple px of gap, same 650x114 canvas.
+
+-   Change "Join the Lab" to "Join the Group" in the nav.
+
+    > Done — that page's `title:` front matter (`Skills.md`) drives both the
+    > nav label and page heading, so changing it there was enough.
+
+-   The dark vertical band within the left 25% of the title image is part of
+    what I've been complaining about; there's a symmetric one on the right.
+
+    > Done — my earlier `0 5px 5px` shadow fix zeroed the x-offset but the
+    > blur radius still bled a soft ~5px shadow past the box on both sides.
+    > Switched to `0 6px 6px -6px` (negative spread pulls the shadow in
+    > before blurring), which measures out to a ~1-unit rounding artifact
+    > instead of a visible band — checked pixel values directly on both
+    > edges, not just by eye.
+
+-   I updated header_only.svg again (subtitle is now two lines, canvas is
+    650x144 instead of 650x114) -- reposition per the notes above, now that
+    it's changed size.
+
+    > Done — re-rendered `header_only.png` at the new size. The title's
+    > descenders and the (now two-line) subtitle collided again, so I moved
+    > the subtitle group down a bit (title had no headroom left to move up
+    > without clipping) until there's a clean few-px gap, then recomputed
+    > `.decoration`'s aspect-ratio from scratch against the new pixel rows
+    > (same method as before — see `_layout.scss` comment for the numbers).
+
+-   Huge whitespace on the People page — the content column is way too
+    narrow on a wide/full-screen monitor, leaving huge blue margins.
+
+    > Done — `$content-width` was 800px; widened to 1100px. This exposed a
+    > real pre-existing bug (photos spilling into the next person's entry
+    > when their own bio was shorter than their photo, since `.mugshot`
+    > never fully contained its float) — gave `.mugshot` `display: flow-root`
+    > so it always contains its own photo regardless of text length. Also
+    > added an "AGENTS.md → Verifying visually" note that you keep
+    > `jekyll serve` running and I should just point a headless browser at
+    > localhost:4000, plus not to screenshot-crop for real image assets.
+
+    "Huge whitespace" wasn't what this meant (keep the width change anyway) —
+    the real, persistent whitespace problem is a gap right under each raised
+    photo, screenshotted and circled in red. It's a template-wide error: the
+    photo is deliberately raised to overlap the content above it, but the
+    gap that raise leaves underneath isn't closing.
+
+    > Found it — `.mugshot img` raised photos with `position: relative; top:
+    > -14px`, which shifts the paint position but not the layout/wrap
+    > position (CSS spec behavior for relatively-positioned floats), leaving
+    > a permanent ~14px dead zone below the visible photo that text can't
+    > enter even though nothing's there. Switched to `margin-top: -14px`,
+    > which actually moves the float, so wrapping text now reaches the
+    > photo's real bottom edge with no gap — verified pixel-exact at three
+    > widths, and confirmed the overlap-with-content-above look is
+    > unchanged. This was in `_base.scss`, so it affects every `.mugshot`
+    > site-wide (People and Instrumentation), not just the one you pointed at.
+
+-   I edited header_only.svg again — the bottom "g" (in "biological") should
+    overhang, just touching the nav bar, with the shadow from the other
+    letters staying on the blue background.
+
+    > Done — recomputed `.decoration`'s aspect-ratio to stop right at that
+    > line's baseline instead of past its descender, so only the "g"'s tail
+    > pokes through into the nav row. Checked pixel-by-pixel that it just
+    > reaches the nav's top edge, and that this doesn't reopen the
+    > subtitle/nav-link collision from earlier (the readable letterforms are
+    > still fully on blue).
+
+-   Tweaked the header again (no size change) — re-render at ~2x resolution.
+
+    > Done — re-exported at `--export-width=1300` (was 650). Checked the
+    > text row positions scale exactly 2x with no layout drift, so no CSS
+    > changes were needed, just the sharper source file.
+
+-   Edited header_only.svg again — it's shorter now, but keep the bottom of
+    the text where it is (less of the png should hang down from that
+    position).
+
+    > Done — your edit trimmed more off the bottom than intended but also
+    > added ~14px of blank padding at the top, which would've pushed the
+    > text down when rendered. Cropped that extra top padding back off
+    > before installing the PNG — verified pixel-for-pixel that the title
+    > and subtitle now land at the exact same rows as before, just with
+    > less blank canvas hanging below. No CSS changes needed since
+    > `.decoration`'s aspect-ratio only depends on content above the
+    > subtitle's baseline, which didn't move.
+
+-   Make the math-animation fade in/out ~3x slower, and add ~3x as many
+    equations.
+
+    > Done — `FADE_MS` 1000→3000 in `head.html` (and the matching CSS
+    > `transition: opacity` in `_layout.scss`), and grew the equation pool
+    > from 4 to 12 with standard NMR/EPR formulas (Larmor frequency, Bloch
+    > equation, spectral density, dipolar coupling, chemical shift,
+    > Boltzmann polarization, T2 relation, Zeeman splitting) in the same
+    > style as the existing ones.
+
+    Since you're still screwing up the people images, I played with it in
+    Chrome "inspect". I can fix the problem by setting padding-bottom to 0
+    and margin-top to -16px.
+
+    > Done — you found the piece I'd missed: `padding-bottom: 5pt` on
+    > `.mugshot img` was, like the old `top: -14px` offset, real reserved
+    > space below the visible photo that text couldn't enter. Set it to 0
+    > and margin-top to -16px exactly as you found. Verified computed style
+    > and zero-gap measurements on all four People entries again.
