@@ -28,11 +28,14 @@ h1 {
     //border-bottom: 3px solid $grey-color-dark;
     //border-top-left-radius: #{$curve-radius};
     //border-top-right-radius: #{$curve-radius};
-    // taller than $top-bar-height (used elsewhere, e.g. the footer) --
-    // scaled up from it to keep the same ~50% title-image overflow the
-    // original design had, now that the logo itself is taller (see
-    // .title-image)
-    height: 75px;
+    // stops just under the bottom of "the Franck lab" white lettering in
+    // header_only.png (bottom of the letters sits ~59px into the 114px-tall
+    // source image, i.e. ~30px at the .title-image display width) -- the
+    // drop shadow and subtitle below that, plus the lower part of the
+    // molecule graphic on the left, are meant to hang off the bottom edge
+    // and overlap the nav row underneath (intentional, for visual depth;
+    // this only reads cleanly because $top-bg-color matches $background-color)
+    height: 30px;
 }
 .site-header {
     // Positioning context for the mobile navigation icon
@@ -490,7 +493,10 @@ h1 {
 
 .fading-equation {
     position: absolute;
-    color: #303030; /* Dark gray text color */
+    // light enough to actually read against the deep-blue $background-color
+    // (the old #303030 dark gray was almost the same darkness as the page
+    // background, so the equations were rendering but invisible)
+    color: rgba(180, 205, 235, 0.6);
     opacity: 0;
     transition: opacity 1s;
 }

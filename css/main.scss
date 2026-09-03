@@ -30,7 +30,7 @@ $brand-color:      #2a7ae2;
 // was going to change to $brand-color:      #a5c14f; but not as good
 $acert-red: #df0909;
 // ACERT's brand red, from assets/acert_logo.svg -- replaces the old Syracuse orange
-$top-bg-color: #071829;
+$top-bg-color: $background-color;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
