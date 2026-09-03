@@ -11,6 +11,11 @@ I received the following commentary from an expert, and want to make these updat
     > (`#071829` vs. the page's `#0a2540`); it now just aliases
     > `$background-color` so there's no seam.
 
+    After adjustment, there is a problem where there's a weirdly darker band
+    above and below the subheader bar -- this darker region wraps around the
+    right side of the title.  See the next point -- you want to resolve
+    together with this.
+
 -   I've edited the header_only.svg again.  You need to convert it to a png,
     and then work on positioning.  Very specifically, the dark blue top
     background should come to just under the bottom of the white letters.  In
@@ -28,6 +33,11 @@ I received the following commentary from an expert, and want to make these updat
     > you described. This only reads cleanly because the previous fix (top
     > image background = page background) removed the seam it would
     > otherwise cut across.
+
+    Now the header is TINY.  It should be 80% of the main white text area.
+    When the view is very narrow, as on some mobile screens, then it should
+    fill 100% of the width (and of course should scale down to match as the
+    screen is made even more narrow).
 
 *   Research page - You explanations for what you do are really good and easy
     to understand for someone not familiar with this. I would include more
@@ -75,6 +85,9 @@ I received the following commentary from an expert, and want to make these updat
     > the footer in place of `syracuse_campus.png` (left that file alone —
     > `basic.html`, an old unused test page, still points at it).
 
+    You should now remove the central acert logo, which is redundant also
+    rescale the left logo to 70% of its current size.
+
 *   The background was supposed to have a subtle effect like a screensaver
     where equations fade lightly in and out.  This was working at some point
     (in history), then you broke it so that everything was shoved in the upper
@@ -87,3 +100,16 @@ I received the following commentary from an expert, and want to make these updat
     > the same darkness as the `#0a2540` background, so it was rendering,
     > just invisible. Changed it to a light, semi-transparent blue-white
     > that's actually readable against the deep blue while staying subtle.
+
+    This is like before, I think, but address the following:
+
+    -   It's not subtle enough -- about 50% of the current alpha, only.
+    -   I think equations appear at different times, but too closely spaced
+        together.
+    -   The equations appear in the first place before mathjax is done.  If
+        it's possible to wait for mathjax before having them appear, do that.
+    -   The equations all fade out at the same time.  This is a major error.
+        They are supposed to fade out one at a time, staggered, and the first
+        should be fading out as the last is fading in, so that the animation is
+        a continuous loop!
+-   Throughout, replace jmfranck@syr.edu (or [at] ) with john.m.franck@acertcenter.org
