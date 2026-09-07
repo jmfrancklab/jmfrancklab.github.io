@@ -21,7 +21,7 @@ portable and transportable NMR instruments.
 He worked as an Elings Prize Postdoctoral Fellow
 (California NanoSystems Institute)
 at the University of California, Santa Barbara,
-under the guidance of Prof. Songi Han.
+under the guidance of Prof. <span id="songi-han">Songi Han</span>.
 There, he developed new, sensitive technologies for investigating
 the properties of water at the surfaces of proteins,
 polymers, lipids, and DNA.
@@ -60,7 +60,7 @@ he relocated his lab to ACERT.
 
 ## {{ person.name }}
 
-*current {{ person.level }} student*
+*current {{ person.level }} student, {{ person.university }}*{% if person.website %} &middot; [Website]({{ person.website }}){% endif %}
 
 {{ person.description }}
 
@@ -75,7 +75,7 @@ he relocated his lab to ACERT.
 
 {% assign grad_alumni = site.data.people | where: "status", "alumnus" | where_exp: "p", "p.level != 'undergrad'" %}
 {% for person in grad_alumni %}
-### {{ person.name }} ({% if person.level == "postdoc" %}Postdoc{% elsif person.level == "Masters" %}MS{% else %}{{ person.level }}{% endif %})
+### {{ person.name }} ({% if person.level == "postdoc" %}Postdoc{% elsif person.level == "Masters" %}MS{% else %}{{ person.level }}{% endif %}, {{ person.university }}){% if person.website %} &middot; [Website]({{ person.website }}){% endif %}
 
 {% if person.photo %}
 <div class="mugshot">
@@ -94,6 +94,8 @@ he relocated his lab to ACERT.
 ## Undergraduates
 
 {% assign undergrad_alumni = site.data.people | where: "level", "undergrad" %}
-{% for person in undergrad_alumni %}| {{ person.name }} | {{ person.description | replace: "
+| Name | University | Description |
+| --- | --- | --- |
+{% for person in undergrad_alumni %}| {{ person.name }} | {{ person.university }} | {{ person.description | replace: "
 ", " " | strip }} |
 {% endfor %}

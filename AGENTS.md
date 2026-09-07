@@ -67,6 +67,17 @@ page) rather than just checking layout, fetch the real image URL directly
 rendered page section as a substitute; that produces a blurry, low-quality
 result, not the actual asset.
 
+### Owner screenshots of layout issues
+
+The owner's browser may be zoomed or DPI-scaled in ways that make a
+screenshot's raw pixel dimensions misleading (e.g. a "1300px" screenshot
+can correspond to a much narrower actual CSS viewport). If the owner is
+discussing layout/CSS and shares (or is about to share) a screenshot, ask
+whether to turn on a small on-page debug readout of `window.innerWidth`
+and `devicePixelRatio` first (`_layouts/default.html` has a commented-out
+`#debug-width` badge for this) — don't assume from the screenshot's pixel
+size, and don't turn it on unasked.
+
 ## Branch workflow
 
 Work happens on `try_claude_for_editing`, not `master` (see README.md

@@ -138,23 +138,47 @@ For example, employing the setup shown above,
 This was even true when the large molecules significantly altered the
     viscosity of the bulk solution {% cite Franck_crowding %}.*
 
-## Current Research:
+## Current Research
 
 In the Franck lab, we currently push the limits of the ODNP technique to
-	retrieve new and more detailed information about hydration water.
-Towards this end,
-    we draw on expertise in spectrometer design
-    {% cite FranckBarnes2015 Kaufmann2013 Demas2009 %}
-    and advanced magnetic resonance methods
-    {% cite FranckFreed2015 Franck2009 %}.
-We have already developed a cogent explanation
-	of the ODNP technique {% cite FranckMethEnz2018 %},
-	as well as a new, powerful, and general scheme
-	for visualizing and processing magnetic resonance data {% cite BeatonCoherence2022 %}.
-We are investigating the water on the insides of reverse micelles,
-	which provide controllable pockets of water,
-	as well as mapping out more subtle details in the water along the surface of proteins,
-	both globular signaling proteins, as well as trans-membrane proteins.
+retrieve new and more detailed information about hydration water, drawing on
+expertise in spectrometer design and advanced magnetic resonance methods
+{% cite FranckFreed2015 Franck2009 %} that we have already distilled into a
+cogent, quantitative explanation of the ODNP technique itself
+{% cite FranckMethEnz2018 %}.
+
+### The Franck Magnetic Resonance Robotics Lab (New Initiative)
+
+![Franck Magnetic Resonance Robotics](assets/franck_robotics_logo.png)
+
+Since joining ACERT, we've launched a new initiative built around the
+observation that autonomous chemistry labs need real-time, quantitative
+feedback on what's actually happening in a reaction -- the "eyes" that let a
+robot check its own work -- and that today's benchtop NMR instruments aren't
+sensitive, flexible, or affordable enough to provide it.
+
+The first phase is to design inexpensive, customizable, yet sensitive
+open instrumentation {% cite FranckBarnes2015 Kaufmann2013 Demas2009 %},
+an approach very much aligned with ACERT's mission of making advanced
+magnetic resonance broadly accessible.
+The second phase draws on our expertise in advanced spin physics: applying
+our quantitative understanding of the Overhauser effect together with the
+DCCT technique {% cite BeatonCoherence2022 %}, which extracts clean,
+multiplexed signal from the noisy, inhomogeneous fields typical of low-cost,
+low-field magnets {% cite BeatonRotational2024 %}.
+Together, these let us push sensitive, quantitative magnetic resonance
+into settings -- like an autonomous synthesis robot -- where it was
+previously impractical.
+
+### Temperature-Controlled ODNP in Reverse Micelles (Continuing Program)
+
+We are investigating the water on the insides of reverse micelles, which
+provide controllable, temperature-tunable pockets of confined water and serve
+as our model system for confinement effects more broadly
+{% cite Beaton2023DirObsTra Shathy2024ExcMicDyn %}.
+Atahan Garip is extending this program by developing a fully open and
+automated temperature-controlled ODNP system, purpose-built for these
+measurements.
 
 When nanoscale aggregates such as reverse micelles isolate small pockets of
 water, the resulting confinement alters the hydrogen bonding network; meanwhile,
@@ -167,12 +191,15 @@ water pools. By measuring this correlation as a function of the size of the
 water pool, we've identified a distinct inflection point at a couple
 nanometers at which the water matrix changes dramatically.
 
-We also employ mutagenesis to attach a spin label at a series of sites on the
-surface of proteins, including cancer signaling proteins (KRas) as well as
-transmembrane proton pumps (proteorhodopsin). This allows us to create a set of
-samples that are primed for measurement of water at a series of different
-sites, so that we can watch how the translational diffusivity of the water
-changes as we move from site to site along the surface.
+We also continue to map out more subtle details in the water along the
+surface of proteins, both globular signaling proteins as well as
+trans-membrane proteins, employing mutagenesis to attach a spin label at a
+series of sites on the surface of proteins, including cancer signaling
+proteins (KRas) as well as transmembrane proton pumps (proteorhodopsin). This
+allows us to create a set of samples that are primed for measurement of water
+at a series of different sites, so that we can watch how the translational
+diffusivity of the water changes as we move from site to site along the
+surface.
 
 # References (Selected Publications)
 
@@ -193,8 +220,43 @@ changes as we move from site to site along the surface.
 </div>
 {% endfor %}
 
+### Preprints
+
+{% assign preprint_keys = "Beaton2023DirObsTra,Shathy2024ExcMicDyn" | split: "," %}
+{% assign preprint_query = "" %}
+{% for k in preprint_keys %}{% unless forloop.first %}{% assign preprint_query = preprint_query | append: " || " %}{% endunless %}{% assign preprint_query = preprint_query | append: "key=" | append: k %}{% endfor %}
+{% bibliography --query @*[{{ preprint_query }}] %}
+
+## Collaborative Independent Work
+
+Ongoing collaborations that apply our magnetic resonance expertise to other
+groups' materials systems.
+
+{% assign collab_keys = "Davis2019,Hofman2020,Davis2021,Chu2023InsAtoTra,Li2023IntBSiIon,Landfield2026ChaDepLoc" | split: "," %}
+
+{% for pub in site.data.collab_toc %}
+{% assign pub_key = pub[0] %}
+{% assign pub_figure = pub[1] %}
+{% capture pub_reference %}{% bibliography --query @*[key={{ pub_key }}] %}{% endcapture %}
+<div class="pub-card">
+
+<img src="{{ pub_figure }}" alt="TOC figure for {{ pub_key }}">
+
+{{ pub_reference | replace: '">1. ', '">' }}
+
+</div>
+{% endfor %}
+
+{% assign collab_plain_query = "" %}
+{% for k in collab_keys %}{% unless site.data.collab_toc[k] %}{% unless collab_plain_query == "" %}{% assign collab_plain_query = collab_plain_query | append: " || " %}{% endunless %}{% assign collab_plain_query = collab_plain_query | append: "key=" | append: k %}{% endunless %}{% endfor %}
+{% if collab_plain_query != "" %}
+{% bibliography --query @*[{{ collab_plain_query }}] %}
+{% endif %}
+
 ## Earlier Publications (PhD and Postdoctoral Work)
 
 {% assign exclude_query = "" %}
 {% for pub in site.data.toc_figures %}{% unless forloop.first %}{% assign exclude_query = exclude_query | append: " && " %}{% endunless %}{% assign exclude_query = exclude_query | append: "key!=" | append: pub[0] %}{% endfor %}
+{% for k in collab_keys %}{% assign exclude_query = exclude_query | append: " && key!=" | append: k %}{% endfor %}
+{% for k in preprint_keys %}{% assign exclude_query = exclude_query | append: " && key!=" | append: k %}{% endfor %}
 {% bibliography --cited_in_order --query @*[{{ exclude_query }}] %}

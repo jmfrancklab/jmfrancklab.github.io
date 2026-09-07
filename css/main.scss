@@ -36,8 +36,26 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $top-bar-height:   50px;
-// Width of the content area
-$content-width:    1100px;
+
+// Width of the main white content column (header decoration, nav bar, and
+// page content all share this so their edges line up). Percentage-based,
+// not a px cap, so the blue margins on either side stay proportional to the
+// viewport instead of the white column hitting a fixed max width and the
+// margins growing without bound on very large/high-res screens.
+// Below $content-breakpoint (but still >= the $on-palm hamburger cutoff)
+// the column is nearly the full width; at/above it, it's exactly 70%,
+// leaving a 15% blue margin on each side (visible behind it is the
+// fading-equation animation -- see #math-container).
+$content-width-narrow: 95%;
+$content-width-wide:   70%;
+$content-breakpoint:   800px;
+
+@mixin content-column-width {
+    width: $content-width-narrow;
+    @media screen and (min-width: $content-breakpoint) {
+        width: $content-width-wide;
+    }
+}
 
 $on-palm:         600px;
 // following for testing/inspecting while on desktop

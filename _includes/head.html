@@ -91,14 +91,26 @@
                           var mathElement = equationElements[index].cloneNode(true);
                           mathElement.classList.add('fading-equation');
 
-                          // Set random position within the page
-                          var left = Math.floor(Math.random() * window.innerWidth);
-                          var top = Math.floor(Math.random() * window.innerHeight);
+                          // Append first so its already-typeset (cloned) size
+                          // is measurable -- positioning by a bare
+                          // `random() * innerWidth`/`innerHeight` (the old
+                          // code) ignores the equation's own rendered size,
+                          // so anything landing near the right/bottom edge
+                          // paints past the viewport. That invisible (it's
+                          // behind everything, z-index -1) overflow was
+                          // still enough for some browsers (observed on
+                          // Chrome/Linux) to refuse to resize the window
+                          // narrower/shorter than whatever was overflowing
+                          // at the time. Clamp so the full box always stays
+                          // inside the viewport.
+                          mathContainer.appendChild(mathElement);
+                          var rect = mathElement.getBoundingClientRect();
+                          var maxLeft = Math.max(0, window.innerWidth - rect.width);
+                          var maxTop = Math.max(0, window.innerHeight - rect.height);
+                          var left = Math.floor(Math.random() * maxLeft);
+                          var top = Math.floor(Math.random() * maxTop);
                           mathElement.style.left = left + 'px';
                           mathElement.style.top = top + 'px';
-
-                          // Append math element to the container
-                          mathContainer.appendChild(mathElement);
 
                           // After rendering, set opacity to 1 to fade in
                           mathElement.style.opacity = '1';

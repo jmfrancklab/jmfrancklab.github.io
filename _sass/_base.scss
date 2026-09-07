@@ -201,22 +201,6 @@ pre {
     // rule's 80% max-width)
     max-width: 28%;
 }
-.top-wrapper {
-    width: 100%;
-    max-width: #{$content-width};
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        width: 100%;
-        max-width: #{$content-width};
-        padding-right: ($spacing-unit)/( 2);
-        padding-left: ($spacing-unit)/( 2);
-    }
-}
 .top-left {
     text-align: center;
     vertical-align: top;
@@ -228,7 +212,7 @@ pre {
     }
 }
 .wrapper {
-    max-width: #{$content-width};
+    @include content-column-width;
     z-index: 0;
     //width: #{$right-width - $spacing-unit};
     //width: 30%;
