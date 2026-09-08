@@ -9,7 +9,7 @@ attribution: J.M. Franck
   behaves so differently from bulk water, and why that matters for
   chemistry and biology.
 
-<hr class="section-divider">
+#### Projects
 
 - [Open Instrumentation (New
   Initiative)](#open-instrumentation-new-initiative) -- affordable,

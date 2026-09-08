@@ -9,7 +9,7 @@ scholar:
 # {{page.title}}
 
 - [Independent Research](#independent-research-franck-lab-syracuse-university)
-  -- peer-reviewed papers from the Franck Lab at Syracuse/ACERT.
+  -- peer-reviewed papers from the Franck Lab at Syracuse + ACERT.
 - [Preprints](#preprints) -- work posted ahead of peer review.
 - [Collaborative Independent Work](#collaborative-independent-work) --
   ongoing collaborations applying our magnetic resonance expertise to other
@@ -19,7 +19,7 @@ scholar:
 
 [Link to Complete List of Publications](https://scholar.google.com/citations?user=TdqiwiIAAAAJ&hl=en&oi=ao){:target="blank"}
 
-## Independent Research (Franck Lab, Syracuse University)
+## Independent Research
 
 {% assign independent_pubs = site.data.pub_toc | where: "category", "independent" | sort: "year" | reverse %}
 {% for pub in independent_pubs %}
