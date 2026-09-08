@@ -21,36 +21,56 @@ scholar:
 
 ## Independent Research (Franck Lab, Syracuse University)
 
-{% assign independent_pubs = site.data.pub_toc | where: "category", "independent" %}
-{% assign independent_query = "" %}
+{% assign independent_pubs = site.data.pub_toc | where: "category", "independent" | sort: "year" | reverse %}
 {% for pub in independent_pubs %}
-  {% unless forloop.first %}{% assign independent_query = independent_query | append: " || " %}{% endunless %}
-  {% assign independent_query = independent_query | append: "key=" | append: pub.key %}
+{% capture pub_reference %}{% bibliography --query @*[key={{ pub.key }}] %}{% endcapture %}
+<div class="pub-card">
+
+<img src="{{ pub.image }}" alt="TOC figure for {{ pub.key }}">
+
+{{ pub_reference | replace: '">1. ', '">' }}
+
+</div>
 {% endfor %}
-{% bibliography --template bibliography_card --query @*[{{ independent_query }}] %}
 
 ## Preprints
 
-{% assign preprint_pubs = site.data.pub_toc | where: "category", "preprint" %}
-{% assign preprint_query = "" %}
+{% assign preprint_pubs = site.data.pub_toc | where: "category", "preprint" | sort: "year" | reverse %}
 {% for pub in preprint_pubs %}
-  {% unless forloop.first %}{% assign preprint_query = preprint_query | append: " || " %}{% endunless %}
-  {% assign preprint_query = preprint_query | append: "key=" | append: pub.key %}
+  {% if pub.image %}
+<div class="pub-card">
+
+<img src="{{ pub.image }}" alt="TOC figure for {{ pub.key }}">
+
+{% capture pub_reference %}{% bibliography --query @*[key={{ pub.key }}] %}{% endcapture %}
+{{ pub_reference | replace: '">1. ', '">' }}
+
+</div>
+  {% else %}
+{% bibliography --query @*[key={{ pub.key }}] %}
+  {% endif %}
 {% endfor %}
-{% bibliography --template bibliography_card --query @*[{{ preprint_query }}] %}
 
 ## Collaborative Independent Work
 
 Ongoing collaborations that apply our magnetic resonance expertise to other
 groups' materials systems.
 
-{% assign collab_pubs = site.data.pub_toc | where: "category", "collab" %}
-{% assign collab_query = "" %}
+{% assign collab_pubs = site.data.pub_toc | where: "category", "collab" | sort: "year" | reverse %}
 {% for pub in collab_pubs %}
-  {% unless forloop.first %}{% assign collab_query = collab_query | append: " || " %}{% endunless %}
-  {% assign collab_query = collab_query | append: "key=" | append: pub.key %}
+  {% if pub.image %}
+<div class="pub-card">
+
+<img src="{{ pub.image }}" alt="TOC figure for {{ pub.key }}">
+
+{% capture pub_reference %}{% bibliography --query @*[key={{ pub.key }}] %}{% endcapture %}
+{{ pub_reference | replace: '">1. ', '">' }}
+
+</div>
+  {% else %}
+{% bibliography --query @*[key={{ pub.key }}] %}
+  {% endif %}
 {% endfor %}
-{% bibliography --template bibliography_card --query @*[{{ collab_query }}] %}
 
 ## Earlier Publications (PhD and Postdoctoral Work)
 
