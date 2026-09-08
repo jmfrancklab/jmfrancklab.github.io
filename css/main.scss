@@ -19,24 +19,43 @@ $left-width:          25%;
 $overlap-width:       7%;
 $right-width:         25%;
 $curve-radius:        3px;
-$middle-image-height: 100px;
 
 $text-color:       #111;
 $text-hover-color: rgba(0,255,255,0.5);
 // was going to change to $text-hover-color: #391c00; but not as good
-$background-color: #ffffffe0;
+$background-color: #0a2540;
+// deep water blue -- ties the site background to the lab's hydration-water research
 $brand-color:      #2a7ae2;
-// was going to change to $brand-color:      #a5c14f; but not as good 
-$syracuse-orange: #d44500;
-$top-bg-color: black;
+// was going to change to $brand-color:      #a5c14f; but not as good
+$acert-red: #df0909;
+// ACERT's brand red, from assets/acert_logo.svg -- replaces the old Syracuse orange
+$top-bg-color: $background-color;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $top-bar-height:   50px;
-// Width of the content area
-$content-width:    800px;
+
+// Width of the main white content column (header decoration, nav bar, and
+// page content all share this so their edges line up). Percentage-based,
+// not a px cap, so the blue margins on either side stay proportional to the
+// viewport instead of the white column hitting a fixed max width and the
+// margins growing without bound on very large/high-res screens.
+// Below $content-breakpoint (but still >= the $on-palm hamburger cutoff)
+// the column is nearly the full width; at/above it, it's exactly 70%,
+// leaving a 15% blue margin on each side (visible behind it is the
+// fading-equation animation -- see #math-container).
+$content-width-narrow: 95%;
+$content-width-wide:   70%;
+$content-breakpoint:   800px;
+
+@mixin content-column-width {
+    width: $content-width-narrow;
+    @media screen and (min-width: $content-breakpoint) {
+        width: $content-width-wide;
+    }
+}
 
 $on-palm:         600px;
 // following for testing/inspecting while on desktop

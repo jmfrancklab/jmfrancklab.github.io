@@ -17,18 +17,42 @@ h1 {
 .floating-top .decoration{
     position: relative;
     background: #{$top-bg-color};
-    width: 95%;
+    @include content-column-width;
     display: block;
-    max-width: #{$content-width};
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.33);
+    // negative spread pulls the shadow's un-blurred rect in from every edge
+    // by exactly the blur radius, so the blur only ever reaches past the
+    // box on the (positive-offset) bottom side -- zero bleed on the left
+    // and right, unlike a plain `0 5px 5px` blur which still spreads a few
+    // px sideways past the box edges.
+    box-shadow: 0 6px 6px -6px rgba(0,0,0,0.45);
     //border: 2px solid rgb(33,41,28);
     //border-top: 5px solid $grey-color-dark;
     //border-bottom: 3px solid $grey-color-dark;
     //border-top-left-radius: #{$curve-radius};
     //border-top-right-radius: #{$curve-radius};
-    height: #{$top-bar-height};
+    // stops right at the baseline of the subtitle's second line ("biological
+    // and material surfaces"), i.e. just before that line's one descender
+    // (the "g" in "biological") -- so the subtitle's actual letterforms
+    // always have blue background behind them (no collision with the nav
+    // row's link text), while that single "g" hangs off the bottom edge and
+    // just touches the nav row underneath, echoing the same effect the
+    // title lettering's shadow + the molecule graphic already have. The
+    // title itself (including "group"'s own descenders, which land well
+    // above this row) stays fully planted on the blue background.
+    // Source-image row math (header_only.png is 650x144): subtitle line 2's
+    // baseline sits at row 109 -- aspect-ratio = 650/(0.8*109) desktop,
+    // 650/109 on palm. NOTE: these numbers are keyed to header_only.png's
+    // own pixel dimensions and text layout -- if that file is ever
+    // re-rendered at a different size/layout, re-measure (open it, scan
+    // alpha channel rows for the target feature) and recompute both values
+    // (see git history / INSTRUCTIONS.md around 2026-09-03 for the method).
+    aspect-ratio: 7.4541;
+
+    @include media-query($on-palm) {
+        aspect-ratio: 5.9633;
+    }
 }
 .site-header {
     // Positioning context for the mobile navigation icon
@@ -41,7 +65,7 @@ h1 {
     margin: 0 auto 0;
     &,
     &:visited {
-        color: $syracuse-orange;
+        color: $acert-red;
     }
 }
 
@@ -68,8 +92,29 @@ h1 {
     }
 
     .page-link {
-        color: $syracuse-orange;
+        color: $acert-red;
+        // Fluid, viewport-relative size (like .footer-heading below) so the
+        // 7 links -- including long ones like "Instrumentation" and "Join
+        // the Group" -- shrink together with the nav bar's own column width
+        // instead of overflowing it. 14px floor (bumped up from 12px per
+        // your own inspector check -- verified it still fits, though
+        // margin is thin, ~480-520px); below the viewport width where
+        // 1.3vw hits that floor, .site-nav's own media-query below
+        // collapses to the hamburger menu instead of shrinking further.
+        font-size: clamp(14px, 1.3vw, 22px);
         line-height: $base-line-height;
+        // Multi-word links ("Join the Group", "Lab News") and
+        // "Instrumentation"'s soft hyphens are legal wrap points, and
+        // without nowrap they actually DO wrap to two lines in the
+        // ~481-520px band right above the hamburger cutoff, where the
+        // fit is tightest. nowrap forces the (very slight, unnoticeable)
+        // overflow/clamping route instead of an ugly two-line wrap. (This
+        // was briefly removed under the theory that it was causing
+        // Chrome/Linux to refuse shrinking the OS window below a certain
+        // size -- confirmed via real, non-headless Chromium windows that
+        // that refusal is actually a hardcoded Chromium minimum window
+        // size unrelated to page content, so removing nowrap never fixed
+        // anything and only reintroduced this wrapping bug.)
         white-space: nowrap;
 
         // Gaps between nav items, but not on the first one
@@ -99,14 +144,23 @@ h1 {
             flex-direction: row;
             justify-content: space-around;
             li {
-                margin: 0 10px;
+                // fluid too, for the same reason as .page-link's font-size --
+                // a fixed px gap wouldn't shrink along with the shrinking text
+                margin: 0 clamp(2px, 0.6vw, 10px);
                 z-index: +6;
                 text-shadow: -0.5px 0.5px 1px #000;
             }
         }
     }
 
-    @include media-query($on-palm) {// this is only included when the width is too small to accomodate "on-palm"
+    // .page-link's font-size (and the li margins) shrink fluidly with the
+    // viewport down to a 14px floor (raised from 11px), so the 7 links
+    // keep fitting inside the nav's own (also-shrinking) column width
+    // without a hamburger. With nowrap and a 14px floor, that stops being
+    // true below ~518px (measured empirically); 540px gives a safety
+    // margin above that crossover for font-rendering variance across
+    // browsers/systems.
+    @include media-query(540px) {
         position: absolute;
         top: 9px;
         right: 10px;
@@ -114,23 +168,25 @@ h1 {
         border: 2px solid $grey-color-dark;
         border-radius: 5px;
         text-align: left;
-        width: 35px;
-        height: 35px;
+        // 44x44 is the standard minimum touch-target size (Apple HIG /
+        // Material Design), not an arbitrary number.
+        width: 44px;
+        height: 44px;
         .text{
             display: none;
         }
         .menu-icon {
             display: block;
             float: right;
-            width: 36px;
-            height: 26px;
+            width: 44px;
+            height: 34px;
             line-height: 0;
-            padding-top: 4px;
+            padding-top: 8px;
             text-align: center;
 
             > svg {
-                width: 18px;
-                height: 15px;
+                width: 22px;
+                height: 18px;
 
                 path {
                     fill: $grey-color-dark;
@@ -157,7 +213,7 @@ h1 {
                     padding: 0px;
                 }
                 //list-style: square inside;
-                //color: #{$syracuse-orange};
+                //color: #{$acert-red};
             }
         }
         &:hover .trigger {
@@ -208,14 +264,27 @@ h1 {
 }
 .title-image{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    max-height: 75px;
-    width: auto;
+    // taken out of normal flow (rather than margin: 0 auto) so its height
+    // doesn't stretch .decoration's own aspect-ratio-driven height -- it's
+    // meant to overflow that box's bottom edge, not grow it
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    // sized relative to .decoration, which is itself sized to match the
+    // main content column -- so this is ~80% of the main white text area.
+    // max-width is repeated here (matching width) because the global
+    // `img { max-width: 80% }` rule would otherwise clamp this back down
+    // regardless of the width set below
+    width: 80%;
+    max-width: 80%;
     height: auto;
-    position: relative;
     z-index: +6;
+
+    @include media-query($on-palm) {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 .main-text{
     background-color: white;
@@ -245,7 +314,7 @@ h1 {
 .footer-col-2 {
     width: -webkit-calc(20% - (#{$spacing-unit} / 2));
     width:         calc(20% - (#{$spacing-unit} / 2));
-    max-width: 50px;// this is the syracuse seal
+    max-width: 50px;// this is the ACERT logo
 }
 
 .footer-col-3 {
@@ -339,13 +408,6 @@ h1 {
         width: #{$right-width};
         text-align: right;
     }
-    .middle{
-        text-align: center;
-        max-height: $middle-image-height;
-    }
-    .middle img{
-        max-height: $middle-image-height;
-    }
     .bottom{
         border: 0px;
         margin: 0px;
@@ -360,8 +422,7 @@ h1 {
 .top-content {
     margin: 0 auto 0;
     padding: 0 0;
-    width: 100%;
-    max-width: #{$content-width};
+    @include content-column-width;
 }
 
 .bottom-pad{
@@ -394,6 +455,31 @@ h1 {
 .post-link {
     display: block;
     font-size: $base-font-size;
+}
+
+.news-item {
+    background: #f4f7fb;
+    border-left: 4px solid $brand-color;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+
+    .post-link {
+        display: inline;
+        font-size: #{$mediumer-font-size};
+        font-weight: bold;
+    }
+
+    .post-meta {
+        display: block;
+        margin-top: 2px;
+        font-size: #{$small-font-size};
+    }
+
+    .news-excerpt {
+        margin-top: 6px;
+        text-indent: 0;
+    }
 }
 
 
@@ -456,17 +542,30 @@ h1 {
 
 .fading-equation {
     position: absolute;
-    color: #303030; /* Dark gray text color */
+    // light enough to actually read against the deep-blue $background-color
+    // (the old #303030 dark gray was almost the same darkness as the page
+    // background, so the equations were rendering but invisible) but at half
+    // the alpha of the first pass, so it stays a subtle background effect
+    color: rgba(180, 205, 235, 0.3);
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 3s;
 }
 
 //{{{ slideshow
 .slideshow-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.slideshow-caption {
+    margin-top: 8px;
+    min-height: 1.4em;
+    font-style: italic;
+    font-size: #{$small-font-size};
+    color: $grey-color-dark;
 }
 
 .slideshow {

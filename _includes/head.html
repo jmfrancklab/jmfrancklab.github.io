@@ -7,6 +7,7 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -42,7 +43,15 @@
                           '\\varepsilon(p) = k_{\\sigma} s(p) T_1(p) C_{SL} |\\omega_e/\\omega_H|',
                           'k_{\\rho} = \\frac{3}{5} k_{low} + \\frac{7}{5}k_{\\sigma}',
                           'F_2^{(0)}(\\mathbf{r}) = \\sqrt{\\frac{3}{2}} \\frac{r^2 - 3 r_z^2}{r^5}',
-                          'k_\\sigma s(p) = \\frac{k_\\sigma s_{max} p}{p_{1/2}+p}'
+                          'k_\\sigma s(p) = \\frac{k_\\sigma s_{max} p}{p_{1/2}+p}',
+                          '\\omega_0 = \\gamma B_0',
+                          '\\frac{dM_z}{dt} = -\\frac{M_z-M_0}{T_1}',
+                          'J(\\omega) = \\frac{2\\tau_c}{1+\\omega^2\\tau_c^2}',
+                          'b_{IS} = \\frac{\\mu_0 \\gamma_I \\gamma_S \\hbar}{4\\pi r^3}',
+                          '\\delta = \\frac{\\nu-\\nu_{ref}}{\\nu_{ref}}\\times 10^6',
+                          'P = \\tanh\\left(\\frac{\\hbar\\omega_0}{2k_BT}\\right)',
+                          '\\frac{1}{T_2} = \\frac{1}{2T_1} + \\frac{1}{T_{2}^{*}}',
+                          '\\Delta E = g\\mu_B B_0'
                       ];
 
                 // Pre-render and cache the equations
@@ -51,13 +60,48 @@
                           var equation = equations[i];
                           var mathElement = document.createElement('div');
                           mathElement.innerHTML = '\\(' + equation + '\\)';
+                          // this cached template is only ever cloned from (see
+                          // createFadingEquation below) -- keep it off-screen so it
+                          // doesn't sit, fully visible, stacked in the page's
+                          // top-left corner (MathJax still needs it in the DOM to
+                          // typeset it, so we can't just skip appending it)
+                          mathElement.style.position = 'absolute';
+                          mathElement.style.left = '-9999px';
+                          mathElement.style.top = '-9999px';
                           mathContainer.appendChild(mathElement);
                           MathJax.Hub.Queue(['Typeset', MathJax.Hub, mathElement]);
                           equationElements.push(mathElement);
                       }
 
+                var VISIBLE_MS = 2000; // how long an equation stays fully visible
+                var FADE_MS = 3000; // matches the 3s opacity transition in CSS
+                var LIFETIME_MS = VISIBLE_MS + 2 * FADE_MS; // fade-in + visible + fade-out
+                var NUM_SLOTS = 60; // number of concurrently-cycling equations (~3x
+                // as dense as before) -- each slot still shows one equation at a
+                // time, fading in/out on its own, but with this many slots
+                // in flight, many are fading in/out simultaneously
+                // spacing between slots' initial appearance -- sized to roughly
+                // one equation's full on-screen lifetime so slots overlap
+                // (one fading out as another fades in) instead of bunching up
+                var STAGGER_MS = LIFETIME_MS / NUM_SLOTS;
+                // short randomized idle gap between a slot's cycles -- kept
+                // small (relative to LIFETIME_MS) so slots don't drift apart
+                // and thin out the overlap over time, but still not perfectly
+                // lockstep
+                var MAX_RESTART_JITTER_MS = STAGGER_MS * 4;
+
+                // Each slot owns a fixed cell in a grid spanning the viewport,
+                // so slots are guaranteed to spread evenly across the whole
+                // page instead of clustering wherever pure `Math.random()`
+                // positioning happens to land (with only a handful of
+                // equations visible at once, uniform-random sampling reads
+                // as clumpy -- e.g. bunched toward the upper-left -- purely
+                // by chance).
+                var GRID_COLS = 8;
+                var GRID_ROWS = Math.ceil(NUM_SLOTS / GRID_COLS);
+
                 // Function to create a fading math equation
-                function createFadingEquation(index) {
+                function createFadingEquation(slot, index) {
                           if (index >= equationElements.length) {
                                     index = 0; // Restart from the first equation
                                 }
@@ -66,14 +110,43 @@
                           var mathElement = equationElements[index].cloneNode(true);
                           mathElement.classList.add('fading-equation');
 
-                          // Set random position within the page
-                          var left = Math.floor(Math.random() * window.innerWidth);
-                          var top = Math.floor(Math.random() * window.innerHeight);
+                          // Append first so its already-typeset (cloned) size
+                          // is measurable -- positioning by a bare
+                          // `random() * innerWidth`/`innerHeight` (the old
+                          // code) ignores the equation's own rendered size,
+                          // so anything landing near the right/bottom edge
+                          // paints past the viewport. That invisible (it's
+                          // behind everything, z-index -1) overflow was
+                          // still enough for some browsers (observed on
+                          // Chrome/Linux) to refuse to resize the window
+                          // narrower/shorter than whatever was overflowing
+                          // at the time. Clamp so the full box always stays
+                          // inside the viewport.
+                          mathContainer.appendChild(mathElement);
+                          var rect = mathElement.getBoundingClientRect();
+
+                          // This slot's fixed cell, then a random position
+                          // within it (falling back to the full viewport for
+                          // the cell's span if the equation is bigger than
+                          // the cell itself).
+                          var col = slot % GRID_COLS;
+                          var row = Math.floor(slot / GRID_COLS) % GRID_ROWS;
+                          var cellWidth = window.innerWidth / GRID_COLS;
+                          var cellHeight = window.innerHeight / GRID_ROWS;
+                          var cellLeft = col * cellWidth;
+                          var cellTop = row * cellHeight;
+                          var maxLeftInCell = Math.max(0, cellWidth - rect.width);
+                          var maxTopInCell = Math.max(0, cellHeight - rect.height);
+                          var left = Math.min(
+                              cellLeft + Math.floor(Math.random() * maxLeftInCell),
+                              Math.max(0, window.innerWidth - rect.width)
+                          );
+                          var top = Math.min(
+                              cellTop + Math.floor(Math.random() * maxTopInCell),
+                              Math.max(0, window.innerHeight - rect.height)
+                          );
                           mathElement.style.left = left + 'px';
                           mathElement.style.top = top + 'px';
-
-                          // Append math element to the container
-                          mathContainer.appendChild(mathElement);
 
                           // After rendering, set opacity to 1 to fade in
                           mathElement.style.opacity = '1';
@@ -88,16 +161,32 @@
                                               // Remove the math element from the container
                                               mathContainer.removeChild(mathElement);
 
-                                              // Repeat the process with the next equation
-                                              createFadingEquation(index + 1);
-                                          }, 2000); // Adjust the duration of the fade-out animation as needed
-                                }, 2000); // Adjust the delay between equations as needed
+                                              // Repeat with the next equation, after a short
+                                              // randomized pause -- lets each slot's cycle
+                                              // drift out of lockstep with the others without
+                                              // leaving a long gap that would thin out the
+                                              // overlap (kept small relative to LIFETIME_MS so
+                                              // slots stay densely packed and equations keep
+                                              // overlapping as they fade in/out)
+                                              setTimeout(function() {
+                                                        createFadingEquation(slot, index + 1);
+                                                    }, Math.random() * MAX_RESTART_JITTER_MS);
+                                          }, FADE_MS);
+                                }, VISIBLE_MS);
                       }
 
-                // Start multiple instances of the animation
-                for (var i = 0; i < 20; i++) {
-                          createFadingEquation(i);
-                      }
+                // Wait until MathJax has actually finished typesetting the
+                // cached templates before starting the animation, so equations
+                // don't briefly appear as raw, un-rendered TeX source
+                MathJax.Hub.Queue(function() {
+                          // Start multiple instances of the animation, staggered
+                          // so they don't all appear/disappear in lockstep
+                          for (var i = 0; i < NUM_SLOTS; i++) {
+                                    setTimeout((function(slot) {
+                                              return function() { createFadingEquation(slot, slot); };
+                                          })(i), i * STAGGER_MS);
+                                }
+                      });
             });
       // end math animation javascript
   </script>

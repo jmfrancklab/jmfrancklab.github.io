@@ -1,0 +1,61 @@
+# Consolidated map of every bibtex key (from references.bib) that gets its own
+# entry on the Publications page, to its category and (if on hand) TOC/
+# graphical-abstract figure in assets/TOC/. Publications.md renders a
+# publication card (figure + citation) for entries with an image, and a plain
+# citation for entries without one.
+#
+# category: independent | preprint | collab
+#   independent - Franck Lab (Syracuse/ACERT) independent-research papers
+#   preprint    - preprints not yet in a journal
+#   collab      - collaborative work led by other groups
+#
+# Add `image: assets/TOC/<file>` to the matching entry once a real
+# graphical-abstract image is found. Add a brand-new entry (with or without
+# an image) for each newly published/preprinted paper.
+
+- key: BeatonCoherence2022
+  image: assets/TOC/BeatonCoherence2022.png
+  category: independent
+  year: 2022
+- key: BeatonRotational2024
+  image: assets/TOC/BeatonRotational2024.jpg
+  category: independent
+  year: 2024
+- key: GuinnessNoise2025
+  image: assets/TOC/GuinnessNoise2025.jpg
+  category: independent
+  year: 2025
+
+- key: Beaton2023DirObsTra
+  image: assets/TOC/Beaton2023DirObsTra.png
+  category: preprint
+  year: 2023
+- key: Shathy2024ExcMicDyn
+  image: assets/TOC/Shathy2024ExcMicDyn.png
+  category: preprint
+  year: 2024
+
+- key: Chu2023InsAtoTra
+  image: assets/TOC/Chu2023InsAtoTra.jpg
+  category: collab
+  year: 2023
+- key: Davis2019
+  image: assets/TOC/Davis2019.png
+  category: collab
+  year: 2019
+- key: Hofman2020
+  image: assets/TOC/Hofman2020.png
+  category: collab
+  year: 2020
+- key: Li2023IntBSiIon
+  image: assets/TOC/Li2023IntBSiIon.jpg
+  category: collab
+  year: 2023
+- key: Davis2021
+  image: assets/TOC/Davis2021.png
+  category: collab
+  year: 2021
+- key: Landfield2026ChaDepLoc
+  image: assets/TOC/Landfield2026ChaDepLoc.png
+  category: collab
+  year: 2026

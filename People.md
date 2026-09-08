@@ -21,7 +21,7 @@ portable and transportable NMR instruments.
 He worked as an Elings Prize Postdoctoral Fellow
 (California NanoSystems Institute)
 at the University of California, Santa Barbara,
-under the guidance of Prof. Songi Han.
+under the guidance of Prof. <span id="songi-han">Songi Han</span>.
 There, he developed new, sensitive technologies for investigating
 the properties of water at the surfaces of proteins,
 polymers, lipids, and DNA.
@@ -41,6 +41,8 @@ work that enabled detection of shorter-lived species than could
 be proved previously.
 After joining Syracuse as a PI and setting up his lab,
 he received the NSF CAREER award (2022).
+When ACERT expanded to become an independent 501(c)3 research nonprofit,
+he relocated his lab to ACERT.
 
 <!-- click to continue is here: https://stackoverflow.com/questions/28334540/truncate-text-in-html-with-link-to-show-more-less-and-keep-elements-inside-->
 
@@ -50,10 +52,18 @@ he received the NSF CAREER award (2022).
 
 &nbsp;
 
-{% for thisperson in site.people %}
+{% assign grad_students = site.data.people | where: "status", "active" %}
+{% for person in grad_students %}
 <div class="mugshot">
-## {{ thisperson.name }}
-{{ thisperson.content }}
+
+![{{ person.name }}]({{ person.photo }})
+
+## {{ person.name }}
+
+*current {{ person.level }} student, {{ person.university }}*{% if person.website %} &middot; [Website]({{ person.website }}){% endif %}
+
+{{ person.description }}
+
 </div>
 {% endfor %}
 
@@ -63,30 +73,29 @@ he received the NSF CAREER award (2022).
 
 ## Graduates and Postdocs 
 
-### Alec Beaton (PhD)
+{% assign grad_alumni = site.data.people | where: "status", "alumnus" | where_exp: "p", "p.level != 'undergrad'" %}
+{% for person in grad_alumni %}
+### {{ person.name }} ({% if person.level == "postdoc" %}Postdoc{% elsif person.level == "Masters" %}MS{% else %}{{ person.level }}{% endif %}, {{ person.university }}){% if person.website %} &middot; [Website]({{ person.website }}){% endif %}
 
-Alec employed both ODNP and <sup>2</sup>H NMR to observe confined water inside reverse micelles.
+{% if person.photo %}
+<div class="mugshot">
 
-He also pioneered the DCCT technique for the display of maximally multiplexed information about the various coherence pathway signals present in an NMR experiment; he applied this technique to identify faint signals in low-field NMR and to perform mean-field-averaged correlation alignment to dramatically improve signal to noise and signal quality in the presence of variable magnetic fields.
+![{{ person.name }}]({{ person.photo }})
 
-Alec currently works at Bruker Biospin.
+{{ person.description }}
 
-### Farhana Syed (Postdoc)
+</div>
+{% else %}
+{{ person.description }}
+{% endif %}
 
-Farhana performed site-directed spin labeling on the protein K-Ras.
-
-### Samantha Betts (MS)
-
-Sam refined a protocol for the expression and site-directed spin labeling of Proteorhodopsin, and also worked on overmodulation reconstruction.
-Sam currently works at the Aldon Corporation as a Product Developer.
+{% endfor %}
 
 ## Undergraduates
 
-| Natasha Prince | Natasha helped to refine our protocol for trans-membrane protocol expression, and worked on customized dialysis devices to precisely control the solvent environment. She graduated with distinction in chemistry, and has proceeded to graduate studies of Art Conservation and Forensics. |
-| Conal Gallagher | Conal worked on the synthesis of small molecule spin labels.  After graduation, he joined a small startup in the Bay Area, followed by graduate studies in Forensics. |
-| Jessica Khuc | Jessica worked with Farhana on generating multiple SDSL mutants of Ras. |
-| Eldon Hard | Began our project on the simulation of microwave resonators.  Graduated and enrolled in the PhD program at USC. |
-| Heta Desai (REU 2017) | Synthesized the small molecule spin label Cat-1, demonstrated its capture inside lipid vesicles, and demonstrated its saturation performance relative to aminotempo. |
-| Isabela Ramirez       |  Worked briefly to initialize a project on mechanical automation of rf tuning and sample mixing. |
-| Soliloquy Rhodes | Soliloquy (graduated 2019) worked on the synthesis of small molecule spin labels as well as the design of an automated temperature control system for use with saturation-level microwaves. |
-| Michelle Sahagian | (Graduated 2019) worked on the synthesis of small molecule spin labels. |
+{% assign undergrad_alumni = site.data.people | where: "level", "undergrad" %}
+| Name | University | Description |
+| --- | --- | --- |
+{% for person in undergrad_alumni %}| {{ person.name }} | {{ person.university }} | {{ person.description | replace: "
+", " " | strip }} |
+{% endfor %}
