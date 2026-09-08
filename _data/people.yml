@@ -5,6 +5,17 @@
 # status is active, People.md displays this as "current <level> student"
 # (or "current postdoc" for postdocs); when alumnus, it displays just the
 # level.
+- name: Atahan Garip
+  status: active
+  level: PhD
+  university: Cornell University
+  photo: assets/atahan_photo.png
+  description: |
+    Atahan is a PhD student in the Applied and Engineering Physics program
+    at Cornell University, working with the Franck Lab at ACERT.
+    He is developing a fully open and automated temperature-controlled
+    ODNP system.
+
 - name: Romana Shathy
   status: active
   level: PhD
@@ -36,17 +47,6 @@
     broadly to the design of couple microwave resonators.
     During the lab's transition to ACERT, Warren also gained additional
     research experience in [Prof. Songi Han's lab](People.html#songi-han).
-
-- name: Atahan Garip
-  status: active
-  level: PhD
-  university: Cornell University
-  photo: assets/atahan_photo.png
-  description: |
-    Atahan is a PhD student in the Applied and Engineering Physics program
-    at Cornell University, working with the Franck Lab at ACERT.
-    He is developing a fully open and automated temperature-controlled
-    ODNP system.
 
 - name: Alexandria Guinness
   status: alumnus
