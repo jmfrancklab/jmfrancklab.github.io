@@ -7,12 +7,13 @@ attribution: J. Franck
 <div class="home">
   <h2>Posts</h2>
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% assign news_items = site.data.news | sort: "date" | reverse %}
+    {% for item in news_items %}
       <li class="news-item">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-link">{{ item.title }}</span>
+        <span class="post-meta">{{ item.date | date: "%b %-d, %Y" }}</span>
         <div class="news-excerpt">
-          {{ post.content | strip_html | truncatewords: 40 }}
+          {{ item.content | markdownify | strip_html | truncatewords: 40 }}
         </div>
       </li>
     {% endfor %}

@@ -1,0 +1,84 @@
+# Lab news items, rendered on news.html and in feed.xml.
+# Add new entries at the top or bottom -- news.html sorts by date.
+
+- date: 2016-10-01
+  title: "First Franck Lab Member"
+  content: |
+    Freshman Eldon Hard joins the Franck lab.
+
+- date: 2017-05-01
+  title: "Summer REU student"
+  content: |
+    Heta Desai joins the Franck lab over the summer as an REU student
+
+- date: 2017-06-09
+  title: "Franck Lab Magnets Arrive!"
+  content: |
+    The Franck Lab is completed and our magnets arrive.
+
+    ![Magnets](/assets/magnet_montage.png)
+
+    We thank Prof. Scholes (U Albany) for his donation of an extra electromagnet and microwave hardware!
+
+- date: 2017-07-24
+  title: "2017 ISMAR conference"
+  content: |
+    John presents talk titled "Liquid-State Overhauser DNP Interpretation" at the 2017 ISMAR (International Society of Magnetic Resonance) conference held in Québec city.
+
+- date: 2017-10-01
+  title: "2017 SharedEPR conference"
+  content: |
+    John presents an invited talk titled "Advancing Liquid-State Overhauser DNP Interpretation and Instrumentation" at the
+    2017 Joint SPP1601/SharedEPR conference held in New Paltz, NY.
+
+- date: 2017-11-01
+  title: "First two graduate students join the Franck Lab"
+  content: |
+    Graduate Students Alec Beaton and Samantha Betts join the Franck lab.
+
+- date: 2018-01-01
+  title: "Welcoming Soliloquy"
+  content: |
+    UG Soliloquy Rhodes joins the growing Franck lab.
+
+- date: 2018-08-01
+  title: "Paper with Maye group"
+  content: |
+    Our exciting and collaboration with the Maye group results in a first publication titled
+    [Understanding the Surface Properties of Halide Exchanged Cesium Lead Halide Nanoparticles](https://pubs.acs.org/doi/abs/10.1021/acs.langmuir.8b02148){:target="blank"}
+
+- date: 2018-08-01
+  title: "Welcoming Michelle"
+  content: |
+    UG Michelle Sahagian joins the Franck lab.
+
+- date: 2018-09-28
+  title: "Methods in Enzymology Review"
+  content: |
+    John and Songi Han's invited review article titled "Overhauser dynamic nuclear polarization for the study
+    of hydration dynamics, explained" is accepted for publication in Methods in Enzymology.
+
+- date: 2018-09-30
+  title: "Welcome to Our New Website!"
+  content: |
+    Welcome to our new lab website.
+
+    For more information, you can also see
+        [John's Faculty Page](http://asfaculty.syr.edu/pages/chem/Franck-John.html){:target="_blank"}
+
+- date: 2021-12-31
+  title: "NSF CAREER Award"
+  content: |
+    Lab PI J.M. Franck awarded NSF CAREER award
+    "Spin Dynamics Measurements of Site-to-Site Variations in Hydration Water at Soft Nanoscale Interfaces" (2146270).
+    This funding will allow us to explore patches and pockets of water on the surface of proteins and materials and to learn how to tap into the chemical energy available from the hydration layer!
+
+- date: 2022-12-13
+  title: "Congrats Alec!"
+  content: |
+    Alec Beaton successfully defended his PhD thesis!  Congrats and good luck at Bruker!
+
+- date: 2023-05-11
+  title: "Congrats Warren!"
+  content: |
+    Congrats to Warren for passing his second year qualifying exam!
