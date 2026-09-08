@@ -396,6 +396,42 @@ table tr:first-child th {
         }
     }
 }
+
+/**
+ * Small inline project logo (e.g. the robotics initiative logo on the
+ * Research page), floated so surrounding text wraps around it -- mirror
+ * of the .mugshot pattern on the People page (photo floats left, text
+ * wraps), but floated right here.
+ */
+.project-logo-wrap {
+    // establishes a block formatting context so this div always fully
+    // contains its own floated logo, regardless of whether the section
+    // text is taller or shorter than the logo (same reasoning as .mugshot).
+    display: flow-root;
+}
+
+.project-logo {
+    float: right;
+    max-width: 30%;
+    width: auto;
+    height: auto;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/**
+ * Divider setting off a distinct project section (e.g. a newly pitched
+ * initiative) from the section before it.
+ */
+.section-divider {
+    border: 0;
+    border-top: 1px solid $grey-color-light;
+    margin: 2em 0;
+}
+
+.centered-link {
+    text-align: center;
+}
 //tbody {
 //    border:3px solid black;
 //}

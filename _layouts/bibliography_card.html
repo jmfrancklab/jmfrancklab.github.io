@@ -1,0 +1,15 @@
+---
+---
+{% capture links %}{% if entry.doi %} <a href="https://doi.org/{{ entry.doi }}">doi:{{ entry.doi }}</a>{% endif %}{% if entry.pmid %} <a href="https://www.ncbi.nlm.nih.gov/pubmed/{{ entry.pmid }}">PMID:{{ entry.pmid }}</a>{% endif %}{% if entry.eprint %} <a href="https://arxiv.org/abs/{{ entry.eprint }}">arXiv:{{ entry.eprint }}</a>{% endif %}{% endcapture %}
+{% assign pub_entry = site.data.pub_toc | where: "key", entry.key | first %}
+{% if pub_entry.image %}
+<div class="pub-card">
+
+<img src="{{ pub_entry.image }}" alt="TOC figure for {{ entry.key }}">
+
+{{ reference }}{{ links }}
+
+</div>
+{% else %}
+{{ reference }}{{ links }}
+{% endif %}

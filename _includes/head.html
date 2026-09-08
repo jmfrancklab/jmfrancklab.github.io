@@ -75,14 +75,33 @@
 
                 var VISIBLE_MS = 2000; // how long an equation stays fully visible
                 var FADE_MS = 3000; // matches the 3s opacity transition in CSS
-                var NUM_SLOTS = 20; // number of concurrently-cycling equations
+                var LIFETIME_MS = VISIBLE_MS + 2 * FADE_MS; // fade-in + visible + fade-out
+                var NUM_SLOTS = 60; // number of concurrently-cycling equations (~3x
+                // as dense as before) -- each slot still shows one equation at a
+                // time, fading in/out on its own, but with this many slots
+                // in flight, many are fading in/out simultaneously
                 // spacing between slots' initial appearance -- sized to roughly
                 // one equation's full on-screen lifetime so slots overlap
                 // (one fading out as another fades in) instead of bunching up
-                var STAGGER_MS = (VISIBLE_MS + 2 * FADE_MS) / NUM_SLOTS;
+                var STAGGER_MS = LIFETIME_MS / NUM_SLOTS;
+                // short randomized idle gap between a slot's cycles -- kept
+                // small (relative to LIFETIME_MS) so slots don't drift apart
+                // and thin out the overlap over time, but still not perfectly
+                // lockstep
+                var MAX_RESTART_JITTER_MS = STAGGER_MS * 4;
+
+                // Each slot owns a fixed cell in a grid spanning the viewport,
+                // so slots are guaranteed to spread evenly across the whole
+                // page instead of clustering wherever pure `Math.random()`
+                // positioning happens to land (with only a handful of
+                // equations visible at once, uniform-random sampling reads
+                // as clumpy -- e.g. bunched toward the upper-left -- purely
+                // by chance).
+                var GRID_COLS = 8;
+                var GRID_ROWS = Math.ceil(NUM_SLOTS / GRID_COLS);
 
                 // Function to create a fading math equation
-                function createFadingEquation(index) {
+                function createFadingEquation(slot, index) {
                           if (index >= equationElements.length) {
                                     index = 0; // Restart from the first equation
                                 }
@@ -105,10 +124,27 @@
                           // inside the viewport.
                           mathContainer.appendChild(mathElement);
                           var rect = mathElement.getBoundingClientRect();
-                          var maxLeft = Math.max(0, window.innerWidth - rect.width);
-                          var maxTop = Math.max(0, window.innerHeight - rect.height);
-                          var left = Math.floor(Math.random() * maxLeft);
-                          var top = Math.floor(Math.random() * maxTop);
+
+                          // This slot's fixed cell, then a random position
+                          // within it (falling back to the full viewport for
+                          // the cell's span if the equation is bigger than
+                          // the cell itself).
+                          var col = slot % GRID_COLS;
+                          var row = Math.floor(slot / GRID_COLS) % GRID_ROWS;
+                          var cellWidth = window.innerWidth / GRID_COLS;
+                          var cellHeight = window.innerHeight / GRID_ROWS;
+                          var cellLeft = col * cellWidth;
+                          var cellTop = row * cellHeight;
+                          var maxLeftInCell = Math.max(0, cellWidth - rect.width);
+                          var maxTopInCell = Math.max(0, cellHeight - rect.height);
+                          var left = Math.min(
+                              cellLeft + Math.floor(Math.random() * maxLeftInCell),
+                              Math.max(0, window.innerWidth - rect.width)
+                          );
+                          var top = Math.min(
+                              cellTop + Math.floor(Math.random() * maxTopInCell),
+                              Math.max(0, window.innerHeight - rect.height)
+                          );
                           mathElement.style.left = left + 'px';
                           mathElement.style.top = top + 'px';
 
@@ -125,13 +161,16 @@
                                               // Remove the math element from the container
                                               mathContainer.removeChild(mathElement);
 
-                                              // Repeat with the next equation, after a randomized
-                                              // pause -- this lets each slot's cycle drift out of
-                                              // lockstep with the others so the staggering doesn't
-                                              // collapse back into a synchronized loop over time
+                                              // Repeat with the next equation, after a short
+                                              // randomized pause -- lets each slot's cycle
+                                              // drift out of lockstep with the others without
+                                              // leaving a long gap that would thin out the
+                                              // overlap (kept small relative to LIFETIME_MS so
+                                              // slots stay densely packed and equations keep
+                                              // overlapping as they fade in/out)
                                               setTimeout(function() {
-                                                        createFadingEquation(index + 1);
-                                                    }, Math.random() * STAGGER_MS * NUM_SLOTS);
+                                                        createFadingEquation(slot, index + 1);
+                                                    }, Math.random() * MAX_RESTART_JITTER_MS);
                                           }, FADE_MS);
                                 }, VISIBLE_MS);
                       }
@@ -144,7 +183,7 @@
                           // so they don't all appear/disappear in lockstep
                           for (var i = 0; i < NUM_SLOTS; i++) {
                                     setTimeout((function(slot) {
-                                              return function() { createFadingEquation(slot); };
+                                              return function() { createFadingEquation(slot, slot); };
                                           })(i), i * STAGGER_MS);
                                 }
                       });
