@@ -28,7 +28,10 @@ scholar:
 
 <img src="{{ pub.image }}" alt="TOC figure for {{ pub.key }}">
 
+<div class="pub-card-body">
+{% if pub.badge %}<span class="pub-badge">{{ pub.badge }}</span>{% endif %}
 {{ pub_reference | replace: '">1. ', '">' }}
+</div>
 
 </div>
 {% endfor %}

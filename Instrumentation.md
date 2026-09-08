@@ -7,6 +7,10 @@ attribution: J. Franck
 
 # {{page.title}}
 
+***Note***: this is our old instrumentation page.
+Things will be updated as we
+move to our new location at ACERT.
+
 
 Our lab conducts Overhauser DNP (Dynamic Nuclear
 Polarization) on liquid state and soft matter systems.
