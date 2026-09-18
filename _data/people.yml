@@ -12,14 +12,15 @@
   photo: assets/atahan_photo.png
   description: |
     Atahan is a PhD student in Applied and Engineering Physics at Cornell 
-    University, working with the Franck Lab at ACERT. He is developing 
-    an affordable, open-source Overhauser dynamic nuclear polarization 
-    (ODNP) system that integrates automated measurements and temperature 
-    control. His work combines modular instrumentation with the development 
-    of intuitive, object-oriented scientific software that uses operator 
-    overloading to support physics-like operations. This approach supports 
-    flexible tools tailored to specific experiments, spanning instrument control, 
-    data acquisition, signal processing, and quantitative analysis.
+    University, working with the Franck Lab as a recipient of the ACERT 
+    Research Fellowship. He is developing an affordable, open-source 
+    Overhauser dynamic nuclear polarization (ODNP) system that integrates 
+    automated measurements and temperature control. His work combines modular 
+    instrumentation with the development of intuitive, object-oriented 
+    scientific software that uses operator overloading to support physics-like 
+    operations. This approach supports flexible tools tailored to specific 
+    experiments, spanning instrument control, data acquisition, signal 
+    processing, and quantitative analysis.
 
 - name: Romana Shathy
   status: active
