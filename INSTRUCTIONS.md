@@ -196,3 +196,26 @@ I received the following commentary from an expert, and want to make these updat
   > per-section sequential numbers reflecting the sorted order, instead of
   > the old hack that stripped a fake "1." from every card.
 
+- The style of the caption with "this image illustrates" is almost correct.
+  It flows around the image. However, the subsequent paragraph should also
+  flow. In contrast, section headers should not flow (except on the people
+  page, where they are hacked to behave differently, or else where we use a
+  very low level section that is designed to flow). Also, edit the text
+  "this image" -> "the image to the left".
+
+  > Done -- moved the `.figure-wrap` div's closing tag in AAResearch.md down
+  > past the "In the Franck lab, we currently push the limits..." paragraph,
+  > so it now flows beside the image too (the `## Open Instrumentation`
+  > header afterward still clears normally, since it's outside the div --
+  > that's already guaranteed by `.figure-wrap`'s `display: flow-root`, same
+  > mechanism that keeps section headers clear everywhere except the
+  > People page's deliberate `.mugshot h2` exception). Changed
+  > `.figure-wrap p` to `.figure-wrap p.caption` in `_sass/_base.scss`,
+  > marking the caption paragraph itself with a kramdown `{: .caption}`
+  > attribute list (Kramdown wraps the image in its own `<p>`, so
+  > `:first-of-type` would have matched that instead) so only the actual
+  > caption keeps the small caption font -- the newly included narrative
+  > paragraph reads at normal body size. Changed the
+  > caption text "This image illustrates" -> "The image to the left
+  > illustrates" (its only occurrence site-wide).
+

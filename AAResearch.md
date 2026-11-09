@@ -136,9 +136,10 @@ The significant variations in the properties of the
     hydration water play in important role in how these surfaces
     interact in nature.
 
+<div class="figure-wrap" markdown="1">
 ![Hydration layer](for_website_160809_labeled.png)
 
-*This image illustrates ODNP of water in the hydration layer of a
+*The image to the left illustrates ODNP of water in the hydration layer of a
     lipid bilayer.
 This is one example of many studies that are possible with ODNP.
 A lipid bilayer (the basis for cellular membranes) consists of a
@@ -160,6 +161,7 @@ For example, employing the setup shown above,
     that are not chemically disposed to disrupt the hydration layer.
 This was even true when the large molecules significantly altered the
     viscosity of the bulk solution {% cite Franck_crowding %}.*
+{: .caption}
 
 In the Franck lab, we currently push the limits of the ODNP technique to
 retrieve new and more detailed information about hydration water, drawing on
@@ -168,6 +170,7 @@ expertise in spectrometer design and advanced magnetic resonance methods
 cogent, quantitative explanation of the ODNP technique itself
 {% cite FranckMethEnz2018 %}. That work is organized into three projects,
 described below.
+</div>
 
 <hr class="section-divider">
 

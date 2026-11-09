@@ -71,6 +71,39 @@ figcaption {
     font-size: $small-font-size;
 }
 
+/**
+ * Standard image+caption presentation (use for any figure with a caption,
+ * site-wide): the image floats left and the caption text wraps around it --
+ * flowing beside the image while there's room for a few words, then
+ * spanning the full line once the image ends. Unlike .mugshot/.project-logo,
+ * the image is not raised (no negative margin-top) since a plain figure
+ * isn't a portrait meant to overlap the line above it. Add the `right`
+ * modifier class to float the image on the other side instead.
+ */
+.figure-wrap {
+    // establishes a block formatting context so this div always fully
+    // contains its own floated image, regardless of whether the caption is
+    // taller or shorter than the image (same reasoning as .mugshot).
+    display: flow-root;
+}
+
+.figure-wrap img {
+    float: left;
+    max-width: 45%;
+    width: auto;
+    height: auto;
+    margin: 0 16px 8px 0;
+}
+
+.figure-wrap.right img {
+    float: right;
+    margin: 0 0 8px 16px;
+}
+
+.figure-wrap p.caption {
+    font-size: $small-font-size;
+}
+
 
 
 /**
@@ -197,9 +230,9 @@ pre {
     margin-bottom: 0;
     margin-left: 0;
     z-index: -1;
-    // 50% of the previous 56% (which was itself 70% of the global `img`
-    // rule's 80% max-width)
-    max-width: 28%;
+    // 28% of .left (25% of .wrapper's 70% of viewport), capped at 158px so
+    // it stops growing on very large/high-res monitors
+    max-width: min(28%, 158px);
 }
 .top-left {
     text-align: center;
@@ -428,7 +461,9 @@ table tr:first-child th {
 
 .project-logo {
     float: right;
-    max-width: 30%;
+    // 30% of .wrapper's 70% of viewport, capped at 358px so it stops
+    // growing on very large/high-res monitors
+    max-width: min(30%, 358px);
     width: auto;
     height: auto;
     margin-left: 20px;
